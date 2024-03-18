@@ -1640,7 +1640,7 @@ Partial Class MainForm
         Me.txt_alarm_copy.Location = New System.Drawing.Point(354, 473)
         Me.txt_alarm_copy.Margin = New System.Windows.Forms.Padding(5)
         Me.txt_alarm_copy.Name = "txt_alarm_copy"
-        Me.txt_alarm_copy.Size = New System.Drawing.Size(768, 131)
+        Me.txt_alarm_copy.Size = New System.Drawing.Size(788, 131)
         Me.txt_alarm_copy.TabIndex = 69
         Me.txt_alarm_copy.Text = ""
         '
