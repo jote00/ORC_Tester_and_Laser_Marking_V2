@@ -57,10 +57,9 @@ Partial Class MainForm
         Me.lbl_date.BackColor = System.Drawing.Color.LimeGreen
         Me.lbl_date.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_date.ForeColor = System.Drawing.Color.White
-        Me.lbl_date.Location = New System.Drawing.Point(968, 67)
-        Me.lbl_date.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_date.Location = New System.Drawing.Point(724, 55)
         Me.lbl_date.Name = "lbl_date"
-        Me.lbl_date.Size = New System.Drawing.Size(163, 40)
+        Me.lbl_date.Size = New System.Drawing.Size(124, 31)
         Me.lbl_date.TabIndex = 17
         Me.lbl_date.Text = "31-12-2000"
         '
@@ -70,10 +69,9 @@ Partial Class MainForm
         Me.Label2.BackColor = System.Drawing.Color.LimeGreen
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(497, 67)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(371, 55)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(152, 40)
+        Me.Label2.Size = New System.Drawing.Size(121, 31)
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "STOPPED"
         '
@@ -83,10 +81,9 @@ Partial Class MainForm
         Me.lbl_curr_time.BackColor = System.Drawing.Color.LimeGreen
         Me.lbl_curr_time.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_curr_time.ForeColor = System.Drawing.Color.White
-        Me.lbl_curr_time.Location = New System.Drawing.Point(1000, 24)
-        Me.lbl_curr_time.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_curr_time.Location = New System.Drawing.Point(748, 21)
         Me.lbl_curr_time.Name = "lbl_curr_time"
-        Me.lbl_curr_time.Size = New System.Drawing.Size(131, 40)
+        Me.lbl_curr_time.Size = New System.Drawing.Size(100, 31)
         Me.lbl_curr_time.TabIndex = 15
         Me.lbl_curr_time.Text = "23:59:59"
         '
@@ -96,10 +93,9 @@ Partial Class MainForm
         Me.Label1.BackColor = System.Drawing.Color.LimeGreen
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(497, 24)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(371, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(137, 40)
+        Me.Label1.Size = New System.Drawing.Size(110, 31)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "MANUAL"
         '
@@ -107,10 +103,9 @@ Partial Class MainForm
         '
         Me.lbl_user.AutoSize = True
         Me.lbl_user.Font = New System.Drawing.Font("Arial Narrow", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_user.Location = New System.Drawing.Point(1573, 23)
-        Me.lbl_user.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_user.Location = New System.Drawing.Point(1266, 19)
         Me.lbl_user.Name = "lbl_user"
-        Me.lbl_user.Size = New System.Drawing.Size(182, 94)
+        Me.lbl_user.Size = New System.Drawing.Size(146, 75)
         Me.lbl_user.TabIndex = 21
         Me.lbl_user.Text = "ENG"
         '
@@ -119,12 +114,11 @@ Partial Class MainForm
         Me.TextBox1.BackColor = System.Drawing.Color.DarkRed
         Me.TextBox1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBox1.Location = New System.Drawing.Point(13, 135)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.Location = New System.Drawing.Point(10, 110)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(1756, 36)
+        Me.TextBox1.Size = New System.Drawing.Size(1402, 30)
         Me.TextBox1.TabIndex = 27
         Me.TextBox1.Text = "ALARM : . . . . . . . . "
         '
@@ -132,10 +126,9 @@ Partial Class MainForm
         '
         Me.btn_setting.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_setting.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_setting_50
-        Me.btn_setting.Location = New System.Drawing.Point(13, 759)
-        Me.btn_setting.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_setting.Location = New System.Drawing.Point(10, 617)
         Me.btn_setting.Name = "btn_setting"
-        Me.btn_setting.Size = New System.Drawing.Size(160, 105)
+        Me.btn_setting.Size = New System.Drawing.Size(120, 85)
         Me.btn_setting.TabIndex = 32
         Me.btn_setting.Text = "Setting"
         Me.btn_setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -145,10 +138,9 @@ Partial Class MainForm
         '
         Me.btn_log.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_log.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_log_50
-        Me.btn_log.Location = New System.Drawing.Point(13, 647)
-        Me.btn_log.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_log.Location = New System.Drawing.Point(10, 526)
         Me.btn_log.Name = "btn_log"
-        Me.btn_log.Size = New System.Drawing.Size(160, 105)
+        Me.btn_log.Size = New System.Drawing.Size(120, 85)
         Me.btn_log.TabIndex = 31
         Me.btn_log.Text = "Log"
         Me.btn_log.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -158,10 +150,9 @@ Partial Class MainForm
         '
         Me.btn_alarm.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_alarm.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_siren_50
-        Me.btn_alarm.Location = New System.Drawing.Point(13, 535)
-        Me.btn_alarm.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_alarm.Location = New System.Drawing.Point(10, 435)
         Me.btn_alarm.Name = "btn_alarm"
-        Me.btn_alarm.Size = New System.Drawing.Size(160, 105)
+        Me.btn_alarm.Size = New System.Drawing.Size(120, 85)
         Me.btn_alarm.TabIndex = 30
         Me.btn_alarm.Text = "Alarm"
         Me.btn_alarm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -171,10 +162,9 @@ Partial Class MainForm
         '
         Me.btn_references.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_references.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_open_book_50
-        Me.btn_references.Location = New System.Drawing.Point(13, 423)
-        Me.btn_references.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_references.Location = New System.Drawing.Point(10, 344)
         Me.btn_references.Name = "btn_references"
-        Me.btn_references.Size = New System.Drawing.Size(160, 105)
+        Me.btn_references.Size = New System.Drawing.Size(120, 85)
         Me.btn_references.TabIndex = 29
         Me.btn_references.Text = "References"
         Me.btn_references.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -184,10 +174,9 @@ Partial Class MainForm
         '
         Me.btn_manual.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_manual.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_manual_50
-        Me.btn_manual.Location = New System.Drawing.Point(13, 311)
-        Me.btn_manual.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_manual.Location = New System.Drawing.Point(10, 253)
         Me.btn_manual.Name = "btn_manual"
-        Me.btn_manual.Size = New System.Drawing.Size(160, 105)
+        Me.btn_manual.Size = New System.Drawing.Size(120, 85)
         Me.btn_manual.TabIndex = 33
         Me.btn_manual.Text = "Manual"
         Me.btn_manual.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -197,10 +186,9 @@ Partial Class MainForm
         '
         Me.btn_home.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_home.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_home_50
-        Me.btn_home.Location = New System.Drawing.Point(13, 199)
-        Me.btn_home.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_home.Location = New System.Drawing.Point(10, 162)
         Me.btn_home.Name = "btn_home"
-        Me.btn_home.Size = New System.Drawing.Size(160, 105)
+        Me.btn_home.Size = New System.Drawing.Size(120, 85)
         Me.btn_home.TabIndex = 28
         Me.btn_home.Text = "Home"
         Me.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -210,10 +198,9 @@ Partial Class MainForm
         '
         Me.btn_login.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_login.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_change_user_65
-        Me.btn_login.Location = New System.Drawing.Point(1425, 13)
-        Me.btn_login.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_login.Location = New System.Drawing.Point(1138, 12)
         Me.btn_login.Name = "btn_login"
-        Me.btn_login.Size = New System.Drawing.Size(113, 105)
+        Me.btn_login.Size = New System.Drawing.Size(85, 85)
         Me.btn_login.TabIndex = 20
         Me.btn_login.Text = "Login"
         Me.btn_login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -222,10 +209,9 @@ Partial Class MainForm
         'pb_logo
         '
         Me.pb_logo.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.telemecanique_sensors_logo_transparent
-        Me.pb_logo.Location = New System.Drawing.Point(13, 12)
-        Me.pb_logo.Margin = New System.Windows.Forms.Padding(4)
+        Me.pb_logo.Location = New System.Drawing.Point(12, 12)
         Me.pb_logo.Name = "pb_logo"
-        Me.pb_logo.Size = New System.Drawing.Size(333, 105)
+        Me.pb_logo.Size = New System.Drawing.Size(250, 85)
         Me.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pb_logo.TabIndex = 19
         Me.pb_logo.TabStop = False
@@ -233,10 +219,9 @@ Partial Class MainForm
         'pb_status_mc
         '
         Me.pb_status_mc.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.mark_ok
-        Me.pb_status_mc.Location = New System.Drawing.Point(1202, 13)
-        Me.pb_status_mc.Margin = New System.Windows.Forms.Padding(4)
+        Me.pb_status_mc.Location = New System.Drawing.Point(900, 12)
         Me.pb_status_mc.Name = "pb_status_mc"
-        Me.pb_status_mc.Size = New System.Drawing.Size(113, 105)
+        Me.pb_status_mc.Size = New System.Drawing.Size(85, 85)
         Me.pb_status_mc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pb_status_mc.TabIndex = 18
         Me.pb_status_mc.TabStop = False
@@ -245,10 +230,9 @@ Partial Class MainForm
         '
         Me.pb_status_bar.BackColor = System.Drawing.Color.LimeGreen
         Me.pb_status_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pb_status_bar.Location = New System.Drawing.Point(484, 13)
-        Me.pb_status_bar.Margin = New System.Windows.Forms.Padding(4)
+        Me.pb_status_bar.Location = New System.Drawing.Point(361, 12)
         Me.pb_status_bar.Name = "pb_status_bar"
-        Me.pb_status_bar.Size = New System.Drawing.Size(666, 104)
+        Me.pb_status_bar.Size = New System.Drawing.Size(500, 85)
         Me.pb_status_bar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pb_status_bar.TabIndex = 13
         Me.pb_status_bar.TabStop = False
@@ -257,10 +241,9 @@ Partial Class MainForm
         '
         Me.btn_st6.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st6.Image = CType(resources.GetObject("btn_st6.Image"), System.Drawing.Image)
-        Me.btn_st6.Location = New System.Drawing.Point(1609, 759)
-        Me.btn_st6.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_st6.Location = New System.Drawing.Point(1292, 617)
         Me.btn_st6.Name = "btn_st6"
-        Me.btn_st6.Size = New System.Drawing.Size(160, 105)
+        Me.btn_st6.Size = New System.Drawing.Size(120, 85)
         Me.btn_st6.TabIndex = 39
         Me.btn_st6.Text = "ST6"
         Me.btn_st6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -270,10 +253,9 @@ Partial Class MainForm
         '
         Me.btn_st5.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st5.Image = CType(resources.GetObject("btn_st5.Image"), System.Drawing.Image)
-        Me.btn_st5.Location = New System.Drawing.Point(1609, 647)
-        Me.btn_st5.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_st5.Location = New System.Drawing.Point(1292, 526)
         Me.btn_st5.Name = "btn_st5"
-        Me.btn_st5.Size = New System.Drawing.Size(160, 105)
+        Me.btn_st5.Size = New System.Drawing.Size(120, 85)
         Me.btn_st5.TabIndex = 38
         Me.btn_st5.Text = "ST5"
         Me.btn_st5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -283,10 +265,9 @@ Partial Class MainForm
         '
         Me.btn_st4.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st4.Image = CType(resources.GetObject("btn_st4.Image"), System.Drawing.Image)
-        Me.btn_st4.Location = New System.Drawing.Point(1609, 535)
-        Me.btn_st4.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_st4.Location = New System.Drawing.Point(1292, 435)
         Me.btn_st4.Name = "btn_st4"
-        Me.btn_st4.Size = New System.Drawing.Size(160, 105)
+        Me.btn_st4.Size = New System.Drawing.Size(120, 85)
         Me.btn_st4.TabIndex = 37
         Me.btn_st4.Text = "ST4"
         Me.btn_st4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -296,10 +277,9 @@ Partial Class MainForm
         '
         Me.btn_st3.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st3.Image = CType(resources.GetObject("btn_st3.Image"), System.Drawing.Image)
-        Me.btn_st3.Location = New System.Drawing.Point(1609, 423)
-        Me.btn_st3.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_st3.Location = New System.Drawing.Point(1292, 344)
         Me.btn_st3.Name = "btn_st3"
-        Me.btn_st3.Size = New System.Drawing.Size(160, 105)
+        Me.btn_st3.Size = New System.Drawing.Size(120, 85)
         Me.btn_st3.TabIndex = 36
         Me.btn_st3.Text = "ST3"
         Me.btn_st3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -309,10 +289,9 @@ Partial Class MainForm
         '
         Me.btn_st2.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st2.Image = CType(resources.GetObject("btn_st2.Image"), System.Drawing.Image)
-        Me.btn_st2.Location = New System.Drawing.Point(1609, 311)
-        Me.btn_st2.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_st2.Location = New System.Drawing.Point(1292, 253)
         Me.btn_st2.Name = "btn_st2"
-        Me.btn_st2.Size = New System.Drawing.Size(160, 105)
+        Me.btn_st2.Size = New System.Drawing.Size(120, 85)
         Me.btn_st2.TabIndex = 35
         Me.btn_st2.Text = "ST2"
         Me.btn_st2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -322,10 +301,9 @@ Partial Class MainForm
         '
         Me.btn_st1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st1.Image = CType(resources.GetObject("btn_st1.Image"), System.Drawing.Image)
-        Me.btn_st1.Location = New System.Drawing.Point(1609, 199)
-        Me.btn_st1.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_st1.Location = New System.Drawing.Point(1292, 162)
         Me.btn_st1.Name = "btn_st1"
-        Me.btn_st1.Size = New System.Drawing.Size(160, 105)
+        Me.btn_st1.Size = New System.Drawing.Size(120, 85)
         Me.btn_st1.TabIndex = 34
         Me.btn_st1.Text = "ST1"
         Me.btn_st1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
@@ -333,19 +311,17 @@ Partial Class MainForm
         '
         'GroupBox1
         '
-        Me.GroupBox1.Location = New System.Drawing.Point(181, 199)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Location = New System.Drawing.Point(136, 162)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(1420, 841)
+        Me.GroupBox1.Size = New System.Drawing.Size(1150, 687)
         Me.GroupBox1.TabIndex = 40
         Me.GroupBox1.TabStop = False
         '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1782, 1078)
+        Me.ClientSize = New System.Drawing.Size(1424, 861)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btn_st6)
         Me.Controls.Add(Me.btn_st5)
@@ -369,6 +345,7 @@ Partial Class MainForm
         Me.Controls.Add(Me.lbl_curr_time)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.pb_status_bar)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "MainForm"
         Me.Text = "Form1"
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
