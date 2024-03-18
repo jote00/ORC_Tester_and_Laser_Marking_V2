@@ -134,6 +134,7 @@ Partial Class MainForm
         '
         'DateTime
         '
+        Me.DateTime.Enabled = True
         '
         'btn_st6
         '

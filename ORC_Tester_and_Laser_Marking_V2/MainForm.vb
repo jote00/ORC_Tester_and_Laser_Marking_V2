@@ -78,7 +78,7 @@ Public Class MainForm
     End Sub
 
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
-        lbl_curr_time.Text = Date.Now.ToString("dd-MM-yyyy")
+        lbl_date.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
     End Sub
 
