@@ -25,6 +25,14 @@ Public Class MainForm
         Cursor = Cursors.Default
         LoginForm.ShowDialog()
         GetUserLevel()
+
+        'Button Station Enable
+
+        For Each ctrl As Control In Me.Controls
+            If TypeOf ctrl Is Button AndAlso ctrl.Name.StartsWith("btn_st") Then
+                ctrl.Enabled = False
+            End If
+        Next
     End Sub
 
     Private Sub initLoadingBar()
@@ -76,6 +84,7 @@ Public Class MainForm
             btn_log.Enabled = False
         End If
     End Sub
+
 
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
         lbl_date.Text = Date.Now.ToString("dd-MM-yyyy")

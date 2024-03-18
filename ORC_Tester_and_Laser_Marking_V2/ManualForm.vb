@@ -20,5 +20,13 @@
     End Sub
     Private Sub ManualForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetUserLevel()
+
+        'Button Station Enable
+
+        For Each ctrl As Control In Me.Controls
+            If TypeOf ctrl Is Button AndAlso ctrl.Name.StartsWith("btn_st") Then
+                ctrl.Enabled = True
+            End If
+        Next
     End Sub
 End Class
