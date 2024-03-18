@@ -177,5 +177,17 @@
   <ItemGroup>
     <None Include="Resources\icons8-setting-50.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-run-56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-emptying-baskets-56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-erase-56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stop-56.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
