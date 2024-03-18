@@ -22,6 +22,7 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.lbl_date = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -29,6 +30,14 @@ Partial Class MainForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_user = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DateTime = New System.Windows.Forms.Timer(Me.components)
+        Me.btn_st6 = New System.Windows.Forms.Button()
+        Me.btn_st5 = New System.Windows.Forms.Button()
+        Me.btn_st4 = New System.Windows.Forms.Button()
+        Me.btn_st3 = New System.Windows.Forms.Button()
+        Me.btn_st2 = New System.Windows.Forms.Button()
+        Me.btn_st1 = New System.Windows.Forms.Button()
         Me.btn_setting = New System.Windows.Forms.Button()
         Me.btn_log = New System.Windows.Forms.Button()
         Me.btn_alarm = New System.Windows.Forms.Button()
@@ -39,13 +48,6 @@ Partial Class MainForm
         Me.pb_logo = New System.Windows.Forms.PictureBox()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
-        Me.btn_st6 = New System.Windows.Forms.Button()
-        Me.btn_st5 = New System.Windows.Forms.Button()
-        Me.btn_st4 = New System.Windows.Forms.Button()
-        Me.btn_st3 = New System.Windows.Forms.Button()
-        Me.btn_st2 = New System.Windows.Forms.Button()
-        Me.btn_st1 = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,6 +123,89 @@ Partial Class MainForm
         Me.TextBox1.Size = New System.Drawing.Size(1402, 30)
         Me.TextBox1.TabIndex = 27
         Me.TextBox1.Text = "ALARM : . . . . . . . . "
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Location = New System.Drawing.Point(136, 157)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(1150, 687)
+        Me.GroupBox1.TabIndex = 40
+        Me.GroupBox1.TabStop = False
+        '
+        'DateTime
+        '
+        '
+        'btn_st6
+        '
+        Me.btn_st6.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st6.Image = CType(resources.GetObject("btn_st6.Image"), System.Drawing.Image)
+        Me.btn_st6.Location = New System.Drawing.Point(1292, 617)
+        Me.btn_st6.Name = "btn_st6"
+        Me.btn_st6.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st6.TabIndex = 39
+        Me.btn_st6.Text = "ST6"
+        Me.btn_st6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st6.UseVisualStyleBackColor = True
+        '
+        'btn_st5
+        '
+        Me.btn_st5.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st5.Image = CType(resources.GetObject("btn_st5.Image"), System.Drawing.Image)
+        Me.btn_st5.Location = New System.Drawing.Point(1292, 526)
+        Me.btn_st5.Name = "btn_st5"
+        Me.btn_st5.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st5.TabIndex = 38
+        Me.btn_st5.Text = "ST5"
+        Me.btn_st5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st5.UseVisualStyleBackColor = True
+        '
+        'btn_st4
+        '
+        Me.btn_st4.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st4.Image = CType(resources.GetObject("btn_st4.Image"), System.Drawing.Image)
+        Me.btn_st4.Location = New System.Drawing.Point(1292, 435)
+        Me.btn_st4.Name = "btn_st4"
+        Me.btn_st4.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st4.TabIndex = 37
+        Me.btn_st4.Text = "ST4"
+        Me.btn_st4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st4.UseVisualStyleBackColor = True
+        '
+        'btn_st3
+        '
+        Me.btn_st3.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st3.Image = CType(resources.GetObject("btn_st3.Image"), System.Drawing.Image)
+        Me.btn_st3.Location = New System.Drawing.Point(1292, 344)
+        Me.btn_st3.Name = "btn_st3"
+        Me.btn_st3.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st3.TabIndex = 36
+        Me.btn_st3.Text = "ST3"
+        Me.btn_st3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st3.UseVisualStyleBackColor = True
+        '
+        'btn_st2
+        '
+        Me.btn_st2.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st2.Image = CType(resources.GetObject("btn_st2.Image"), System.Drawing.Image)
+        Me.btn_st2.Location = New System.Drawing.Point(1292, 253)
+        Me.btn_st2.Name = "btn_st2"
+        Me.btn_st2.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st2.TabIndex = 35
+        Me.btn_st2.Text = "ST2"
+        Me.btn_st2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st2.UseVisualStyleBackColor = True
+        '
+        'btn_st1
+        '
+        Me.btn_st1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st1.Image = CType(resources.GetObject("btn_st1.Image"), System.Drawing.Image)
+        Me.btn_st1.Location = New System.Drawing.Point(1292, 162)
+        Me.btn_st1.Name = "btn_st1"
+        Me.btn_st1.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st1.TabIndex = 34
+        Me.btn_st1.Text = "ST1"
+        Me.btn_st1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st1.UseVisualStyleBackColor = True
         '
         'btn_setting
         '
@@ -237,90 +322,11 @@ Partial Class MainForm
         Me.pb_status_bar.TabIndex = 13
         Me.pb_status_bar.TabStop = False
         '
-        'btn_st6
-        '
-        Me.btn_st6.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st6.Image = CType(resources.GetObject("btn_st6.Image"), System.Drawing.Image)
-        Me.btn_st6.Location = New System.Drawing.Point(1292, 617)
-        Me.btn_st6.Name = "btn_st6"
-        Me.btn_st6.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st6.TabIndex = 39
-        Me.btn_st6.Text = "ST6"
-        Me.btn_st6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st6.UseVisualStyleBackColor = True
-        '
-        'btn_st5
-        '
-        Me.btn_st5.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st5.Image = CType(resources.GetObject("btn_st5.Image"), System.Drawing.Image)
-        Me.btn_st5.Location = New System.Drawing.Point(1292, 526)
-        Me.btn_st5.Name = "btn_st5"
-        Me.btn_st5.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st5.TabIndex = 38
-        Me.btn_st5.Text = "ST5"
-        Me.btn_st5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st5.UseVisualStyleBackColor = True
-        '
-        'btn_st4
-        '
-        Me.btn_st4.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st4.Image = CType(resources.GetObject("btn_st4.Image"), System.Drawing.Image)
-        Me.btn_st4.Location = New System.Drawing.Point(1292, 435)
-        Me.btn_st4.Name = "btn_st4"
-        Me.btn_st4.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st4.TabIndex = 37
-        Me.btn_st4.Text = "ST4"
-        Me.btn_st4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st4.UseVisualStyleBackColor = True
-        '
-        'btn_st3
-        '
-        Me.btn_st3.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st3.Image = CType(resources.GetObject("btn_st3.Image"), System.Drawing.Image)
-        Me.btn_st3.Location = New System.Drawing.Point(1292, 344)
-        Me.btn_st3.Name = "btn_st3"
-        Me.btn_st3.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st3.TabIndex = 36
-        Me.btn_st3.Text = "ST3"
-        Me.btn_st3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st3.UseVisualStyleBackColor = True
-        '
-        'btn_st2
-        '
-        Me.btn_st2.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st2.Image = CType(resources.GetObject("btn_st2.Image"), System.Drawing.Image)
-        Me.btn_st2.Location = New System.Drawing.Point(1292, 253)
-        Me.btn_st2.Name = "btn_st2"
-        Me.btn_st2.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st2.TabIndex = 35
-        Me.btn_st2.Text = "ST2"
-        Me.btn_st2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st2.UseVisualStyleBackColor = True
-        '
-        'btn_st1
-        '
-        Me.btn_st1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st1.Image = CType(resources.GetObject("btn_st1.Image"), System.Drawing.Image)
-        Me.btn_st1.Location = New System.Drawing.Point(1292, 162)
-        Me.btn_st1.Name = "btn_st1"
-        Me.btn_st1.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st1.TabIndex = 34
-        Me.btn_st1.Text = "ST1"
-        Me.btn_st1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st1.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Location = New System.Drawing.Point(136, 162)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1150, 687)
-        Me.GroupBox1.TabIndex = 40
-        Me.GroupBox1.TabStop = False
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1424, 861)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btn_st6)
@@ -345,7 +351,7 @@ Partial Class MainForm
         Me.Controls.Add(Me.lbl_curr_time)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.pb_status_bar)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "MainForm"
         Me.Text = "Form1"
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -379,4 +385,5 @@ Partial Class MainForm
     Friend WithEvents btn_st2 As Button
     Friend WithEvents btn_st1 As Button
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents DateTime As Timer
 End Class
