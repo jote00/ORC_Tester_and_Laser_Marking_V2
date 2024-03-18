@@ -87,4 +87,9 @@ Public Class MainForm
         LoginForm.ShowDialog()
         GetUserLevel()
     End Sub
+
+    Private Sub btn_manual_Click(sender As Object, e As EventArgs) Handles btn_manual.Click
+        Hide()
+        ManualForm.Show()
+    End Sub
 End Class
