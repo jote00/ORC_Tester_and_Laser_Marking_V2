@@ -189,5 +189,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-stop-56.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\led-red-off.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
