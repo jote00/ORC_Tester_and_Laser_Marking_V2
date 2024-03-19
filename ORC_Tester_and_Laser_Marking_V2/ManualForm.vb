@@ -1,4 +1,6 @@
-﻿Public Class ManualForm
+﻿Imports System.Threading
+Imports System.IO
+Public Class ManualForm
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
         lbl_curr_time.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
@@ -20,6 +22,7 @@
     End Sub
     Private Sub ManualForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetUserLevel()
+        AutoConnection()
 
         'Button Station Enable
 
@@ -125,19 +128,17 @@
         End If
 
         If btn_stn1_cyl1_bw.Text = "Backward" Then
-            'UpdateSTN1_CYL1(BACKWARD)
             STN1_CYL1 = BACKWARD
             btn_stn1_cyl1_bw.Image = My.Resources.button_white
             btn_stn1_cyl1_bw.Text = "Is Backward"
         ElseIf btn_stn1_cyl1_bw.Text = "Is Backward" Then
-            'UpdateSTN1_CYL1(IDLE)
             STN1_CYL1 = IDLE
             btn_stn1_cyl1_bw.Image = My.Resources.button_silver
             btn_stn1_cyl1_bw.Text = "Backward"
         End If
     End Sub
 
-    'Button Manual Station 3.1
+    'Button Manual Station 3
 
     Private Sub btn_stn3_cyl1_fw_Click(sender As Object, e As EventArgs) Handles btn_stn3_cyl1_fw.Click
         If btn_stn3_cyl1_bw.Text = "Is Backward" Then
@@ -266,9 +267,6 @@
             btn_stn3_cyl4_bw.Text = "Backward"
         End If
     End Sub
-
-    'Button Manual Station 3.2 Festo
-
 
 
     'Button Manual Station 4

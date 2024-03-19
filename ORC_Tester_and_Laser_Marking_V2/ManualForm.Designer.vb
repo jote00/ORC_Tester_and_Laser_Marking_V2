@@ -34,68 +34,116 @@ Partial Class ManualForm
         Me.GroupBox77 = New System.Windows.Forms.GroupBox()
         Me.GroupBox79 = New System.Windows.Forms.GroupBox()
         Me.Label108 = New System.Windows.Forms.Label()
+        Me.man_stn1_cyl1_min = New System.Windows.Forms.PictureBox()
         Me.Label109 = New System.Windows.Forms.Label()
+        Me.man_stn1_cyl1_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox80 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn1_cyl1_bw = New System.Windows.Forms.Button()
+        Me.btn_stn1_cyl1_fw = New System.Windows.Forms.Button()
         Me.DateTime = New System.Windows.Forms.Timer(Me.components)
         Me.gb_st2_man = New System.Windows.Forms.GroupBox()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.man_stn3_cyl3_min = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.man_stn3_cyl3_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn3_cyl3_bw = New System.Windows.Forms.Button()
+        Me.btn_stn3_cyl3_fw = New System.Windows.Forms.Button()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.man_stn3_cyl4_min = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.man_stn3_cyl4_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn3_cyl4_bw = New System.Windows.Forms.Button()
+        Me.btn_stn3_cyl4_fw = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.man_stn3_cyl2_min = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.man_stn3_cyl2_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox16 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn3_cyl2_bw = New System.Windows.Forms.Button()
+        Me.btn_stn3_cyl2_fw = New System.Windows.Forms.Button()
         Me.GroupBox70 = New System.Windows.Forms.GroupBox()
         Me.GroupBox17 = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.man_stn3_cyl1_min = New System.Windows.Forms.PictureBox()
         Me.Label53 = New System.Windows.Forms.Label()
+        Me.man_stn3_cyl1_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox71 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn3_cyl1_bw = New System.Windows.Forms.Button()
+        Me.btn_stn3_cyl1_fw = New System.Windows.Forms.Button()
         Me.gb_st4_man = New System.Windows.Forms.GroupBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.man_stn4_cyl1_min = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.man_stn4_cyl1_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox81 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn4_cyl1_bw = New System.Windows.Forms.Button()
+        Me.btn_stn4_cyl1_fw = New System.Windows.Forms.Button()
         Me.gb_st5_man = New System.Windows.Forms.GroupBox()
         Me.GroupBox24 = New System.Windows.Forms.GroupBox()
         Me.GroupBox25 = New System.Windows.Forms.GroupBox()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.man_stn5_cyl3_min = New System.Windows.Forms.PictureBox()
         Me.Label20 = New System.Windows.Forms.Label()
+        Me.man_stn5_cyl3_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox26 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn5_cyl3_bw = New System.Windows.Forms.Button()
+        Me.btn_stn5_cyl3_fw = New System.Windows.Forms.Button()
         Me.GroupBox21 = New System.Windows.Forms.GroupBox()
         Me.GroupBox22 = New System.Windows.Forms.GroupBox()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.man_stn5_cyl2_min = New System.Windows.Forms.PictureBox()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.man_stn5_cyl2_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox23 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn5_cyl2_bw = New System.Windows.Forms.Button()
+        Me.btn_stn5_cyl2_fw = New System.Windows.Forms.Button()
         Me.GroupBox18 = New System.Windows.Forms.GroupBox()
         Me.GroupBox19 = New System.Windows.Forms.GroupBox()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.man_stn5_cyl1_min = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.man_stn5_cyl1_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox20 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn5_cyl1_bw = New System.Windows.Forms.Button()
+        Me.btn_stn5_cyl1_fw = New System.Windows.Forms.Button()
         Me.gb_st6_man = New System.Windows.Forms.GroupBox()
         Me.GroupBox27 = New System.Windows.Forms.GroupBox()
         Me.GroupBox28 = New System.Windows.Forms.GroupBox()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.man_stn6_cyl3_min = New System.Windows.Forms.PictureBox()
         Me.Label22 = New System.Windows.Forms.Label()
+        Me.man_stn6_cyl3_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox29 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn6_cyl3_bw = New System.Windows.Forms.Button()
+        Me.btn_stn6_cyl3_fw = New System.Windows.Forms.Button()
         Me.GroupBox30 = New System.Windows.Forms.GroupBox()
         Me.GroupBox31 = New System.Windows.Forms.GroupBox()
         Me.Label23 = New System.Windows.Forms.Label()
+        Me.man_stn6_cyl2_min = New System.Windows.Forms.PictureBox()
         Me.Label24 = New System.Windows.Forms.Label()
+        Me.man_stn6_cyl2_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox32 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn6_cyl2_bw = New System.Windows.Forms.Button()
+        Me.btn_stn6_cyl2_fw = New System.Windows.Forms.Button()
         Me.GroupBox33 = New System.Windows.Forms.GroupBox()
         Me.GroupBox34 = New System.Windows.Forms.GroupBox()
         Me.Label25 = New System.Windows.Forms.Label()
+        Me.man_stn6_cyl1_min = New System.Windows.Forms.PictureBox()
         Me.Label26 = New System.Windows.Forms.Label()
+        Me.man_stn6_cyl1_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox35 = New System.Windows.Forms.GroupBox()
+        Me.btn_stn6_cyl1_bw = New System.Windows.Forms.Button()
+        Me.btn_stn6_cyl1_fw = New System.Windows.Forms.Button()
         Me.GroupBox74 = New System.Windows.Forms.GroupBox()
         Me.btn_Rfesto_servo = New System.Windows.Forms.Button()
         Me.Label99 = New System.Windows.Forms.Label()
@@ -109,9 +157,14 @@ Partial Class ManualForm
         Me.Label105 = New System.Windows.Forms.Label()
         Me.btn_Rfesto_jog_plus = New System.Windows.Forms.Button()
         Me.btn_Rfesto_jog_min = New System.Windows.Forms.Button()
+        Me.ind_stn3_Rfesto_emg = New System.Windows.Forms.PictureBox()
         Me.tbx_Rfesto_alarm = New System.Windows.Forms.TextBox()
+        Me.ind_stn3_Rfesto_svon = New System.Windows.Forms.PictureBox()
         Me.tbx_Rfesto_speed = New System.Windows.Forms.TextBox()
+        Me.ind_stn3_Rfesto_alm = New System.Windows.Forms.PictureBox()
         Me.tbx_Rfesto_position = New System.Windows.Forms.TextBox()
+        Me.ind_stn3_Rfesto_hend = New System.Windows.Forms.PictureBox()
+        Me.ind_stn3_Rfesto_pend = New System.Windows.Forms.PictureBox()
         Me.Label103 = New System.Windows.Forms.Label()
         Me.Label104 = New System.Windows.Forms.Label()
         Me.Label107 = New System.Windows.Forms.Label()
@@ -134,6 +187,11 @@ Partial Class ManualForm
         Me.Label106 = New System.Windows.Forms.Label()
         Me.Label97 = New System.Windows.Forms.Label()
         Me.Label87 = New System.Windows.Forms.Label()
+        Me.ind_stn3_Lfesto_emg = New System.Windows.Forms.PictureBox()
+        Me.ind_stn3_Lfesto_svon = New System.Windows.Forms.PictureBox()
+        Me.ind_stn3_Lfesto_alm = New System.Windows.Forms.PictureBox()
+        Me.ind_stn3_Lfesto_hend = New System.Windows.Forms.PictureBox()
+        Me.ind_stn3_Lfesto_pend = New System.Windows.Forms.PictureBox()
         Me.tab_st3_man = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -148,146 +206,88 @@ Partial Class ManualForm
         Me.pb_logo = New System.Windows.Forms.PictureBox()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
-        Me.man_stn1_cyl1_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn1_cyl1_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn1_cyl1_bw = New System.Windows.Forms.Button()
-        Me.btn_stn1_cyl1_fw = New System.Windows.Forms.Button()
-        Me.man_stn6_cyl3_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn6_cyl3_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn6_cyl3_bw = New System.Windows.Forms.Button()
-        Me.btn_stn6_cyl3_fw = New System.Windows.Forms.Button()
-        Me.man_stn6_cyl2_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn6_cyl2_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn6_cyl2_bw = New System.Windows.Forms.Button()
-        Me.btn_stn6_cyl2_fw = New System.Windows.Forms.Button()
-        Me.man_stn6_cyl1_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn6_cyl1_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn6_cyl1_bw = New System.Windows.Forms.Button()
-        Me.btn_stn6_cyl1_fw = New System.Windows.Forms.Button()
-        Me.man_stn5_cyl3_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn5_cyl3_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn5_cyl3_bw = New System.Windows.Forms.Button()
-        Me.btn_stn5_cyl3_fw = New System.Windows.Forms.Button()
-        Me.man_stn5_cyl2_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn5_cyl2_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn5_cyl2_bw = New System.Windows.Forms.Button()
-        Me.btn_stn5_cyl2_fw = New System.Windows.Forms.Button()
-        Me.man_stn5_cyl1_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn5_cyl1_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn5_cyl1_bw = New System.Windows.Forms.Button()
-        Me.btn_stn5_cyl1_fw = New System.Windows.Forms.Button()
-        Me.man_stn4_cyl1_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn4_cyl1_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn4_cyl1_bw = New System.Windows.Forms.Button()
-        Me.btn_stn4_cyl1_fw = New System.Windows.Forms.Button()
-        Me.man_stn3_cyl1_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn3_cyl1_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn3_cyl1_bw = New System.Windows.Forms.Button()
-        Me.btn_stn3_cyl1_fw = New System.Windows.Forms.Button()
-        Me.man_stn3_cyl3_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn3_cyl3_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn3_cyl3_bw = New System.Windows.Forms.Button()
-        Me.btn_stn3_cyl3_fw = New System.Windows.Forms.Button()
-        Me.man_stn3_cyl2_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn3_cyl2_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn3_cyl2_bw = New System.Windows.Forms.Button()
-        Me.btn_stn3_cyl2_fw = New System.Windows.Forms.Button()
-        Me.man_stn3_cyl4_min = New System.Windows.Forms.PictureBox()
-        Me.man_stn3_cyl4_max = New System.Windows.Forms.PictureBox()
-        Me.btn_stn3_cyl4_bw = New System.Windows.Forms.Button()
-        Me.btn_stn3_cyl4_fw = New System.Windows.Forms.Button()
-        Me.ind_stn3_Rfesto_emg = New System.Windows.Forms.PictureBox()
-        Me.ind_stn3_Rfesto_svon = New System.Windows.Forms.PictureBox()
-        Me.ind_stn3_Rfesto_alm = New System.Windows.Forms.PictureBox()
-        Me.ind_stn3_Rfesto_hend = New System.Windows.Forms.PictureBox()
-        Me.ind_stn3_Rfesto_pend = New System.Windows.Forms.PictureBox()
-        Me.ind_stn3_Lfesto_emg = New System.Windows.Forms.PictureBox()
-        Me.ind_stn3_Lfesto_svon = New System.Windows.Forms.PictureBox()
-        Me.ind_stn3_Lfesto_alm = New System.Windows.Forms.PictureBox()
-        Me.ind_stn3_Lfesto_hend = New System.Windows.Forms.PictureBox()
-        Me.ind_stn3_Lfesto_pend = New System.Windows.Forms.PictureBox()
         Me.gb_st1_man.SuspendLayout()
         Me.GroupBox77.SuspendLayout()
         Me.GroupBox79.SuspendLayout()
+        CType(Me.man_stn1_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn1_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox80.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
+        CType(Me.man_stn3_cyl3_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn3_cyl3_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox11.SuspendLayout()
         Me.GroupBox12.SuspendLayout()
         Me.GroupBox13.SuspendLayout()
+        CType(Me.man_stn3_cyl4_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn3_cyl4_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox14.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox15.SuspendLayout()
+        CType(Me.man_stn3_cyl2_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn3_cyl2_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox16.SuspendLayout()
         Me.GroupBox70.SuspendLayout()
         Me.GroupBox17.SuspendLayout()
+        CType(Me.man_stn3_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn3_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox71.SuspendLayout()
         Me.gb_st4_man.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
+        CType(Me.man_stn4_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn4_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox81.SuspendLayout()
         Me.gb_st5_man.SuspendLayout()
         Me.GroupBox24.SuspendLayout()
         Me.GroupBox25.SuspendLayout()
+        CType(Me.man_stn5_cyl3_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn5_cyl3_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox26.SuspendLayout()
         Me.GroupBox21.SuspendLayout()
         Me.GroupBox22.SuspendLayout()
+        CType(Me.man_stn5_cyl2_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn5_cyl2_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox23.SuspendLayout()
         Me.GroupBox18.SuspendLayout()
         Me.GroupBox19.SuspendLayout()
+        CType(Me.man_stn5_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn5_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox20.SuspendLayout()
         Me.gb_st6_man.SuspendLayout()
         Me.GroupBox27.SuspendLayout()
         Me.GroupBox28.SuspendLayout()
+        CType(Me.man_stn6_cyl3_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn6_cyl3_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox29.SuspendLayout()
         Me.GroupBox30.SuspendLayout()
         Me.GroupBox31.SuspendLayout()
+        CType(Me.man_stn6_cyl2_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn6_cyl2_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox32.SuspendLayout()
         Me.GroupBox33.SuspendLayout()
         Me.GroupBox34.SuspendLayout()
+        CType(Me.man_stn6_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.man_stn6_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox35.SuspendLayout()
         Me.GroupBox74.SuspendLayout()
+        CType(Me.ind_stn3_Rfesto_emg, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn3_Rfesto_svon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn3_Rfesto_alm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn3_Rfesto_hend, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn3_Rfesto_pend, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox75.SuspendLayout()
+        CType(Me.ind_stn3_Lfesto_emg, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn3_Lfesto_svon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn3_Lfesto_alm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn3_Lfesto_hend, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn3_Lfesto_pend, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tab_st3_man.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn1_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn1_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn6_cyl3_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn6_cyl3_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn6_cyl2_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn6_cyl2_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn6_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn6_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn5_cyl3_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn5_cyl3_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn5_cyl2_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn5_cyl2_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn5_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn5_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn4_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn4_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn3_cyl1_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn3_cyl1_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn3_cyl3_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn3_cyl3_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn3_cyl2_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn3_cyl2_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn3_cyl4_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.man_stn3_cyl4_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Rfesto_emg, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Rfesto_svon, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Rfesto_alm, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Rfesto_hend, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Rfesto_pend, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Lfesto_emg, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Lfesto_svon, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Lfesto_alm, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Lfesto_hend, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn3_Lfesto_pend, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -365,7 +365,7 @@ Partial Class ManualForm
         '
         Me.gb_st1_man.Controls.Add(Me.GroupBox77)
         Me.gb_st1_man.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_st1_man.Location = New System.Drawing.Point(136, 157)
+        Me.gb_st1_man.Location = New System.Drawing.Point(136, 146)
         Me.gb_st1_man.Name = "gb_st1_man"
         Me.gb_st1_man.Size = New System.Drawing.Size(1150, 687)
         Me.gb_st1_man.TabIndex = 41
@@ -415,6 +415,17 @@ Partial Class ManualForm
         Me.Label108.TabIndex = 46
         Me.Label108.Text = "Minimun"
         '
+        'man_stn1_cyl1_min
+        '
+        Me.man_stn1_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn1_cyl1_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn1_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn1_cyl1_min.Name = "man_stn1_cyl1_min"
+        Me.man_stn1_cyl1_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn1_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn1_cyl1_min.TabIndex = 3
+        Me.man_stn1_cyl1_min.TabStop = False
+        '
         'Label109
         '
         Me.Label109.AutoSize = True
@@ -425,6 +436,17 @@ Partial Class ManualForm
         Me.Label109.Size = New System.Drawing.Size(73, 18)
         Me.Label109.TabIndex = 2
         Me.Label109.Text = "Maximum"
+        '
+        'man_stn1_cyl1_max
+        '
+        Me.man_stn1_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn1_cyl1_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn1_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn1_cyl1_max.Name = "man_stn1_cyl1_max"
+        Me.man_stn1_cyl1_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn1_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn1_cyl1_max.TabIndex = 1
+        Me.man_stn1_cyl1_max.TabStop = False
         '
         'GroupBox80
         '
@@ -440,6 +462,36 @@ Partial Class ManualForm
         Me.GroupBox80.TabStop = False
         Me.GroupBox80.Text = "Button"
         '
+        'btn_stn1_cyl1_bw
+        '
+        Me.btn_stn1_cyl1_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn1_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn1_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn1_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn1_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn1_cyl1_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn1_cyl1_bw.Name = "btn_stn1_cyl1_bw"
+        Me.btn_stn1_cyl1_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn1_cyl1_bw.TabIndex = 46
+        Me.btn_stn1_cyl1_bw.Text = "Backward"
+        Me.btn_stn1_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn1_cyl1_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn1_cyl1_fw
+        '
+        Me.btn_stn1_cyl1_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn1_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn1_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn1_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn1_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn1_cyl1_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn1_cyl1_fw.Name = "btn_stn1_cyl1_fw"
+        Me.btn_stn1_cyl1_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn1_cyl1_fw.TabIndex = 0
+        Me.btn_stn1_cyl1_fw.Text = "Forward"
+        Me.btn_stn1_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn1_cyl1_fw.UseVisualStyleBackColor = True
+        '
         'DateTime
         '
         Me.DateTime.Enabled = True
@@ -447,7 +499,7 @@ Partial Class ManualForm
         'gb_st2_man
         '
         Me.gb_st2_man.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_st2_man.Location = New System.Drawing.Point(136, 157)
+        Me.gb_st2_man.Location = New System.Drawing.Point(136, 146)
         Me.gb_st2_man.Name = "gb_st2_man"
         Me.gb_st2_man.Size = New System.Drawing.Size(1150, 687)
         Me.gb_st2_man.TabIndex = 48
@@ -497,6 +549,17 @@ Partial Class ManualForm
         Me.Label9.TabIndex = 46
         Me.Label9.Text = "Minimun"
         '
+        'man_stn3_cyl3_min
+        '
+        Me.man_stn3_cyl3_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn3_cyl3_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn3_cyl3_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn3_cyl3_min.Name = "man_stn3_cyl3_min"
+        Me.man_stn3_cyl3_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn3_cyl3_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn3_cyl3_min.TabIndex = 3
+        Me.man_stn3_cyl3_min.TabStop = False
+        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -507,6 +570,17 @@ Partial Class ManualForm
         Me.Label10.Size = New System.Drawing.Size(73, 18)
         Me.Label10.TabIndex = 2
         Me.Label10.Text = "Maximum"
+        '
+        'man_stn3_cyl3_max
+        '
+        Me.man_stn3_cyl3_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn3_cyl3_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn3_cyl3_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn3_cyl3_max.Name = "man_stn3_cyl3_max"
+        Me.man_stn3_cyl3_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn3_cyl3_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn3_cyl3_max.TabIndex = 1
+        Me.man_stn3_cyl3_max.TabStop = False
         '
         'GroupBox11
         '
@@ -521,6 +595,36 @@ Partial Class ManualForm
         Me.GroupBox11.TabIndex = 4
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = "Button"
+        '
+        'btn_stn3_cyl3_bw
+        '
+        Me.btn_stn3_cyl3_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn3_cyl3_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn3_cyl3_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn3_cyl3_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn3_cyl3_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn3_cyl3_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn3_cyl3_bw.Name = "btn_stn3_cyl3_bw"
+        Me.btn_stn3_cyl3_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn3_cyl3_bw.TabIndex = 46
+        Me.btn_stn3_cyl3_bw.Text = "Backward"
+        Me.btn_stn3_cyl3_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn3_cyl3_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn3_cyl3_fw
+        '
+        Me.btn_stn3_cyl3_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn3_cyl3_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn3_cyl3_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn3_cyl3_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn3_cyl3_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn3_cyl3_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn3_cyl3_fw.Name = "btn_stn3_cyl3_fw"
+        Me.btn_stn3_cyl3_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn3_cyl3_fw.TabIndex = 0
+        Me.btn_stn3_cyl3_fw.Text = "Forward"
+        Me.btn_stn3_cyl3_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn3_cyl3_fw.UseVisualStyleBackColor = True
         '
         'GroupBox12
         '
@@ -564,6 +668,17 @@ Partial Class ManualForm
         Me.Label11.TabIndex = 46
         Me.Label11.Text = "Minimun"
         '
+        'man_stn3_cyl4_min
+        '
+        Me.man_stn3_cyl4_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn3_cyl4_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn3_cyl4_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn3_cyl4_min.Name = "man_stn3_cyl4_min"
+        Me.man_stn3_cyl4_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn3_cyl4_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn3_cyl4_min.TabIndex = 3
+        Me.man_stn3_cyl4_min.TabStop = False
+        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -574,6 +689,17 @@ Partial Class ManualForm
         Me.Label12.Size = New System.Drawing.Size(73, 18)
         Me.Label12.TabIndex = 2
         Me.Label12.Text = "Maximum"
+        '
+        'man_stn3_cyl4_max
+        '
+        Me.man_stn3_cyl4_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn3_cyl4_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn3_cyl4_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn3_cyl4_max.Name = "man_stn3_cyl4_max"
+        Me.man_stn3_cyl4_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn3_cyl4_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn3_cyl4_max.TabIndex = 1
+        Me.man_stn3_cyl4_max.TabStop = False
         '
         'GroupBox14
         '
@@ -588,6 +714,36 @@ Partial Class ManualForm
         Me.GroupBox14.TabIndex = 4
         Me.GroupBox14.TabStop = False
         Me.GroupBox14.Text = "Button"
+        '
+        'btn_stn3_cyl4_bw
+        '
+        Me.btn_stn3_cyl4_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn3_cyl4_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn3_cyl4_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn3_cyl4_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn3_cyl4_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn3_cyl4_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn3_cyl4_bw.Name = "btn_stn3_cyl4_bw"
+        Me.btn_stn3_cyl4_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn3_cyl4_bw.TabIndex = 46
+        Me.btn_stn3_cyl4_bw.Text = "Backward"
+        Me.btn_stn3_cyl4_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn3_cyl4_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn3_cyl4_fw
+        '
+        Me.btn_stn3_cyl4_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn3_cyl4_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn3_cyl4_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn3_cyl4_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn3_cyl4_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn3_cyl4_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn3_cyl4_fw.Name = "btn_stn3_cyl4_fw"
+        Me.btn_stn3_cyl4_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn3_cyl4_fw.TabIndex = 0
+        Me.btn_stn3_cyl4_fw.Text = "Forward"
+        Me.btn_stn3_cyl4_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn3_cyl4_fw.UseVisualStyleBackColor = True
         '
         'GroupBox8
         '
@@ -631,6 +787,17 @@ Partial Class ManualForm
         Me.Label7.TabIndex = 46
         Me.Label7.Text = "Minimun"
         '
+        'man_stn3_cyl2_min
+        '
+        Me.man_stn3_cyl2_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn3_cyl2_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn3_cyl2_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn3_cyl2_min.Name = "man_stn3_cyl2_min"
+        Me.man_stn3_cyl2_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn3_cyl2_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn3_cyl2_min.TabIndex = 3
+        Me.man_stn3_cyl2_min.TabStop = False
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -641,6 +808,17 @@ Partial Class ManualForm
         Me.Label8.Size = New System.Drawing.Size(73, 18)
         Me.Label8.TabIndex = 2
         Me.Label8.Text = "Maximum"
+        '
+        'man_stn3_cyl2_max
+        '
+        Me.man_stn3_cyl2_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn3_cyl2_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn3_cyl2_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn3_cyl2_max.Name = "man_stn3_cyl2_max"
+        Me.man_stn3_cyl2_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn3_cyl2_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn3_cyl2_max.TabIndex = 1
+        Me.man_stn3_cyl2_max.TabStop = False
         '
         'GroupBox16
         '
@@ -655,6 +833,36 @@ Partial Class ManualForm
         Me.GroupBox16.TabIndex = 4
         Me.GroupBox16.TabStop = False
         Me.GroupBox16.Text = "Button"
+        '
+        'btn_stn3_cyl2_bw
+        '
+        Me.btn_stn3_cyl2_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn3_cyl2_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn3_cyl2_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn3_cyl2_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn3_cyl2_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn3_cyl2_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn3_cyl2_bw.Name = "btn_stn3_cyl2_bw"
+        Me.btn_stn3_cyl2_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn3_cyl2_bw.TabIndex = 46
+        Me.btn_stn3_cyl2_bw.Text = "Backward"
+        Me.btn_stn3_cyl2_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn3_cyl2_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn3_cyl2_fw
+        '
+        Me.btn_stn3_cyl2_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn3_cyl2_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn3_cyl2_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn3_cyl2_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn3_cyl2_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn3_cyl2_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn3_cyl2_fw.Name = "btn_stn3_cyl2_fw"
+        Me.btn_stn3_cyl2_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn3_cyl2_fw.TabIndex = 0
+        Me.btn_stn3_cyl2_fw.Text = "Forward"
+        Me.btn_stn3_cyl2_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn3_cyl2_fw.UseVisualStyleBackColor = True
         '
         'GroupBox70
         '
@@ -698,6 +906,17 @@ Partial Class ManualForm
         Me.Label6.TabIndex = 46
         Me.Label6.Text = "Minimun"
         '
+        'man_stn3_cyl1_min
+        '
+        Me.man_stn3_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn3_cyl1_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn3_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn3_cyl1_min.Name = "man_stn3_cyl1_min"
+        Me.man_stn3_cyl1_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn3_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn3_cyl1_min.TabIndex = 3
+        Me.man_stn3_cyl1_min.TabStop = False
+        '
         'Label53
         '
         Me.Label53.AutoSize = True
@@ -708,6 +927,17 @@ Partial Class ManualForm
         Me.Label53.Size = New System.Drawing.Size(73, 18)
         Me.Label53.TabIndex = 2
         Me.Label53.Text = "Maximum"
+        '
+        'man_stn3_cyl1_max
+        '
+        Me.man_stn3_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn3_cyl1_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn3_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn3_cyl1_max.Name = "man_stn3_cyl1_max"
+        Me.man_stn3_cyl1_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn3_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn3_cyl1_max.TabIndex = 1
+        Me.man_stn3_cyl1_max.TabStop = False
         '
         'GroupBox71
         '
@@ -723,11 +953,41 @@ Partial Class ManualForm
         Me.GroupBox71.TabStop = False
         Me.GroupBox71.Text = "Button"
         '
+        'btn_stn3_cyl1_bw
+        '
+        Me.btn_stn3_cyl1_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn3_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn3_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn3_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn3_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn3_cyl1_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn3_cyl1_bw.Name = "btn_stn3_cyl1_bw"
+        Me.btn_stn3_cyl1_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn3_cyl1_bw.TabIndex = 46
+        Me.btn_stn3_cyl1_bw.Text = "Backward"
+        Me.btn_stn3_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn3_cyl1_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn3_cyl1_fw
+        '
+        Me.btn_stn3_cyl1_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn3_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn3_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn3_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn3_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn3_cyl1_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn3_cyl1_fw.Name = "btn_stn3_cyl1_fw"
+        Me.btn_stn3_cyl1_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn3_cyl1_fw.TabIndex = 0
+        Me.btn_stn3_cyl1_fw.Text = "Forward"
+        Me.btn_stn3_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn3_cyl1_fw.UseVisualStyleBackColor = True
+        '
         'gb_st4_man
         '
         Me.gb_st4_man.Controls.Add(Me.GroupBox5)
         Me.gb_st4_man.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_st4_man.Location = New System.Drawing.Point(136, 157)
+        Me.gb_st4_man.Location = New System.Drawing.Point(136, 146)
         Me.gb_st4_man.Name = "gb_st4_man"
         Me.gb_st4_man.Size = New System.Drawing.Size(1150, 687)
         Me.gb_st4_man.TabIndex = 50
@@ -777,6 +1037,17 @@ Partial Class ManualForm
         Me.Label4.TabIndex = 46
         Me.Label4.Text = "Minimun"
         '
+        'man_stn4_cyl1_min
+        '
+        Me.man_stn4_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn4_cyl1_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn4_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn4_cyl1_min.Name = "man_stn4_cyl1_min"
+        Me.man_stn4_cyl1_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn4_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn4_cyl1_min.TabIndex = 3
+        Me.man_stn4_cyl1_min.TabStop = False
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -787,6 +1058,17 @@ Partial Class ManualForm
         Me.Label5.Size = New System.Drawing.Size(73, 18)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Maximum"
+        '
+        'man_stn4_cyl1_max
+        '
+        Me.man_stn4_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn4_cyl1_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn4_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn4_cyl1_max.Name = "man_stn4_cyl1_max"
+        Me.man_stn4_cyl1_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn4_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn4_cyl1_max.TabIndex = 1
+        Me.man_stn4_cyl1_max.TabStop = False
         '
         'GroupBox81
         '
@@ -802,13 +1084,43 @@ Partial Class ManualForm
         Me.GroupBox81.TabStop = False
         Me.GroupBox81.Text = "Button"
         '
+        'btn_stn4_cyl1_bw
+        '
+        Me.btn_stn4_cyl1_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn4_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn4_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn4_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn4_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn4_cyl1_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn4_cyl1_bw.Name = "btn_stn4_cyl1_bw"
+        Me.btn_stn4_cyl1_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn4_cyl1_bw.TabIndex = 46
+        Me.btn_stn4_cyl1_bw.Text = "Backward"
+        Me.btn_stn4_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn4_cyl1_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn4_cyl1_fw
+        '
+        Me.btn_stn4_cyl1_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn4_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn4_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn4_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn4_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn4_cyl1_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn4_cyl1_fw.Name = "btn_stn4_cyl1_fw"
+        Me.btn_stn4_cyl1_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn4_cyl1_fw.TabIndex = 0
+        Me.btn_stn4_cyl1_fw.Text = "Forward"
+        Me.btn_stn4_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn4_cyl1_fw.UseVisualStyleBackColor = True
+        '
         'gb_st5_man
         '
         Me.gb_st5_man.Controls.Add(Me.GroupBox24)
         Me.gb_st5_man.Controls.Add(Me.GroupBox21)
         Me.gb_st5_man.Controls.Add(Me.GroupBox18)
         Me.gb_st5_man.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_st5_man.Location = New System.Drawing.Point(136, 157)
+        Me.gb_st5_man.Location = New System.Drawing.Point(136, 146)
         Me.gb_st5_man.Name = "gb_st5_man"
         Me.gb_st5_man.Size = New System.Drawing.Size(1150, 687)
         Me.gb_st5_man.TabIndex = 51
@@ -858,6 +1170,17 @@ Partial Class ManualForm
         Me.Label19.TabIndex = 46
         Me.Label19.Text = "Minimun"
         '
+        'man_stn5_cyl3_min
+        '
+        Me.man_stn5_cyl3_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn5_cyl3_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn5_cyl3_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn5_cyl3_min.Name = "man_stn5_cyl3_min"
+        Me.man_stn5_cyl3_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn5_cyl3_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn5_cyl3_min.TabIndex = 3
+        Me.man_stn5_cyl3_min.TabStop = False
+        '
         'Label20
         '
         Me.Label20.AutoSize = True
@@ -868,6 +1191,17 @@ Partial Class ManualForm
         Me.Label20.Size = New System.Drawing.Size(73, 18)
         Me.Label20.TabIndex = 2
         Me.Label20.Text = "Maximum"
+        '
+        'man_stn5_cyl3_max
+        '
+        Me.man_stn5_cyl3_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn5_cyl3_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn5_cyl3_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn5_cyl3_max.Name = "man_stn5_cyl3_max"
+        Me.man_stn5_cyl3_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn5_cyl3_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn5_cyl3_max.TabIndex = 1
+        Me.man_stn5_cyl3_max.TabStop = False
         '
         'GroupBox26
         '
@@ -882,6 +1216,36 @@ Partial Class ManualForm
         Me.GroupBox26.TabIndex = 4
         Me.GroupBox26.TabStop = False
         Me.GroupBox26.Text = "Button"
+        '
+        'btn_stn5_cyl3_bw
+        '
+        Me.btn_stn5_cyl3_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn5_cyl3_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn5_cyl3_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn5_cyl3_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn5_cyl3_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn5_cyl3_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn5_cyl3_bw.Name = "btn_stn5_cyl3_bw"
+        Me.btn_stn5_cyl3_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn5_cyl3_bw.TabIndex = 46
+        Me.btn_stn5_cyl3_bw.Text = "Backward"
+        Me.btn_stn5_cyl3_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn5_cyl3_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn5_cyl3_fw
+        '
+        Me.btn_stn5_cyl3_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn5_cyl3_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn5_cyl3_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn5_cyl3_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn5_cyl3_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn5_cyl3_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn5_cyl3_fw.Name = "btn_stn5_cyl3_fw"
+        Me.btn_stn5_cyl3_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn5_cyl3_fw.TabIndex = 0
+        Me.btn_stn5_cyl3_fw.Text = "Forward"
+        Me.btn_stn5_cyl3_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn5_cyl3_fw.UseVisualStyleBackColor = True
         '
         'GroupBox21
         '
@@ -925,6 +1289,17 @@ Partial Class ManualForm
         Me.Label17.TabIndex = 46
         Me.Label17.Text = "Minimun"
         '
+        'man_stn5_cyl2_min
+        '
+        Me.man_stn5_cyl2_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn5_cyl2_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn5_cyl2_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn5_cyl2_min.Name = "man_stn5_cyl2_min"
+        Me.man_stn5_cyl2_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn5_cyl2_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn5_cyl2_min.TabIndex = 3
+        Me.man_stn5_cyl2_min.TabStop = False
+        '
         'Label18
         '
         Me.Label18.AutoSize = True
@@ -935,6 +1310,17 @@ Partial Class ManualForm
         Me.Label18.Size = New System.Drawing.Size(73, 18)
         Me.Label18.TabIndex = 2
         Me.Label18.Text = "Maximum"
+        '
+        'man_stn5_cyl2_max
+        '
+        Me.man_stn5_cyl2_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn5_cyl2_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn5_cyl2_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn5_cyl2_max.Name = "man_stn5_cyl2_max"
+        Me.man_stn5_cyl2_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn5_cyl2_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn5_cyl2_max.TabIndex = 1
+        Me.man_stn5_cyl2_max.TabStop = False
         '
         'GroupBox23
         '
@@ -949,6 +1335,36 @@ Partial Class ManualForm
         Me.GroupBox23.TabIndex = 4
         Me.GroupBox23.TabStop = False
         Me.GroupBox23.Text = "Button"
+        '
+        'btn_stn5_cyl2_bw
+        '
+        Me.btn_stn5_cyl2_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn5_cyl2_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn5_cyl2_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn5_cyl2_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn5_cyl2_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn5_cyl2_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn5_cyl2_bw.Name = "btn_stn5_cyl2_bw"
+        Me.btn_stn5_cyl2_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn5_cyl2_bw.TabIndex = 46
+        Me.btn_stn5_cyl2_bw.Text = "Backward"
+        Me.btn_stn5_cyl2_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn5_cyl2_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn5_cyl2_fw
+        '
+        Me.btn_stn5_cyl2_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn5_cyl2_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn5_cyl2_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn5_cyl2_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn5_cyl2_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn5_cyl2_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn5_cyl2_fw.Name = "btn_stn5_cyl2_fw"
+        Me.btn_stn5_cyl2_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn5_cyl2_fw.TabIndex = 0
+        Me.btn_stn5_cyl2_fw.Text = "Forward"
+        Me.btn_stn5_cyl2_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn5_cyl2_fw.UseVisualStyleBackColor = True
         '
         'GroupBox18
         '
@@ -992,6 +1408,17 @@ Partial Class ManualForm
         Me.Label15.TabIndex = 46
         Me.Label15.Text = "Minimun"
         '
+        'man_stn5_cyl1_min
+        '
+        Me.man_stn5_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn5_cyl1_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn5_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn5_cyl1_min.Name = "man_stn5_cyl1_min"
+        Me.man_stn5_cyl1_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn5_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn5_cyl1_min.TabIndex = 3
+        Me.man_stn5_cyl1_min.TabStop = False
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
@@ -1002,6 +1429,17 @@ Partial Class ManualForm
         Me.Label16.Size = New System.Drawing.Size(73, 18)
         Me.Label16.TabIndex = 2
         Me.Label16.Text = "Maximum"
+        '
+        'man_stn5_cyl1_max
+        '
+        Me.man_stn5_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn5_cyl1_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn5_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn5_cyl1_max.Name = "man_stn5_cyl1_max"
+        Me.man_stn5_cyl1_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn5_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn5_cyl1_max.TabIndex = 1
+        Me.man_stn5_cyl1_max.TabStop = False
         '
         'GroupBox20
         '
@@ -1017,13 +1455,43 @@ Partial Class ManualForm
         Me.GroupBox20.TabStop = False
         Me.GroupBox20.Text = "Button"
         '
+        'btn_stn5_cyl1_bw
+        '
+        Me.btn_stn5_cyl1_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn5_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn5_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn5_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn5_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn5_cyl1_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn5_cyl1_bw.Name = "btn_stn5_cyl1_bw"
+        Me.btn_stn5_cyl1_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn5_cyl1_bw.TabIndex = 46
+        Me.btn_stn5_cyl1_bw.Text = "Backward"
+        Me.btn_stn5_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn5_cyl1_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn5_cyl1_fw
+        '
+        Me.btn_stn5_cyl1_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn5_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn5_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn5_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn5_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn5_cyl1_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn5_cyl1_fw.Name = "btn_stn5_cyl1_fw"
+        Me.btn_stn5_cyl1_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn5_cyl1_fw.TabIndex = 0
+        Me.btn_stn5_cyl1_fw.Text = "Forward"
+        Me.btn_stn5_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn5_cyl1_fw.UseVisualStyleBackColor = True
+        '
         'gb_st6_man
         '
         Me.gb_st6_man.Controls.Add(Me.GroupBox27)
         Me.gb_st6_man.Controls.Add(Me.GroupBox30)
         Me.gb_st6_man.Controls.Add(Me.GroupBox33)
         Me.gb_st6_man.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_st6_man.Location = New System.Drawing.Point(136, 157)
+        Me.gb_st6_man.Location = New System.Drawing.Point(136, 146)
         Me.gb_st6_man.Name = "gb_st6_man"
         Me.gb_st6_man.Size = New System.Drawing.Size(1150, 687)
         Me.gb_st6_man.TabIndex = 52
@@ -1073,6 +1541,17 @@ Partial Class ManualForm
         Me.Label21.TabIndex = 46
         Me.Label21.Text = "Minimun"
         '
+        'man_stn6_cyl3_min
+        '
+        Me.man_stn6_cyl3_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn6_cyl3_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn6_cyl3_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn6_cyl3_min.Name = "man_stn6_cyl3_min"
+        Me.man_stn6_cyl3_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn6_cyl3_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn6_cyl3_min.TabIndex = 3
+        Me.man_stn6_cyl3_min.TabStop = False
+        '
         'Label22
         '
         Me.Label22.AutoSize = True
@@ -1083,6 +1562,17 @@ Partial Class ManualForm
         Me.Label22.Size = New System.Drawing.Size(73, 18)
         Me.Label22.TabIndex = 2
         Me.Label22.Text = "Maximum"
+        '
+        'man_stn6_cyl3_max
+        '
+        Me.man_stn6_cyl3_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn6_cyl3_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn6_cyl3_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn6_cyl3_max.Name = "man_stn6_cyl3_max"
+        Me.man_stn6_cyl3_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn6_cyl3_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn6_cyl3_max.TabIndex = 1
+        Me.man_stn6_cyl3_max.TabStop = False
         '
         'GroupBox29
         '
@@ -1097,6 +1587,36 @@ Partial Class ManualForm
         Me.GroupBox29.TabIndex = 4
         Me.GroupBox29.TabStop = False
         Me.GroupBox29.Text = "Button"
+        '
+        'btn_stn6_cyl3_bw
+        '
+        Me.btn_stn6_cyl3_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn6_cyl3_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn6_cyl3_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn6_cyl3_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn6_cyl3_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn6_cyl3_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn6_cyl3_bw.Name = "btn_stn6_cyl3_bw"
+        Me.btn_stn6_cyl3_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn6_cyl3_bw.TabIndex = 46
+        Me.btn_stn6_cyl3_bw.Text = "Backward"
+        Me.btn_stn6_cyl3_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn6_cyl3_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn6_cyl3_fw
+        '
+        Me.btn_stn6_cyl3_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn6_cyl3_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn6_cyl3_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn6_cyl3_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn6_cyl3_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn6_cyl3_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn6_cyl3_fw.Name = "btn_stn6_cyl3_fw"
+        Me.btn_stn6_cyl3_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn6_cyl3_fw.TabIndex = 0
+        Me.btn_stn6_cyl3_fw.Text = "Forward"
+        Me.btn_stn6_cyl3_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn6_cyl3_fw.UseVisualStyleBackColor = True
         '
         'GroupBox30
         '
@@ -1140,6 +1660,17 @@ Partial Class ManualForm
         Me.Label23.TabIndex = 46
         Me.Label23.Text = "Minimun"
         '
+        'man_stn6_cyl2_min
+        '
+        Me.man_stn6_cyl2_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn6_cyl2_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn6_cyl2_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn6_cyl2_min.Name = "man_stn6_cyl2_min"
+        Me.man_stn6_cyl2_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn6_cyl2_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn6_cyl2_min.TabIndex = 3
+        Me.man_stn6_cyl2_min.TabStop = False
+        '
         'Label24
         '
         Me.Label24.AutoSize = True
@@ -1150,6 +1681,17 @@ Partial Class ManualForm
         Me.Label24.Size = New System.Drawing.Size(73, 18)
         Me.Label24.TabIndex = 2
         Me.Label24.Text = "Maximum"
+        '
+        'man_stn6_cyl2_max
+        '
+        Me.man_stn6_cyl2_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn6_cyl2_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn6_cyl2_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn6_cyl2_max.Name = "man_stn6_cyl2_max"
+        Me.man_stn6_cyl2_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn6_cyl2_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn6_cyl2_max.TabIndex = 1
+        Me.man_stn6_cyl2_max.TabStop = False
         '
         'GroupBox32
         '
@@ -1164,6 +1706,36 @@ Partial Class ManualForm
         Me.GroupBox32.TabIndex = 4
         Me.GroupBox32.TabStop = False
         Me.GroupBox32.Text = "Button"
+        '
+        'btn_stn6_cyl2_bw
+        '
+        Me.btn_stn6_cyl2_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn6_cyl2_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn6_cyl2_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn6_cyl2_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn6_cyl2_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn6_cyl2_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn6_cyl2_bw.Name = "btn_stn6_cyl2_bw"
+        Me.btn_stn6_cyl2_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn6_cyl2_bw.TabIndex = 46
+        Me.btn_stn6_cyl2_bw.Text = "Backward"
+        Me.btn_stn6_cyl2_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn6_cyl2_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn6_cyl2_fw
+        '
+        Me.btn_stn6_cyl2_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn6_cyl2_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn6_cyl2_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn6_cyl2_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn6_cyl2_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn6_cyl2_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn6_cyl2_fw.Name = "btn_stn6_cyl2_fw"
+        Me.btn_stn6_cyl2_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn6_cyl2_fw.TabIndex = 0
+        Me.btn_stn6_cyl2_fw.Text = "Forward"
+        Me.btn_stn6_cyl2_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn6_cyl2_fw.UseVisualStyleBackColor = True
         '
         'GroupBox33
         '
@@ -1207,6 +1779,17 @@ Partial Class ManualForm
         Me.Label25.TabIndex = 46
         Me.Label25.Text = "Minimun"
         '
+        'man_stn6_cyl1_min
+        '
+        Me.man_stn6_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn6_cyl1_min.Location = New System.Drawing.Point(8, 147)
+        Me.man_stn6_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn6_cyl1_min.Name = "man_stn6_cyl1_min"
+        Me.man_stn6_cyl1_min.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn6_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn6_cyl1_min.TabIndex = 3
+        Me.man_stn6_cyl1_min.TabStop = False
+        '
         'Label26
         '
         Me.Label26.AutoSize = True
@@ -1217,6 +1800,17 @@ Partial Class ManualForm
         Me.Label26.Size = New System.Drawing.Size(73, 18)
         Me.Label26.TabIndex = 2
         Me.Label26.Text = "Maximum"
+        '
+        'man_stn6_cyl1_max
+        '
+        Me.man_stn6_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.man_stn6_cyl1_max.Location = New System.Drawing.Point(8, 51)
+        Me.man_stn6_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
+        Me.man_stn6_cyl1_max.Name = "man_stn6_cyl1_max"
+        Me.man_stn6_cyl1_max.Size = New System.Drawing.Size(107, 41)
+        Me.man_stn6_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.man_stn6_cyl1_max.TabIndex = 1
+        Me.man_stn6_cyl1_max.TabStop = False
         '
         'GroupBox35
         '
@@ -1231,6 +1825,36 @@ Partial Class ManualForm
         Me.GroupBox35.TabIndex = 4
         Me.GroupBox35.TabStop = False
         Me.GroupBox35.Text = "Button"
+        '
+        'btn_stn6_cyl1_bw
+        '
+        Me.btn_stn6_cyl1_bw.FlatAppearance.BorderSize = 0
+        Me.btn_stn6_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn6_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn6_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn6_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn6_cyl1_bw.Location = New System.Drawing.Point(7, 125)
+        Me.btn_stn6_cyl1_bw.Name = "btn_stn6_cyl1_bw"
+        Me.btn_stn6_cyl1_bw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn6_cyl1_bw.TabIndex = 46
+        Me.btn_stn6_cyl1_bw.Text = "Backward"
+        Me.btn_stn6_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn6_cyl1_bw.UseVisualStyleBackColor = True
+        '
+        'btn_stn6_cyl1_fw
+        '
+        Me.btn_stn6_cyl1_fw.FlatAppearance.BorderSize = 0
+        Me.btn_stn6_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stn6_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stn6_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_stn6_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
+        Me.btn_stn6_cyl1_fw.Location = New System.Drawing.Point(7, 29)
+        Me.btn_stn6_cyl1_fw.Name = "btn_stn6_cyl1_fw"
+        Me.btn_stn6_cyl1_fw.Size = New System.Drawing.Size(100, 90)
+        Me.btn_stn6_cyl1_fw.TabIndex = 0
+        Me.btn_stn6_cyl1_fw.Text = "Forward"
+        Me.btn_stn6_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btn_stn6_cyl1_fw.UseVisualStyleBackColor = True
         '
         'GroupBox74
         '
@@ -1391,6 +2015,16 @@ Partial Class ManualForm
         Me.btn_Rfesto_jog_min.Text = "JOG -"
         Me.btn_Rfesto_jog_min.UseVisualStyleBackColor = False
         '
+        'ind_stn3_Rfesto_emg
+        '
+        Me.ind_stn3_Rfesto_emg.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Rfesto_emg.Location = New System.Drawing.Point(460, 53)
+        Me.ind_stn3_Rfesto_emg.Name = "ind_stn3_Rfesto_emg"
+        Me.ind_stn3_Rfesto_emg.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Rfesto_emg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Rfesto_emg.TabIndex = 0
+        Me.ind_stn3_Rfesto_emg.TabStop = False
+        '
         'tbx_Rfesto_alarm
         '
         Me.tbx_Rfesto_alarm.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1398,6 +2032,16 @@ Partial Class ManualForm
         Me.tbx_Rfesto_alarm.Name = "tbx_Rfesto_alarm"
         Me.tbx_Rfesto_alarm.Size = New System.Drawing.Size(309, 26)
         Me.tbx_Rfesto_alarm.TabIndex = 2
+        '
+        'ind_stn3_Rfesto_svon
+        '
+        Me.ind_stn3_Rfesto_svon.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Rfesto_svon.Location = New System.Drawing.Point(350, 53)
+        Me.ind_stn3_Rfesto_svon.Name = "ind_stn3_Rfesto_svon"
+        Me.ind_stn3_Rfesto_svon.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Rfesto_svon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Rfesto_svon.TabIndex = 0
+        Me.ind_stn3_Rfesto_svon.TabStop = False
         '
         'tbx_Rfesto_speed
         '
@@ -1407,6 +2051,16 @@ Partial Class ManualForm
         Me.tbx_Rfesto_speed.Size = New System.Drawing.Size(309, 26)
         Me.tbx_Rfesto_speed.TabIndex = 2
         '
+        'ind_stn3_Rfesto_alm
+        '
+        Me.ind_stn3_Rfesto_alm.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Rfesto_alm.Location = New System.Drawing.Point(240, 53)
+        Me.ind_stn3_Rfesto_alm.Name = "ind_stn3_Rfesto_alm"
+        Me.ind_stn3_Rfesto_alm.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Rfesto_alm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Rfesto_alm.TabIndex = 0
+        Me.ind_stn3_Rfesto_alm.TabStop = False
+        '
         'tbx_Rfesto_position
         '
         Me.tbx_Rfesto_position.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1414,6 +2068,26 @@ Partial Class ManualForm
         Me.tbx_Rfesto_position.Name = "tbx_Rfesto_position"
         Me.tbx_Rfesto_position.Size = New System.Drawing.Size(309, 26)
         Me.tbx_Rfesto_position.TabIndex = 2
+        '
+        'ind_stn3_Rfesto_hend
+        '
+        Me.ind_stn3_Rfesto_hend.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Rfesto_hend.Location = New System.Drawing.Point(130, 53)
+        Me.ind_stn3_Rfesto_hend.Name = "ind_stn3_Rfesto_hend"
+        Me.ind_stn3_Rfesto_hend.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Rfesto_hend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Rfesto_hend.TabIndex = 0
+        Me.ind_stn3_Rfesto_hend.TabStop = False
+        '
+        'ind_stn3_Rfesto_pend
+        '
+        Me.ind_stn3_Rfesto_pend.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Rfesto_pend.Location = New System.Drawing.Point(20, 53)
+        Me.ind_stn3_Rfesto_pend.Name = "ind_stn3_Rfesto_pend"
+        Me.ind_stn3_Rfesto_pend.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Rfesto_pend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Rfesto_pend.TabIndex = 0
+        Me.ind_stn3_Rfesto_pend.TabStop = False
         '
         'Label103
         '
@@ -1659,12 +2333,62 @@ Partial Class ManualForm
         Me.Label87.TabIndex = 1
         Me.Label87.Text = "PEND"
         '
+        'ind_stn3_Lfesto_emg
+        '
+        Me.ind_stn3_Lfesto_emg.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Lfesto_emg.Location = New System.Drawing.Point(460, 53)
+        Me.ind_stn3_Lfesto_emg.Name = "ind_stn3_Lfesto_emg"
+        Me.ind_stn3_Lfesto_emg.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Lfesto_emg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Lfesto_emg.TabIndex = 0
+        Me.ind_stn3_Lfesto_emg.TabStop = False
+        '
+        'ind_stn3_Lfesto_svon
+        '
+        Me.ind_stn3_Lfesto_svon.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Lfesto_svon.Location = New System.Drawing.Point(350, 53)
+        Me.ind_stn3_Lfesto_svon.Name = "ind_stn3_Lfesto_svon"
+        Me.ind_stn3_Lfesto_svon.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Lfesto_svon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Lfesto_svon.TabIndex = 0
+        Me.ind_stn3_Lfesto_svon.TabStop = False
+        '
+        'ind_stn3_Lfesto_alm
+        '
+        Me.ind_stn3_Lfesto_alm.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Lfesto_alm.Location = New System.Drawing.Point(240, 53)
+        Me.ind_stn3_Lfesto_alm.Name = "ind_stn3_Lfesto_alm"
+        Me.ind_stn3_Lfesto_alm.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Lfesto_alm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Lfesto_alm.TabIndex = 0
+        Me.ind_stn3_Lfesto_alm.TabStop = False
+        '
+        'ind_stn3_Lfesto_hend
+        '
+        Me.ind_stn3_Lfesto_hend.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Lfesto_hend.Location = New System.Drawing.Point(130, 53)
+        Me.ind_stn3_Lfesto_hend.Name = "ind_stn3_Lfesto_hend"
+        Me.ind_stn3_Lfesto_hend.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Lfesto_hend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Lfesto_hend.TabIndex = 0
+        Me.ind_stn3_Lfesto_hend.TabStop = False
+        '
+        'ind_stn3_Lfesto_pend
+        '
+        Me.ind_stn3_Lfesto_pend.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
+        Me.ind_stn3_Lfesto_pend.Location = New System.Drawing.Point(20, 53)
+        Me.ind_stn3_Lfesto_pend.Name = "ind_stn3_Lfesto_pend"
+        Me.ind_stn3_Lfesto_pend.Size = New System.Drawing.Size(50, 50)
+        Me.ind_stn3_Lfesto_pend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn3_Lfesto_pend.TabIndex = 0
+        Me.ind_stn3_Lfesto_pend.TabStop = False
+        '
         'tab_st3_man
         '
         Me.tab_st3_man.Controls.Add(Me.TabPage1)
         Me.tab_st3_man.Controls.Add(Me.TabPage2)
         Me.tab_st3_man.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tab_st3_man.Location = New System.Drawing.Point(136, 157)
+        Me.tab_st3_man.Location = New System.Drawing.Point(136, 146)
         Me.tab_st3_man.Name = "tab_st3_man"
         Me.tab_st3_man.SelectedIndex = 0
         Me.tab_st3_man.Size = New System.Drawing.Size(1150, 687)
@@ -1824,730 +2548,6 @@ Partial Class ManualForm
         Me.pb_status_bar.TabIndex = 28
         Me.pb_status_bar.TabStop = False
         '
-        'man_stn1_cyl1_min
-        '
-        Me.man_stn1_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn1_cyl1_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn1_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn1_cyl1_min.Name = "man_stn1_cyl1_min"
-        Me.man_stn1_cyl1_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn1_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn1_cyl1_min.TabIndex = 3
-        Me.man_stn1_cyl1_min.TabStop = False
-        '
-        'man_stn1_cyl1_max
-        '
-        Me.man_stn1_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn1_cyl1_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn1_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn1_cyl1_max.Name = "man_stn1_cyl1_max"
-        Me.man_stn1_cyl1_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn1_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn1_cyl1_max.TabIndex = 1
-        Me.man_stn1_cyl1_max.TabStop = False
-        '
-        'btn_stn1_cyl1_bw
-        '
-        Me.btn_stn1_cyl1_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn1_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn1_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn1_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn1_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn1_cyl1_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn1_cyl1_bw.Name = "btn_stn1_cyl1_bw"
-        Me.btn_stn1_cyl1_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn1_cyl1_bw.TabIndex = 46
-        Me.btn_stn1_cyl1_bw.Text = "Backward"
-        Me.btn_stn1_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn1_cyl1_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn1_cyl1_fw
-        '
-        Me.btn_stn1_cyl1_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn1_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn1_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn1_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn1_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn1_cyl1_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn1_cyl1_fw.Name = "btn_stn1_cyl1_fw"
-        Me.btn_stn1_cyl1_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn1_cyl1_fw.TabIndex = 0
-        Me.btn_stn1_cyl1_fw.Text = "Forward"
-        Me.btn_stn1_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn1_cyl1_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn6_cyl3_min
-        '
-        Me.man_stn6_cyl3_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn6_cyl3_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn6_cyl3_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn6_cyl3_min.Name = "man_stn6_cyl3_min"
-        Me.man_stn6_cyl3_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn6_cyl3_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn6_cyl3_min.TabIndex = 3
-        Me.man_stn6_cyl3_min.TabStop = False
-        '
-        'man_stn6_cyl3_max
-        '
-        Me.man_stn6_cyl3_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn6_cyl3_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn6_cyl3_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn6_cyl3_max.Name = "man_stn6_cyl3_max"
-        Me.man_stn6_cyl3_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn6_cyl3_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn6_cyl3_max.TabIndex = 1
-        Me.man_stn6_cyl3_max.TabStop = False
-        '
-        'btn_stn6_cyl3_bw
-        '
-        Me.btn_stn6_cyl3_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn6_cyl3_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn6_cyl3_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn6_cyl3_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn6_cyl3_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn6_cyl3_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn6_cyl3_bw.Name = "btn_stn6_cyl3_bw"
-        Me.btn_stn6_cyl3_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn6_cyl3_bw.TabIndex = 46
-        Me.btn_stn6_cyl3_bw.Text = "Backward"
-        Me.btn_stn6_cyl3_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn6_cyl3_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn6_cyl3_fw
-        '
-        Me.btn_stn6_cyl3_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn6_cyl3_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn6_cyl3_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn6_cyl3_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn6_cyl3_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn6_cyl3_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn6_cyl3_fw.Name = "btn_stn6_cyl3_fw"
-        Me.btn_stn6_cyl3_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn6_cyl3_fw.TabIndex = 0
-        Me.btn_stn6_cyl3_fw.Text = "Forward"
-        Me.btn_stn6_cyl3_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn6_cyl3_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn6_cyl2_min
-        '
-        Me.man_stn6_cyl2_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn6_cyl2_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn6_cyl2_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn6_cyl2_min.Name = "man_stn6_cyl2_min"
-        Me.man_stn6_cyl2_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn6_cyl2_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn6_cyl2_min.TabIndex = 3
-        Me.man_stn6_cyl2_min.TabStop = False
-        '
-        'man_stn6_cyl2_max
-        '
-        Me.man_stn6_cyl2_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn6_cyl2_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn6_cyl2_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn6_cyl2_max.Name = "man_stn6_cyl2_max"
-        Me.man_stn6_cyl2_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn6_cyl2_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn6_cyl2_max.TabIndex = 1
-        Me.man_stn6_cyl2_max.TabStop = False
-        '
-        'btn_stn6_cyl2_bw
-        '
-        Me.btn_stn6_cyl2_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn6_cyl2_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn6_cyl2_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn6_cyl2_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn6_cyl2_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn6_cyl2_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn6_cyl2_bw.Name = "btn_stn6_cyl2_bw"
-        Me.btn_stn6_cyl2_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn6_cyl2_bw.TabIndex = 46
-        Me.btn_stn6_cyl2_bw.Text = "Backward"
-        Me.btn_stn6_cyl2_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn6_cyl2_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn6_cyl2_fw
-        '
-        Me.btn_stn6_cyl2_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn6_cyl2_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn6_cyl2_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn6_cyl2_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn6_cyl2_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn6_cyl2_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn6_cyl2_fw.Name = "btn_stn6_cyl2_fw"
-        Me.btn_stn6_cyl2_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn6_cyl2_fw.TabIndex = 0
-        Me.btn_stn6_cyl2_fw.Text = "Forward"
-        Me.btn_stn6_cyl2_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn6_cyl2_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn6_cyl1_min
-        '
-        Me.man_stn6_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn6_cyl1_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn6_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn6_cyl1_min.Name = "man_stn6_cyl1_min"
-        Me.man_stn6_cyl1_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn6_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn6_cyl1_min.TabIndex = 3
-        Me.man_stn6_cyl1_min.TabStop = False
-        '
-        'man_stn6_cyl1_max
-        '
-        Me.man_stn6_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn6_cyl1_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn6_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn6_cyl1_max.Name = "man_stn6_cyl1_max"
-        Me.man_stn6_cyl1_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn6_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn6_cyl1_max.TabIndex = 1
-        Me.man_stn6_cyl1_max.TabStop = False
-        '
-        'btn_stn6_cyl1_bw
-        '
-        Me.btn_stn6_cyl1_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn6_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn6_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn6_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn6_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn6_cyl1_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn6_cyl1_bw.Name = "btn_stn6_cyl1_bw"
-        Me.btn_stn6_cyl1_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn6_cyl1_bw.TabIndex = 46
-        Me.btn_stn6_cyl1_bw.Text = "Backward"
-        Me.btn_stn6_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn6_cyl1_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn6_cyl1_fw
-        '
-        Me.btn_stn6_cyl1_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn6_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn6_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn6_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn6_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn6_cyl1_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn6_cyl1_fw.Name = "btn_stn6_cyl1_fw"
-        Me.btn_stn6_cyl1_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn6_cyl1_fw.TabIndex = 0
-        Me.btn_stn6_cyl1_fw.Text = "Forward"
-        Me.btn_stn6_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn6_cyl1_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn5_cyl3_min
-        '
-        Me.man_stn5_cyl3_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn5_cyl3_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn5_cyl3_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn5_cyl3_min.Name = "man_stn5_cyl3_min"
-        Me.man_stn5_cyl3_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn5_cyl3_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn5_cyl3_min.TabIndex = 3
-        Me.man_stn5_cyl3_min.TabStop = False
-        '
-        'man_stn5_cyl3_max
-        '
-        Me.man_stn5_cyl3_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn5_cyl3_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn5_cyl3_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn5_cyl3_max.Name = "man_stn5_cyl3_max"
-        Me.man_stn5_cyl3_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn5_cyl3_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn5_cyl3_max.TabIndex = 1
-        Me.man_stn5_cyl3_max.TabStop = False
-        '
-        'btn_stn5_cyl3_bw
-        '
-        Me.btn_stn5_cyl3_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn5_cyl3_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn5_cyl3_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn5_cyl3_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn5_cyl3_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn5_cyl3_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn5_cyl3_bw.Name = "btn_stn5_cyl3_bw"
-        Me.btn_stn5_cyl3_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn5_cyl3_bw.TabIndex = 46
-        Me.btn_stn5_cyl3_bw.Text = "Backward"
-        Me.btn_stn5_cyl3_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn5_cyl3_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn5_cyl3_fw
-        '
-        Me.btn_stn5_cyl3_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn5_cyl3_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn5_cyl3_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn5_cyl3_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn5_cyl3_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn5_cyl3_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn5_cyl3_fw.Name = "btn_stn5_cyl3_fw"
-        Me.btn_stn5_cyl3_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn5_cyl3_fw.TabIndex = 0
-        Me.btn_stn5_cyl3_fw.Text = "Forward"
-        Me.btn_stn5_cyl3_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn5_cyl3_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn5_cyl2_min
-        '
-        Me.man_stn5_cyl2_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn5_cyl2_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn5_cyl2_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn5_cyl2_min.Name = "man_stn5_cyl2_min"
-        Me.man_stn5_cyl2_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn5_cyl2_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn5_cyl2_min.TabIndex = 3
-        Me.man_stn5_cyl2_min.TabStop = False
-        '
-        'man_stn5_cyl2_max
-        '
-        Me.man_stn5_cyl2_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn5_cyl2_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn5_cyl2_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn5_cyl2_max.Name = "man_stn5_cyl2_max"
-        Me.man_stn5_cyl2_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn5_cyl2_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn5_cyl2_max.TabIndex = 1
-        Me.man_stn5_cyl2_max.TabStop = False
-        '
-        'btn_stn5_cyl2_bw
-        '
-        Me.btn_stn5_cyl2_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn5_cyl2_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn5_cyl2_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn5_cyl2_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn5_cyl2_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn5_cyl2_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn5_cyl2_bw.Name = "btn_stn5_cyl2_bw"
-        Me.btn_stn5_cyl2_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn5_cyl2_bw.TabIndex = 46
-        Me.btn_stn5_cyl2_bw.Text = "Backward"
-        Me.btn_stn5_cyl2_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn5_cyl2_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn5_cyl2_fw
-        '
-        Me.btn_stn5_cyl2_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn5_cyl2_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn5_cyl2_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn5_cyl2_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn5_cyl2_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn5_cyl2_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn5_cyl2_fw.Name = "btn_stn5_cyl2_fw"
-        Me.btn_stn5_cyl2_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn5_cyl2_fw.TabIndex = 0
-        Me.btn_stn5_cyl2_fw.Text = "Forward"
-        Me.btn_stn5_cyl2_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn5_cyl2_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn5_cyl1_min
-        '
-        Me.man_stn5_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn5_cyl1_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn5_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn5_cyl1_min.Name = "man_stn5_cyl1_min"
-        Me.man_stn5_cyl1_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn5_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn5_cyl1_min.TabIndex = 3
-        Me.man_stn5_cyl1_min.TabStop = False
-        '
-        'man_stn5_cyl1_max
-        '
-        Me.man_stn5_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn5_cyl1_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn5_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn5_cyl1_max.Name = "man_stn5_cyl1_max"
-        Me.man_stn5_cyl1_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn5_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn5_cyl1_max.TabIndex = 1
-        Me.man_stn5_cyl1_max.TabStop = False
-        '
-        'btn_stn5_cyl1_bw
-        '
-        Me.btn_stn5_cyl1_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn5_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn5_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn5_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn5_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn5_cyl1_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn5_cyl1_bw.Name = "btn_stn5_cyl1_bw"
-        Me.btn_stn5_cyl1_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn5_cyl1_bw.TabIndex = 46
-        Me.btn_stn5_cyl1_bw.Text = "Backward"
-        Me.btn_stn5_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn5_cyl1_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn5_cyl1_fw
-        '
-        Me.btn_stn5_cyl1_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn5_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn5_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn5_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn5_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn5_cyl1_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn5_cyl1_fw.Name = "btn_stn5_cyl1_fw"
-        Me.btn_stn5_cyl1_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn5_cyl1_fw.TabIndex = 0
-        Me.btn_stn5_cyl1_fw.Text = "Forward"
-        Me.btn_stn5_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn5_cyl1_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn4_cyl1_min
-        '
-        Me.man_stn4_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn4_cyl1_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn4_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn4_cyl1_min.Name = "man_stn4_cyl1_min"
-        Me.man_stn4_cyl1_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn4_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn4_cyl1_min.TabIndex = 3
-        Me.man_stn4_cyl1_min.TabStop = False
-        '
-        'man_stn4_cyl1_max
-        '
-        Me.man_stn4_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn4_cyl1_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn4_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn4_cyl1_max.Name = "man_stn4_cyl1_max"
-        Me.man_stn4_cyl1_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn4_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn4_cyl1_max.TabIndex = 1
-        Me.man_stn4_cyl1_max.TabStop = False
-        '
-        'btn_stn4_cyl1_bw
-        '
-        Me.btn_stn4_cyl1_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn4_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn4_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn4_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn4_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn4_cyl1_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn4_cyl1_bw.Name = "btn_stn4_cyl1_bw"
-        Me.btn_stn4_cyl1_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn4_cyl1_bw.TabIndex = 46
-        Me.btn_stn4_cyl1_bw.Text = "Backward"
-        Me.btn_stn4_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn4_cyl1_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn4_cyl1_fw
-        '
-        Me.btn_stn4_cyl1_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn4_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn4_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn4_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn4_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn4_cyl1_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn4_cyl1_fw.Name = "btn_stn4_cyl1_fw"
-        Me.btn_stn4_cyl1_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn4_cyl1_fw.TabIndex = 0
-        Me.btn_stn4_cyl1_fw.Text = "Forward"
-        Me.btn_stn4_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn4_cyl1_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn3_cyl1_min
-        '
-        Me.man_stn3_cyl1_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn3_cyl1_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn3_cyl1_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn3_cyl1_min.Name = "man_stn3_cyl1_min"
-        Me.man_stn3_cyl1_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn3_cyl1_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn3_cyl1_min.TabIndex = 3
-        Me.man_stn3_cyl1_min.TabStop = False
-        '
-        'man_stn3_cyl1_max
-        '
-        Me.man_stn3_cyl1_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn3_cyl1_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn3_cyl1_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn3_cyl1_max.Name = "man_stn3_cyl1_max"
-        Me.man_stn3_cyl1_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn3_cyl1_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn3_cyl1_max.TabIndex = 1
-        Me.man_stn3_cyl1_max.TabStop = False
-        '
-        'btn_stn3_cyl1_bw
-        '
-        Me.btn_stn3_cyl1_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn3_cyl1_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn3_cyl1_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn3_cyl1_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn3_cyl1_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn3_cyl1_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn3_cyl1_bw.Name = "btn_stn3_cyl1_bw"
-        Me.btn_stn3_cyl1_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn3_cyl1_bw.TabIndex = 46
-        Me.btn_stn3_cyl1_bw.Text = "Backward"
-        Me.btn_stn3_cyl1_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn3_cyl1_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn3_cyl1_fw
-        '
-        Me.btn_stn3_cyl1_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn3_cyl1_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn3_cyl1_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn3_cyl1_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn3_cyl1_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn3_cyl1_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn3_cyl1_fw.Name = "btn_stn3_cyl1_fw"
-        Me.btn_stn3_cyl1_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn3_cyl1_fw.TabIndex = 0
-        Me.btn_stn3_cyl1_fw.Text = "Forward"
-        Me.btn_stn3_cyl1_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn3_cyl1_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn3_cyl3_min
-        '
-        Me.man_stn3_cyl3_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn3_cyl3_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn3_cyl3_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn3_cyl3_min.Name = "man_stn3_cyl3_min"
-        Me.man_stn3_cyl3_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn3_cyl3_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn3_cyl3_min.TabIndex = 3
-        Me.man_stn3_cyl3_min.TabStop = False
-        '
-        'man_stn3_cyl3_max
-        '
-        Me.man_stn3_cyl3_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn3_cyl3_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn3_cyl3_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn3_cyl3_max.Name = "man_stn3_cyl3_max"
-        Me.man_stn3_cyl3_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn3_cyl3_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn3_cyl3_max.TabIndex = 1
-        Me.man_stn3_cyl3_max.TabStop = False
-        '
-        'btn_stn3_cyl3_bw
-        '
-        Me.btn_stn3_cyl3_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn3_cyl3_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn3_cyl3_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn3_cyl3_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn3_cyl3_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn3_cyl3_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn3_cyl3_bw.Name = "btn_stn3_cyl3_bw"
-        Me.btn_stn3_cyl3_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn3_cyl3_bw.TabIndex = 46
-        Me.btn_stn3_cyl3_bw.Text = "Backward"
-        Me.btn_stn3_cyl3_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn3_cyl3_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn3_cyl3_fw
-        '
-        Me.btn_stn3_cyl3_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn3_cyl3_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn3_cyl3_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn3_cyl3_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn3_cyl3_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn3_cyl3_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn3_cyl3_fw.Name = "btn_stn3_cyl3_fw"
-        Me.btn_stn3_cyl3_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn3_cyl3_fw.TabIndex = 0
-        Me.btn_stn3_cyl3_fw.Text = "Forward"
-        Me.btn_stn3_cyl3_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn3_cyl3_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn3_cyl2_min
-        '
-        Me.man_stn3_cyl2_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn3_cyl2_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn3_cyl2_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn3_cyl2_min.Name = "man_stn3_cyl2_min"
-        Me.man_stn3_cyl2_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn3_cyl2_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn3_cyl2_min.TabIndex = 3
-        Me.man_stn3_cyl2_min.TabStop = False
-        '
-        'man_stn3_cyl2_max
-        '
-        Me.man_stn3_cyl2_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn3_cyl2_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn3_cyl2_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn3_cyl2_max.Name = "man_stn3_cyl2_max"
-        Me.man_stn3_cyl2_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn3_cyl2_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn3_cyl2_max.TabIndex = 1
-        Me.man_stn3_cyl2_max.TabStop = False
-        '
-        'btn_stn3_cyl2_bw
-        '
-        Me.btn_stn3_cyl2_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn3_cyl2_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn3_cyl2_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn3_cyl2_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn3_cyl2_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn3_cyl2_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn3_cyl2_bw.Name = "btn_stn3_cyl2_bw"
-        Me.btn_stn3_cyl2_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn3_cyl2_bw.TabIndex = 46
-        Me.btn_stn3_cyl2_bw.Text = "Backward"
-        Me.btn_stn3_cyl2_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn3_cyl2_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn3_cyl2_fw
-        '
-        Me.btn_stn3_cyl2_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn3_cyl2_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn3_cyl2_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn3_cyl2_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn3_cyl2_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn3_cyl2_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn3_cyl2_fw.Name = "btn_stn3_cyl2_fw"
-        Me.btn_stn3_cyl2_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn3_cyl2_fw.TabIndex = 0
-        Me.btn_stn3_cyl2_fw.Text = "Forward"
-        Me.btn_stn3_cyl2_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn3_cyl2_fw.UseVisualStyleBackColor = True
-        '
-        'man_stn3_cyl4_min
-        '
-        Me.man_stn3_cyl4_min.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn3_cyl4_min.Location = New System.Drawing.Point(8, 147)
-        Me.man_stn3_cyl4_min.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn3_cyl4_min.Name = "man_stn3_cyl4_min"
-        Me.man_stn3_cyl4_min.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn3_cyl4_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn3_cyl4_min.TabIndex = 3
-        Me.man_stn3_cyl4_min.TabStop = False
-        '
-        'man_stn3_cyl4_max
-        '
-        Me.man_stn3_cyl4_max.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.man_stn3_cyl4_max.Location = New System.Drawing.Point(8, 51)
-        Me.man_stn3_cyl4_max.Margin = New System.Windows.Forms.Padding(4)
-        Me.man_stn3_cyl4_max.Name = "man_stn3_cyl4_max"
-        Me.man_stn3_cyl4_max.Size = New System.Drawing.Size(107, 41)
-        Me.man_stn3_cyl4_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.man_stn3_cyl4_max.TabIndex = 1
-        Me.man_stn3_cyl4_max.TabStop = False
-        '
-        'btn_stn3_cyl4_bw
-        '
-        Me.btn_stn3_cyl4_bw.FlatAppearance.BorderSize = 0
-        Me.btn_stn3_cyl4_bw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn3_cyl4_bw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn3_cyl4_bw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn3_cyl4_bw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn3_cyl4_bw.Location = New System.Drawing.Point(7, 125)
-        Me.btn_stn3_cyl4_bw.Name = "btn_stn3_cyl4_bw"
-        Me.btn_stn3_cyl4_bw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn3_cyl4_bw.TabIndex = 46
-        Me.btn_stn3_cyl4_bw.Text = "Backward"
-        Me.btn_stn3_cyl4_bw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn3_cyl4_bw.UseVisualStyleBackColor = True
-        '
-        'btn_stn3_cyl4_fw
-        '
-        Me.btn_stn3_cyl4_fw.FlatAppearance.BorderSize = 0
-        Me.btn_stn3_cyl4_fw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stn3_cyl4_fw.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stn3_cyl4_fw.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_stn3_cyl4_fw.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.button_silver
-        Me.btn_stn3_cyl4_fw.Location = New System.Drawing.Point(7, 29)
-        Me.btn_stn3_cyl4_fw.Name = "btn_stn3_cyl4_fw"
-        Me.btn_stn3_cyl4_fw.Size = New System.Drawing.Size(100, 90)
-        Me.btn_stn3_cyl4_fw.TabIndex = 0
-        Me.btn_stn3_cyl4_fw.Text = "Forward"
-        Me.btn_stn3_cyl4_fw.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btn_stn3_cyl4_fw.UseVisualStyleBackColor = True
-        '
-        'ind_stn3_Rfesto_emg
-        '
-        Me.ind_stn3_Rfesto_emg.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Rfesto_emg.Location = New System.Drawing.Point(460, 53)
-        Me.ind_stn3_Rfesto_emg.Name = "ind_stn3_Rfesto_emg"
-        Me.ind_stn3_Rfesto_emg.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Rfesto_emg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Rfesto_emg.TabIndex = 0
-        Me.ind_stn3_Rfesto_emg.TabStop = False
-        '
-        'ind_stn3_Rfesto_svon
-        '
-        Me.ind_stn3_Rfesto_svon.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Rfesto_svon.Location = New System.Drawing.Point(350, 53)
-        Me.ind_stn3_Rfesto_svon.Name = "ind_stn3_Rfesto_svon"
-        Me.ind_stn3_Rfesto_svon.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Rfesto_svon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Rfesto_svon.TabIndex = 0
-        Me.ind_stn3_Rfesto_svon.TabStop = False
-        '
-        'ind_stn3_Rfesto_alm
-        '
-        Me.ind_stn3_Rfesto_alm.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Rfesto_alm.Location = New System.Drawing.Point(240, 53)
-        Me.ind_stn3_Rfesto_alm.Name = "ind_stn3_Rfesto_alm"
-        Me.ind_stn3_Rfesto_alm.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Rfesto_alm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Rfesto_alm.TabIndex = 0
-        Me.ind_stn3_Rfesto_alm.TabStop = False
-        '
-        'ind_stn3_Rfesto_hend
-        '
-        Me.ind_stn3_Rfesto_hend.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Rfesto_hend.Location = New System.Drawing.Point(130, 53)
-        Me.ind_stn3_Rfesto_hend.Name = "ind_stn3_Rfesto_hend"
-        Me.ind_stn3_Rfesto_hend.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Rfesto_hend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Rfesto_hend.TabIndex = 0
-        Me.ind_stn3_Rfesto_hend.TabStop = False
-        '
-        'ind_stn3_Rfesto_pend
-        '
-        Me.ind_stn3_Rfesto_pend.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Rfesto_pend.Location = New System.Drawing.Point(20, 53)
-        Me.ind_stn3_Rfesto_pend.Name = "ind_stn3_Rfesto_pend"
-        Me.ind_stn3_Rfesto_pend.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Rfesto_pend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Rfesto_pend.TabIndex = 0
-        Me.ind_stn3_Rfesto_pend.TabStop = False
-        '
-        'ind_stn3_Lfesto_emg
-        '
-        Me.ind_stn3_Lfesto_emg.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Lfesto_emg.Location = New System.Drawing.Point(460, 53)
-        Me.ind_stn3_Lfesto_emg.Name = "ind_stn3_Lfesto_emg"
-        Me.ind_stn3_Lfesto_emg.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Lfesto_emg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Lfesto_emg.TabIndex = 0
-        Me.ind_stn3_Lfesto_emg.TabStop = False
-        '
-        'ind_stn3_Lfesto_svon
-        '
-        Me.ind_stn3_Lfesto_svon.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Lfesto_svon.Location = New System.Drawing.Point(350, 53)
-        Me.ind_stn3_Lfesto_svon.Name = "ind_stn3_Lfesto_svon"
-        Me.ind_stn3_Lfesto_svon.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Lfesto_svon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Lfesto_svon.TabIndex = 0
-        Me.ind_stn3_Lfesto_svon.TabStop = False
-        '
-        'ind_stn3_Lfesto_alm
-        '
-        Me.ind_stn3_Lfesto_alm.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Lfesto_alm.Location = New System.Drawing.Point(240, 53)
-        Me.ind_stn3_Lfesto_alm.Name = "ind_stn3_Lfesto_alm"
-        Me.ind_stn3_Lfesto_alm.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Lfesto_alm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Lfesto_alm.TabIndex = 0
-        Me.ind_stn3_Lfesto_alm.TabStop = False
-        '
-        'ind_stn3_Lfesto_hend
-        '
-        Me.ind_stn3_Lfesto_hend.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Lfesto_hend.Location = New System.Drawing.Point(130, 53)
-        Me.ind_stn3_Lfesto_hend.Name = "ind_stn3_Lfesto_hend"
-        Me.ind_stn3_Lfesto_hend.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Lfesto_hend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Lfesto_hend.TabIndex = 0
-        Me.ind_stn3_Lfesto_hend.TabStop = False
-        '
-        'ind_stn3_Lfesto_pend
-        '
-        Me.ind_stn3_Lfesto_pend.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.led_red_off
-        Me.ind_stn3_Lfesto_pend.Location = New System.Drawing.Point(20, 53)
-        Me.ind_stn3_Lfesto_pend.Name = "ind_stn3_Lfesto_pend"
-        Me.ind_stn3_Lfesto_pend.Size = New System.Drawing.Size(50, 50)
-        Me.ind_stn3_Lfesto_pend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn3_Lfesto_pend.TabIndex = 0
-        Me.ind_stn3_Lfesto_pend.TabStop = False
-        '
         'ManualForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2578,67 +2578,102 @@ Partial Class ManualForm
         Me.Controls.Add(Me.tab_st3_man)
         Me.Controls.Add(Me.gb_st2_man)
         Me.Name = "ManualForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ManualForm"
         Me.gb_st1_man.ResumeLayout(False)
         Me.gb_st1_man.PerformLayout()
         Me.GroupBox77.ResumeLayout(False)
         Me.GroupBox79.ResumeLayout(False)
         Me.GroupBox79.PerformLayout()
+        CType(Me.man_stn1_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn1_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox80.ResumeLayout(False)
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
+        CType(Me.man_stn3_cyl3_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn3_cyl3_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox13.ResumeLayout(False)
         Me.GroupBox13.PerformLayout()
+        CType(Me.man_stn3_cyl4_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn3_cyl4_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox14.ResumeLayout(False)
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox15.ResumeLayout(False)
         Me.GroupBox15.PerformLayout()
+        CType(Me.man_stn3_cyl2_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn3_cyl2_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox16.ResumeLayout(False)
         Me.GroupBox70.ResumeLayout(False)
         Me.GroupBox17.ResumeLayout(False)
         Me.GroupBox17.PerformLayout()
+        CType(Me.man_stn3_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn3_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox71.ResumeLayout(False)
         Me.gb_st4_man.ResumeLayout(False)
         Me.gb_st4_man.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
+        CType(Me.man_stn4_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn4_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox81.ResumeLayout(False)
         Me.gb_st5_man.ResumeLayout(False)
         Me.gb_st5_man.PerformLayout()
         Me.GroupBox24.ResumeLayout(False)
         Me.GroupBox25.ResumeLayout(False)
         Me.GroupBox25.PerformLayout()
+        CType(Me.man_stn5_cyl3_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn5_cyl3_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox26.ResumeLayout(False)
         Me.GroupBox21.ResumeLayout(False)
         Me.GroupBox22.ResumeLayout(False)
         Me.GroupBox22.PerformLayout()
+        CType(Me.man_stn5_cyl2_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn5_cyl2_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox23.ResumeLayout(False)
         Me.GroupBox18.ResumeLayout(False)
         Me.GroupBox19.ResumeLayout(False)
         Me.GroupBox19.PerformLayout()
+        CType(Me.man_stn5_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn5_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox20.ResumeLayout(False)
         Me.gb_st6_man.ResumeLayout(False)
         Me.gb_st6_man.PerformLayout()
         Me.GroupBox27.ResumeLayout(False)
         Me.GroupBox28.ResumeLayout(False)
         Me.GroupBox28.PerformLayout()
+        CType(Me.man_stn6_cyl3_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn6_cyl3_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox29.ResumeLayout(False)
         Me.GroupBox30.ResumeLayout(False)
         Me.GroupBox31.ResumeLayout(False)
         Me.GroupBox31.PerformLayout()
+        CType(Me.man_stn6_cyl2_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn6_cyl2_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox32.ResumeLayout(False)
         Me.GroupBox33.ResumeLayout(False)
         Me.GroupBox34.ResumeLayout(False)
         Me.GroupBox34.PerformLayout()
+        CType(Me.man_stn6_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.man_stn6_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox35.ResumeLayout(False)
         Me.GroupBox74.ResumeLayout(False)
         Me.GroupBox74.PerformLayout()
+        CType(Me.ind_stn3_Rfesto_emg, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn3_Rfesto_svon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn3_Rfesto_alm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn3_Rfesto_hend, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn3_Rfesto_pend, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox75.ResumeLayout(False)
         Me.GroupBox75.PerformLayout()
+        CType(Me.ind_stn3_Lfesto_emg, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn3_Lfesto_svon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn3_Lfesto_alm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn3_Lfesto_hend, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn3_Lfesto_pend, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tab_st3_man.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -2646,40 +2681,6 @@ Partial Class ManualForm
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn1_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn1_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn6_cyl3_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn6_cyl3_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn6_cyl2_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn6_cyl2_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn6_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn6_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn5_cyl3_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn5_cyl3_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn5_cyl2_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn5_cyl2_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn5_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn5_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn4_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn4_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn3_cyl1_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn3_cyl1_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn3_cyl3_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn3_cyl3_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn3_cyl2_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn3_cyl2_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn3_cyl4_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.man_stn3_cyl4_max, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Rfesto_emg, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Rfesto_svon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Rfesto_alm, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Rfesto_hend, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Rfesto_pend, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Lfesto_emg, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Lfesto_svon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Lfesto_alm, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Lfesto_hend, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn3_Lfesto_pend, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

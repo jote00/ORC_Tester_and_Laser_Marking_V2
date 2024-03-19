@@ -1,10 +1,11 @@
 ﻿Imports System.Threading
+Imports System.IO
 Public Class MainForm
     Dim ThreadLoadingBar As Thread
-
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Hide()
         initLoadingBar()
+        AutoConnection()
 
         UpdateLoadingBar(20, "Loading")
         Thread.Sleep(500)
@@ -102,5 +103,30 @@ Public Class MainForm
         ManualForm.Show()
     End Sub
 
+    Private Sub btn_setting_Click(sender As Object, e As EventArgs) Handles btn_setting.Click
+        Hide()
+        SettingForm.Show()
+    End Sub
 
+    Private Sub plcReading()
+
+        If Connected() Then
+            'Check PLC
+            Try
+                PLC_READY = Modbus.ReadModbus(ADDR_PLC_READY, 1)(0)
+                If PLC_READY = 1 Then
+                    ind_plc_status.BackColor = Color.Lime
+                Else
+                    ind_plc_status.BackColor = Color.Red
+                End If
+
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
+    Private Sub ModbusRW_Tick(sender As Object, e As EventArgs) Handles ModbusRW.Tick
+        plcReading()
+    End Sub
 End Class
