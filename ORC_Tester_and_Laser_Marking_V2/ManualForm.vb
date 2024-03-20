@@ -1,6 +1,8 @@
 ﻿Imports System.Threading
 Imports System.IO
 Public Class ManualForm
+    Dim plcReadThread As Thread
+    Dim runningModeThread As Thread
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
         lbl_curr_time.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
@@ -23,6 +25,10 @@ Public Class ManualForm
     Private Sub ManualForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetUserLevel()
         AutoConnection()
+        plcReadThread = New Thread(New ThreadStart(AddressOf plcReading))
+        plcReadThread.Start()
+        runningModeThread = New Thread(New ThreadStart(AddressOf runningMode))
+        runningModeThread.Start()
 
         'Button Station Enable
 
@@ -496,6 +502,321 @@ Public Class ManualForm
             btn_stn6_cyl3_bw.Image = My.Resources.button_silver
             btn_stn6_cyl3_bw.Text = "Backward"
         End If
+    End Sub
+
+    'Running Mode Status
+    Private Sub runningMode()
+        Do
+            If Connected() Then
+                RUNNING_MODE = Modbus.ReadModbus(ADDR_RUNNING_MODE, 1)(0)
+                Me.Invoke(Sub()
+                              Select Case RUNNING_MODE
+                                  Case 0
+                                      lbl_auto_man.Text = "..."
+                                  Case 1
+                                      lbl_auto_man.Text = "AUTO"
+                                  Case 2
+                                      lbl_auto_man.Text = "MANUAL"
+                              End Select
+                          End Sub)
+
+            End If
+            Thread.Sleep(100)
+        Loop
+    End Sub
+
+    'ReadPLC
+
+    Private Sub plcReading()
+        Do
+            If Connected() Then
+
+                Dim readS11 = ReadModbus(ADDR_STN1_SEN1, 1)
+
+                Dim readS31 = ReadModbus(ADDR_STN3_SEN1, 1)
+                Dim readS32 = ReadModbus(ADDR_STN3_SEN2, 1)
+                Dim readS33 = ReadModbus(ADDR_STN3_SEN3, 1)
+                Dim readS34 = ReadModbus(ADDR_STN3_SEN4, 1)
+
+                Dim readS41 = ReadModbus(ADDR_STN4_SEN1, 1)
+
+                Dim readS51 = ReadModbus(ADDR_STN5_SEN1, 1)
+                Dim readS52 = ReadModbus(ADDR_STN5_SEN2, 1)
+                Dim readS53 = ReadModbus(ADDR_STN5_SEN3, 1)    'STN5
+
+                Dim readS61 = ReadModbus(ADDR_STN6_SEN1, 1)
+                Dim readS62 = ReadModbus(ADDR_STN6_SEN2, 1)
+                Dim readS63 = ReadModbus(ADDR_STN6_SEN3, 1)    'STN6
+
+                Dim readLALM As Integer = ReadBit(ADDR_STN3_IND_LFESTO, 0)
+                Dim readLPEND As Integer = ReadBit(ADDR_STN3_IND_LFESTO, 1)
+                Dim readLHEND As Integer = ReadBit(ADDR_STN3_IND_LFESTO, 2)   'Indicator LFesto
+                Dim readLSVON As Integer = ReadBit(ADDR_STN3_IND_LFESTO, 3)
+                Dim readLEMG As Integer = ReadBit(ADDR_STN3_IND_LFESTO, 4)
+
+                Dim readRALM As Integer = ReadBit(ADDR_STN3_IND_RFESTO, 0)
+                Dim readRPEND As Integer = ReadBit(ADDR_STN3_IND_RFESTO, 1)
+                Dim readRHEND As Integer = ReadBit(ADDR_STN3_IND_RFESTO, 2)   'Indicator RFesto
+                Dim readRSVON As Integer = ReadBit(ADDR_STN3_IND_RFESTO, 3)
+                Dim readREMG As Integer = ReadBit(ADDR_STN3_IND_RFESTO, 4)
+
+
+                'Text Box Festo read ----------------------------------------------
+                Me.Invoke(Sub()
+
+                              tbx_Lfesto_position.Text = ReadDoubleAddrees(ADDR_STN3_PSTN_LFESTO)
+                              tbx_Lfesto_speed.Text = ReadModbus(ADDR_STN3_SPD_LFESTO, 1)(0)
+                              tbx_Lfesto_alarm.Text = ReadModbus(ADDR_STN3_ALM_LFESTO, 1)(0)
+
+                              tbx_Rfesto_position.Text = ReadDoubleAddrees(ADDR_STN3_PSTN_RFESTO)
+                              tbx_Rfesto_speed.Text = ReadModbus(ADDR_STN3_SPD_RFESTO, 1)(0)
+                              tbx_Rfesto_alarm.Text = ReadModbus(ADDR_STN3_ALM_RFESTO, 1)(0)
+                          End Sub)
+
+                'Station 1 ----------------------------------------------
+                'CylSen 1
+                If readS11.Length > 0 AndAlso readS11(0) = FORWARD Then
+                    man_stn1_cyl1_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn1_cyl1_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS11.Length > 0 AndAlso readS11(0) = BACKWARD Then
+                    man_stn1_cyl1_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn1_cyl1_min.Image = My.Resources.led_red_on
+                End If
+
+
+                'Station 3 ----------------------------------------------
+                'CylSen 1
+                If readS31.Length > 0 AndAlso readS31(0) = FORWARD Then
+                    man_stn3_cyl1_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn3_cyl1_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS31.Length > 0 AndAlso readS31(0) = BACKWARD Then
+                    man_stn3_cyl1_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn3_cyl1_min.Image = My.Resources.led_red_on
+                End If
+
+                'CylSen 2
+                If readS32.Length > 0 AndAlso readS32(0) = FORWARD Then
+                    man_stn3_cyl2_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn3_cyl2_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS32.Length > 0 AndAlso readS32(0) = BACKWARD Then
+                    man_stn3_cyl2_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn3_cyl2_min.Image = My.Resources.led_red_on
+                End If
+
+                'CylSen 3
+                If readS33.Length > 0 AndAlso readS33(0) = FORWARD Then
+                    man_stn3_cyl3_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn3_cyl3_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS33.Length > 0 AndAlso readS33(0) = BACKWARD Then
+                    man_stn3_cyl3_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn3_cyl3_min.Image = My.Resources.led_red_on
+                End If
+
+                'CylSen 4
+                If readS34.Length > 0 AndAlso readS34(0) = FORWARD Then
+                    man_stn3_cyl4_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn3_cyl4_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS34.Length > 0 AndAlso readS34(0) = BACKWARD Then
+                    man_stn3_cyl4_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn3_cyl4_min.Image = My.Resources.led_red_on
+                End If
+
+                'Festo Left
+                If readLALM = 1 Then
+                    ind_stn3_Lfesto_alm.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Lfesto_alm.Image = My.Resources.led_red_on
+                End If
+
+                If readLPEND = 1 Then
+                    ind_stn3_Lfesto_pend.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Lfesto_pend.Image = My.Resources.led_red_on
+                End If
+
+                If readLHEND = 1 Then
+                    ind_stn3_Lfesto_hend.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Lfesto_hend.Image = My.Resources.led_red_on
+                End If
+
+                If readLSVON = 1 Then
+                    ind_stn3_Lfesto_svon.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Lfesto_svon.Image = My.Resources.led_red_on
+                End If
+
+                If readLEMG = 1 Then
+                    ind_stn3_Lfesto_emg.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Lfesto_emg.Image = My.Resources.led_red_on
+                End If
+
+                'Festo Right
+                If readRALM = 1 Then
+                    ind_stn3_Rfesto_alm.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Rfesto_alm.Image = My.Resources.led_red_on
+                End If
+
+                If readRPEND = 1 Then
+                    ind_stn3_Rfesto_pend.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Rfesto_pend.Image = My.Resources.led_red_on
+                End If
+
+                If readRHEND = 1 Then
+                    ind_stn3_Rfesto_hend.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Rfesto_hend.Image = My.Resources.led_red_on
+                End If
+
+                If readRSVON = 1 Then
+                    ind_stn3_Rfesto_svon.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Rfesto_svon.Image = My.Resources.led_red_on
+                End If
+
+                If readREMG = 1 Then
+                    ind_stn3_Rfesto_emg.Image = My.Resources.led_green_on
+                Else
+                    ind_stn3_Rfesto_emg.Image = My.Resources.led_red_on
+                End If
+
+
+
+                'Station 4 ----------------------------------------------
+                'CylSen 1
+                If readS41.Length > 0 AndAlso readS41(0) = FORWARD Then
+                    man_stn4_cyl1_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn4_cyl1_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS41.Length > 0 AndAlso readS41(0) = BACKWARD Then
+                    man_stn4_cyl1_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn4_cyl1_min.Image = My.Resources.led_red_on
+                End If
+
+
+                'Station 5 ----------------------------------------------
+                'CylSen 1
+                If readS51.Length > 0 AndAlso readS51(0) = FORWARD Then
+                    man_stn5_cyl1_max.Image = My.Resources.led_green_on
+
+                Else
+                    man_stn5_cyl1_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS51.Length > 0 AndAlso readS51(0) = BACKWARD Then
+                    man_stn5_cyl1_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn5_cyl1_min.Image = My.Resources.led_red_on
+                End If
+
+                'CylSen 2
+                If readS52.Length > 0 AndAlso readS52(0) = FORWARD Then
+                    man_stn5_cyl2_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn5_cyl2_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS52.Length > 0 AndAlso readS52(0) = BACKWARD Then
+                    man_stn5_cyl2_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn5_cyl2_min.Image = My.Resources.led_red_on
+                End If
+
+                'CylSen 3
+                If readS53.Length > 0 AndAlso readS53(0) = FORWARD Then
+                    man_stn5_cyl3_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn5_cyl3_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS53.Length > 0 AndAlso readS53(0) = BACKWARD Then
+                    man_stn5_cyl3_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn5_cyl3_min.Image = My.Resources.led_red_on
+                End If
+
+
+                'Station 6 ----------------------------------------------
+                'CylSen 1
+                If readS61.Length > 0 AndAlso readS61(0) = FORWARD Then
+                    man_stn6_cyl1_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn6_cyl1_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS61.Length > 0 AndAlso readS61(0) = BACKWARD Then
+                    man_stn6_cyl1_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn6_cyl1_min.Image = My.Resources.led_red_on
+                End If
+
+                'CylSen 2
+                If readS62.Length > 0 AndAlso readS62(0) = FORWARD Then
+                    man_stn6_cyl2_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn6_cyl2_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS62.Length > 0 AndAlso readS62(0) = BACKWARD Then
+                    man_stn6_cyl2_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn6_cyl2_min.Image = My.Resources.led_red_on
+                End If
+
+                'CylSen 3
+                If readS63.Length > 0 AndAlso readS63(0) = FORWARD Then
+                    man_stn6_cyl3_max.Image = My.Resources.led_green_on
+                Else
+                    man_stn6_cyl3_max.Image = My.Resources.led_red_on
+                End If
+
+
+                If readS63.Length > 0 AndAlso readS63(0) = BACKWARD Then
+                    man_stn6_cyl3_min.Image = My.Resources.led_green_on
+                Else
+                    man_stn6_cyl3_min.Image = My.Resources.led_red_on
+                End If
+
+            End If
+            Thread.Sleep(100)
+        Loop
     End Sub
 
 
