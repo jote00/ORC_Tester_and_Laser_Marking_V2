@@ -112,6 +112,11 @@ Public Class MainForm
         plcReadThread.Start()
     End Sub
 
+    Private Sub btn_references_Click(sender As Object, e As EventArgs) Handles btn_references.Click
+        Hide()
+        ReferencesForm.ShowDialog()
+    End Sub
+
     Private Sub btn_setting_Click(sender As Object, e As EventArgs) Handles btn_setting.Click
         Hide()
         plcReadThread.Abort()

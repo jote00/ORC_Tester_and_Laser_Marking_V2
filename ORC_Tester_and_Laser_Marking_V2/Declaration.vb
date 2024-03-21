@@ -8,7 +8,6 @@
     Public Config As New machineConfig
     Public MODBUS_ERR As Boolean = False
 
-    Public ADDR_TEST As Integer = 9090
 
     Public Structure machineConfig
         Dim dbHostName As String
@@ -16,6 +15,8 @@
         Dim dbPassword As String
         Dim dbDatabase As String
     End Structure
+
+    Public ADDR_TEST As Integer = 9090
 
     Public PLC_READY As Integer = 0
     Public ADDR_PLC_READY As Integer = 60200

@@ -3,7 +3,7 @@ Imports System.IO
 Public Class SettingForm
     Dim runningModeThread As Thread
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
-        lbl_curr_time.Text = Date.Now.ToString("dd-MM-yyyy")
+        lbl_date.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
     End Sub
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
@@ -42,7 +42,6 @@ Public Class SettingForm
         End If
 
         'Button Station Enable
-
         For Each ctrl As Control In Me.Controls
             If TypeOf ctrl Is Button AndAlso ctrl.Name.StartsWith("btn_st") Then
                 ctrl.Enabled = False
