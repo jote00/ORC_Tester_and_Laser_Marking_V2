@@ -3,6 +3,7 @@
     Public BtnStnVisible As Integer
     Public LoadingBarValue As Integer
     Public LoadingBarMessage As String
+    Public txtManAuto As Integer
 
     Public Config As New machineConfig
     Public MODBUS_ERR As Boolean = False

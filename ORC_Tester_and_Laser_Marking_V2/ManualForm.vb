@@ -2,12 +2,15 @@
 Imports System.IO
 Public Class ManualForm
     Dim plcReadThread As Thread
-    Dim runningModeThread As Thread
+    Dim plcWriteThread As Thread
+
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
-        lbl_curr_time.Text = Date.Now.ToString("dd-MM-yyyy")
+        lbl_date.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
     End Sub
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
+        plcReadThread.Abort()
+        plcWriteThread.Abort()
         Close()
         MainForm.Show()
     End Sub
@@ -24,20 +27,27 @@ Public Class ManualForm
     End Sub
     Private Sub ManualForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetUserLevel()
-        AutoConnection()
-        plcReadThread = New Thread(New ThreadStart(AddressOf plcReading))
+        '  AutoConnection()
+        plcReadThread = New Thread(AddressOf plcReading)
         plcReadThread.Start()
-        runningModeThread = New Thread(New ThreadStart(AddressOf runningMode))
-        runningModeThread.Start()
+        plcWriteThread = New Thread(AddressOf plcWriting)
+        plcWriteThread.Start()
+
 
         'Button Station Enable
-
         For Each ctrl As Control In Me.Controls
             If TypeOf ctrl Is Button AndAlso ctrl.Name.StartsWith("btn_st") Then
                 ctrl.Enabled = True
             End If
         Next
     End Sub
+
+    'Thread Abort
+    'Private Sub ManualForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    '    If plcReadThread IsNot Nothing AndAlso plcReadThread.IsAlive Then
+    '        plcReadThread.Abort()
+    '    End If
+    'End Sub
 
     'Show Station in Manual Form
 
@@ -504,31 +514,14 @@ Public Class ManualForm
         End If
     End Sub
 
-    'Running Mode Status
-    Private Sub runningMode()
-        Do
-            If Connected() Then
-                RUNNING_MODE = Modbus.ReadModbus(ADDR_RUNNING_MODE, 1)(0)
-                Me.Invoke(Sub()
-                              Select Case RUNNING_MODE
-                                  Case 0
-                                      lbl_auto_man.Text = "..."
-                                  Case 1
-                                      lbl_auto_man.Text = "AUTO"
-                                  Case 2
-                                      lbl_auto_man.Text = "MANUAL"
-                              End Select
-                          End Sub)
 
-            End If
-            Thread.Sleep(100)
-        Loop
-    End Sub
+
 
     'ReadPLC
 
     Private Sub plcReading()
         Do
+            Console.WriteLine("Modbus ManualForm ReadPLC")
             If Connected() Then
 
                 Dim readS11 = ReadModbus(ADDR_STN1_SEN1, 1)
@@ -560,6 +553,22 @@ Public Class ManualForm
                 Dim readRSVON As Integer = ReadBit(ADDR_STN3_IND_RFESTO, 3)
                 Dim readREMG As Integer = ReadBit(ADDR_STN3_IND_RFESTO, 4)
 
+                RUNNING_MODE = Modbus.ReadModbus(ADDR_RUNNING_MODE, 1)(0)
+                Select Case RUNNING_MODE
+                    Case 0
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "..."
+                                  End Sub)
+                    Case 1
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "AUTO"
+                                  End Sub)
+                    Case 2
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "MANUAL"
+                                  End Sub)
+                End Select
+
 
                 'Text Box Festo read ----------------------------------------------
                 Me.Invoke(Sub()
@@ -573,7 +582,9 @@ Public Class ManualForm
                               tbx_Rfesto_alarm.Text = ReadModbus(ADDR_STN3_ALM_RFESTO, 1)(0)
                           End Sub)
 
-                'Station 1 ----------------------------------------------
+
+
+                'Station 1 - ---------------------------------------------
                 'CylSen 1
                 If readS11.Length > 0 AndAlso readS11(0) = FORWARD Then
                     man_stn1_cyl1_max.Image = My.Resources.led_green_on
@@ -819,5 +830,312 @@ Public Class ManualForm
         Loop
     End Sub
 
+    Private Sub ModbusWriter(output As Integer, address As Integer)
+        If output = FORWARD Then
+            Modbus.WriteModbus(address, FORWARD)
+        ElseIf output = BACKWARD Then
+            Modbus.WriteModbus(address, BACKWARD)
+        Else
+            Modbus.WriteModbus(address, IDLE)
+        End If
+    End Sub
 
+    Private Sub plcWriting()
+        Do
+            Console.WriteLine("Modbus ManualForm WritePLC")
+            If Connected() Then
+                'Station 1
+
+                If STN1_CYL1 <> LAST_STN1_CYL1 Then
+                    ModbusWriter(STN1_CYL1, ADDR_STN1_CYL1)
+                    LAST_STN1_CYL1 = STN1_CYL1
+                End If
+
+
+                'Station 3  
+
+                If STN3_CYL1 <> LAST_STN3_CYL1 Then
+                    ModbusWriter(STN3_CYL1, ADDR_STN3_CYL1)
+                    LAST_STN3_CYL1 = STN3_CYL1
+                End If
+
+                If STN3_CYL2 <> LAST_STN3_CYL2 Then
+                    ModbusWriter(STN3_CYL2, ADDR_STN3_CYL2)
+                    LAST_STN3_CYL2 = STN3_CYL2
+                End If
+
+                If STN3_CYL3 <> LAST_STN3_CYL3 Then
+                    ModbusWriter(STN3_CYL3, ADDR_STN3_CYL3)
+                    LAST_STN3_CYL3 = STN3_CYL3
+                End If
+
+                If STN3_CYL4 <> LAST_STN3_CYL4 Then
+                    ModbusWriter(STN3_CYL4, ADDR_STN3_CYL4)
+                    LAST_STN3_CYL4 = STN3_CYL4
+                End If
+
+                'Station 4
+
+                If STN4_CYL1 <> LAST_STN4_CYL1 Then
+                    ModbusWriter(STN4_CYL1, ADDR_STN4_CYL1)
+                    LAST_STN4_CYL1 = STN4_CYL1
+                End If
+
+                'Station 5
+
+                If STN5_CYL1 <> LAST_STN5_CYL1 Then
+                    ModbusWriter(STN5_CYL1, ADDR_STN5_CYL1)
+                    LAST_STN5_CYL1 = STN5_CYL1
+                End If
+
+                If STN5_CYL2 <> LAST_STN5_CYL2 Then
+                    ModbusWriter(STN5_CYL2, ADDR_STN5_CYL2)
+                    LAST_STN5_CYL2 = STN5_CYL2
+                End If
+
+                If STN5_CYL3 <> LAST_STN5_CYL3 Then
+                    ModbusWriter(STN5_CYL3, ADDR_STN5_CYL3)
+                    LAST_STN5_CYL3 = STN5_CYL3
+                End If
+
+                'Station 6
+
+                If STN6_CYL1 <> LAST_STN6_CYL1 Then
+                    ModbusWriter(STN6_CYL1, ADDR_STN6_CYL1)
+                    LAST_STN6_CYL1 = STN6_CYL1
+                End If
+
+                If STN6_CYL2 <> LAST_STN6_CYL2 Then
+                    ModbusWriter(STN6_CYL2, ADDR_STN6_CYL2)
+                    LAST_STN6_CYL2 = STN6_CYL2
+                End If
+
+                If STN6_CYL3 <> LAST_STN6_CYL3 Then
+                    ModbusWriter(STN6_CYL3, ADDR_STN6_CYL3)
+                    LAST_STN6_CYL3 = STN6_CYL3
+                End If
+
+            End If
+            Thread.Sleep(100)
+        Loop
+    End Sub
+
+    '###############################################################################################################################################################################################
+    'Festo Controller Button
+
+    'Festo Left ----------------------------------------------
+    'Alarm Reset 
+    Private Sub btn_Lfesto_alarm_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_alarm.MouseDown
+        WriteBit(370, 0, 1)
+        btn_Lfesto_alarm.Tag = New Tuple(Of Color, Color)(btn_Lfesto_alarm.BackColor, btn_Lfesto_alarm.ForeColor)
+        btn_Lfesto_alarm.BackColor = SystemColors.GradientInactiveCaption
+        btn_Lfesto_alarm.ForeColor = Color.DarkBlue
+
+    End Sub
+
+    Private Sub btn_Lfesto_alarm_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_alarm.MouseUp
+        WriteBit(370, 0, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_alarm.Tag, Tuple(Of Color, Color))
+        btn_Lfesto_alarm.BackColor = originalColors.Item1
+        btn_Lfesto_alarm.ForeColor = originalColors.Item2
+    End Sub
+
+
+    'Servo On
+    Private Sub btn_Lfesto_servo_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_servo.MouseDown
+        WriteBit(370, 1, 1)
+        btn_Lfesto_servo.Tag = New Tuple(Of Color, Color)(btn_Lfesto_servo.BackColor, btn_Lfesto_servo.ForeColor)
+        btn_Lfesto_servo.BackColor = SystemColors.GradientInactiveCaption
+        btn_Lfesto_servo.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Lfesto_servo_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_servo.MouseUp
+        WriteBit(370, 1, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_servo.Tag, Tuple(Of Color, Color))
+        btn_Lfesto_servo.BackColor = originalColors.Item1
+        btn_Lfesto_servo.ForeColor = originalColors.Item2
+    End Sub
+
+    'Jog Min
+    Private Sub btn_Lfesto_jog_min_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_min.MouseDown
+        WriteBit(370, 2, 1)
+        btn_Lfesto_jog_min.Tag = New Tuple(Of Color, Color)(btn_Lfesto_jog_min.BackColor, btn_Lfesto_jog_min.ForeColor)
+        btn_Lfesto_jog_min.BackColor = SystemColors.GradientInactiveCaption
+        btn_Lfesto_jog_min.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Lfesto_jog_min_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_min.MouseUp
+        WriteBit(370, 2, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_jog_min.Tag, Tuple(Of Color, Color))
+        btn_Lfesto_jog_min.BackColor = originalColors.Item1
+        btn_Lfesto_jog_min.ForeColor = originalColors.Item2
+    End Sub
+
+    'Jog Plus
+    Private Sub btn_Lfesto_jog_plus_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_plus.MouseDown
+        WriteBit(370, 3, 1)
+        btn_Lfesto_jog_plus.Tag = New Tuple(Of Color, Color)(btn_Lfesto_jog_plus.BackColor, btn_Lfesto_jog_plus.ForeColor)
+        btn_Lfesto_jog_plus.BackColor = SystemColors.GradientInactiveCaption
+        btn_Lfesto_jog_plus.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Lfesto_jog_plus_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_plus.MouseUp
+        WriteBit(370, 3, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_jog_plus.Tag, Tuple(Of Color, Color))
+        btn_Lfesto_jog_plus.BackColor = originalColors.Item1
+        btn_Lfesto_jog_plus.ForeColor = originalColors.Item2
+    End Sub
+
+    'Homing
+    Private Sub btn_Lfesto_homing_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_homing.MouseDown
+        WriteBit(370, 4, 1)
+        btn_Lfesto_homing.Tag = New Tuple(Of Color, Color)(btn_Lfesto_homing.BackColor, btn_Lfesto_homing.ForeColor)
+        btn_Lfesto_homing.BackColor = SystemColors.GradientInactiveCaption
+        btn_Lfesto_homing.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Lfesto_homing_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_homing.MouseUp
+        WriteBit(370, 4, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_homing.Tag, Tuple(Of Color, Color))
+        btn_Lfesto_homing.BackColor = originalColors.Item1
+        btn_Lfesto_homing.ForeColor = originalColors.Item2
+    End Sub
+
+    'Jisl
+    Private Sub btn_Lfesto_jisl_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jisl.MouseDown
+        WriteBit(370, 5, 1)
+        btn_Lfesto_jisl.Tag = New Tuple(Of Color, Color)(btn_Lfesto_jisl.BackColor, btn_Lfesto_jisl.ForeColor)
+        btn_Lfesto_jisl.BackColor = SystemColors.GradientInactiveCaption
+        btn_Lfesto_jisl.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Lfesto_jisl_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jisl.MouseUp
+        WriteBit(370, 5, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_jisl.Tag, Tuple(Of Color, Color))
+        btn_Lfesto_jisl.BackColor = originalColors.Item1
+        btn_Lfesto_jisl.ForeColor = originalColors.Item2
+    End Sub
+
+    'Power Reset
+    Private Sub btn_Lfesto_power_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_power.MouseDown
+        WriteBit(370, 6, 1)
+        btn_Lfesto_power.Tag = New Tuple(Of Color, Color)(btn_Lfesto_power.BackColor, btn_Lfesto_power.ForeColor)
+        btn_Lfesto_power.BackColor = SystemColors.GradientInactiveCaption
+        btn_Lfesto_power.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Lfesto_power_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_power.MouseUp
+        WriteBit(370, 6, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_power.Tag, Tuple(Of Color, Color))
+        btn_Lfesto_power.BackColor = originalColors.Item1
+        btn_Lfesto_power.ForeColor = originalColors.Item2
+    End Sub
+
+    'Festo Right ----------------------------------------------
+    'Alarm Reset 
+    Private Sub btn_Rfesto_alarm_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_alarm.MouseDown
+        WriteBit(380, 0, 1)
+        btn_Rfesto_alarm.Tag = New Tuple(Of Color, Color)(btn_Rfesto_alarm.BackColor, btn_Rfesto_alarm.ForeColor)
+        btn_Rfesto_alarm.BackColor = SystemColors.GradientInactiveCaption
+        btn_Rfesto_alarm.ForeColor = Color.DarkBlue
+
+    End Sub
+
+    Private Sub btn_Rfesto_alarm_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_alarm.MouseUp
+        WriteBit(380, 0, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_alarm.Tag, Tuple(Of Color, Color))
+        btn_Rfesto_alarm.BackColor = originalColors.Item1
+        btn_Rfesto_alarm.ForeColor = originalColors.Item2
+    End Sub
+
+
+    'Servo On
+    Private Sub btn_Rfesto_servo_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_servo.MouseDown
+        WriteBit(380, 1, 1)
+        btn_Rfesto_servo.Tag = New Tuple(Of Color, Color)(btn_Rfesto_servo.BackColor, btn_Rfesto_servo.ForeColor)
+        btn_Rfesto_servo.BackColor = SystemColors.GradientInactiveCaption
+        btn_Rfesto_servo.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Rfesto_servo_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_servo.MouseUp
+        WriteBit(380, 1, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_servo.Tag, Tuple(Of Color, Color))
+        btn_Rfesto_servo.BackColor = originalColors.Item1
+        btn_Rfesto_servo.ForeColor = originalColors.Item2
+    End Sub
+
+    'Jog Min
+    Private Sub btn_Rfesto_jog_min_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_min.MouseDown
+        WriteBit(380, 2, 1)
+        btn_Rfesto_jog_min.Tag = New Tuple(Of Color, Color)(btn_Rfesto_jog_min.BackColor, btn_Rfesto_jog_min.ForeColor)
+        btn_Rfesto_jog_min.BackColor = SystemColors.GradientInactiveCaption
+        btn_Rfesto_jog_min.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Rfesto_jog_min_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_min.MouseUp
+        WriteBit(380, 2, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_jog_min.Tag, Tuple(Of Color, Color))
+        btn_Rfesto_jog_min.BackColor = originalColors.Item1
+        btn_Rfesto_jog_min.ForeColor = originalColors.Item2
+    End Sub
+
+    'Jog Plus
+    Private Sub btn_Rfesto_jog_plus_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_plus.MouseDown
+        WriteBit(380, 3, 1)
+        btn_Rfesto_jog_plus.Tag = New Tuple(Of Color, Color)(btn_Rfesto_jog_plus.BackColor, btn_Rfesto_jog_plus.ForeColor)
+        btn_Rfesto_jog_plus.BackColor = SystemColors.GradientInactiveCaption
+        btn_Rfesto_jog_plus.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Rfesto_jog_plus_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_plus.MouseUp
+        WriteBit(380, 3, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_jog_plus.Tag, Tuple(Of Color, Color))
+        btn_Rfesto_jog_plus.BackColor = originalColors.Item1
+        btn_Rfesto_jog_plus.ForeColor = originalColors.Item2
+    End Sub
+
+    'Homing
+    Private Sub btn_Rfesto_homing_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_homing.MouseDown
+        WriteBit(380, 4, 1)
+        btn_Rfesto_homing.Tag = New Tuple(Of Color, Color)(btn_Rfesto_homing.BackColor, btn_Rfesto_homing.ForeColor)
+        btn_Rfesto_homing.BackColor = SystemColors.GradientInactiveCaption
+        btn_Rfesto_homing.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Rfesto_homing_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_homing.MouseUp
+        WriteBit(380, 4, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_homing.Tag, Tuple(Of Color, Color))
+        btn_Rfesto_homing.BackColor = originalColors.Item1
+        btn_Rfesto_homing.ForeColor = originalColors.Item2
+    End Sub
+
+    'Jisl
+    Private Sub btn_Rfesto_jisl_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jisl.MouseDown
+        WriteBit(380, 5, 1)
+        btn_Rfesto_jisl.Tag = New Tuple(Of Color, Color)(btn_Rfesto_jisl.BackColor, btn_Rfesto_jisl.ForeColor)
+        btn_Rfesto_jisl.BackColor = SystemColors.GradientInactiveCaption
+        btn_Rfesto_jisl.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Rfesto_jisl_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jisl.MouseUp
+        WriteBit(380, 5, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_jisl.Tag, Tuple(Of Color, Color))
+        btn_Rfesto_jisl.BackColor = originalColors.Item1
+        btn_Rfesto_jisl.ForeColor = originalColors.Item2
+    End Sub
+
+    'Power Reset
+    Private Sub btn_Rfesto_power_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_power.MouseDown
+        WriteBit(380, 6, 1)
+        btn_Rfesto_power.Tag = New Tuple(Of Color, Color)(btn_Rfesto_power.BackColor, btn_Rfesto_power.ForeColor)
+        btn_Rfesto_power.BackColor = SystemColors.GradientInactiveCaption
+        btn_Rfesto_power.ForeColor = Color.DarkBlue
+    End Sub
+
+    Private Sub btn_Rfesto_power_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_power.MouseUp
+        WriteBit(380, 6, 0)
+        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_power.Tag, Tuple(Of Color, Color))
+        btn_Rfesto_power.BackColor = originalColors.Item1
+        btn_Rfesto_power.ForeColor = originalColors.Item2
+    End Sub
 End Class

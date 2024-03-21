@@ -1,12 +1,13 @@
 ﻿Imports System.Threading
 Imports System.IO
 Public Class SettingForm
-
+    Dim runningModeThread As Thread
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
         lbl_curr_time.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
     End Sub
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
+        runningModeThread.Abort()
         Close()
         MainForm.Show()
     End Sub
@@ -24,7 +25,9 @@ Public Class SettingForm
 
     Private Sub SettingForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetUserLevel()
-        AutoConnection()
+        'AutoConnection()
+        runningModeThread = New Thread(New ThreadStart(AddressOf runningMode))
+        runningModeThread.Start()
 
         If Connected() Then
             btn_connect_plc.Text = "Disconnect"
@@ -46,7 +49,12 @@ Public Class SettingForm
             End If
         Next
     End Sub
-
+    'Thread Abort
+    'Private Sub SettingForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    '    If runningModeThread IsNot Nothing AndAlso runningModeThread.IsAlive Then
+    '        runningModeThread.Abort()
+    '    End If
+    'End Sub
 
     'PLC Connection
     Private Sub btn_connect_plc_Click(sender As Object, e As EventArgs) Handles btn_connect_plc.Click
@@ -116,8 +124,32 @@ Public Class SettingForm
             rtbSetting.Text = $"Failed to write data: {ex.Message}"
         End Try
     End Sub
+    'Running Mode Status
+    Private Sub runningMode()
+        Do
+            Console.WriteLine("Modbus SettingForm")
+            If Connected() Then
 
-
+                'Running Mode Status
+                RUNNING_MODE = Modbus.ReadModbus(ADDR_RUNNING_MODE, 1)(0)
+                Select Case RUNNING_MODE
+                    Case 0
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "..."
+                                  End Sub)
+                    Case 1
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "AUTO"
+                                  End Sub)
+                    Case 2
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "MANUAL"
+                                  End Sub)
+                End Select
+            End If
+            Thread.Sleep(100)
+        Loop
+    End Sub
 
 
 End Class

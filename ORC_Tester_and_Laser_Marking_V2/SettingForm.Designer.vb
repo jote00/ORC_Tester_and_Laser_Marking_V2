@@ -32,7 +32,7 @@ Partial Class SettingForm
         Me.lbl_date = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_curr_time = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lbl_auto_man = New System.Windows.Forms.Label()
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
         Me.btn_home = New System.Windows.Forms.Button()
         Me.btn_st6 = New System.Windows.Forms.Button()
@@ -93,7 +93,7 @@ Partial Class SettingForm
         Me.TextBox1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.Window
         Me.TextBox1.Location = New System.Drawing.Point(13, 135)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
@@ -117,7 +117,7 @@ Partial Class SettingForm
         Me.btn_login.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_login.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_change_user_65
         Me.btn_login.Location = New System.Drawing.Point(1517, 15)
-        Me.btn_login.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_login.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Size = New System.Drawing.Size(113, 105)
         Me.btn_login.TabIndex = 35
@@ -129,7 +129,7 @@ Partial Class SettingForm
         '
         Me.pb_logo.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.telemecanique_sensors_logo_transparent
         Me.pb_logo.Location = New System.Drawing.Point(16, 15)
-        Me.pb_logo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pb_logo.Margin = New System.Windows.Forms.Padding(4)
         Me.pb_logo.Name = "pb_logo"
         Me.pb_logo.Size = New System.Drawing.Size(333, 105)
         Me.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -140,7 +140,7 @@ Partial Class SettingForm
         '
         Me.pb_status_mc.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.mark_ok
         Me.pb_status_mc.Location = New System.Drawing.Point(1200, 15)
-        Me.pb_status_mc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pb_status_mc.Margin = New System.Windows.Forms.Padding(4)
         Me.pb_status_mc.Name = "pb_status_mc"
         Me.pb_status_mc.Size = New System.Drawing.Size(113, 105)
         Me.pb_status_mc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -186,25 +186,25 @@ Partial Class SettingForm
         Me.lbl_curr_time.TabIndex = 30
         Me.lbl_curr_time.Text = "23:59:59"
         '
-        'Label1
+        'lbl_auto_man
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.LimeGreen
-        Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(495, 26)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(137, 40)
-        Me.Label1.TabIndex = 29
-        Me.Label1.Text = "MANUAL"
+        Me.lbl_auto_man.AutoSize = True
+        Me.lbl_auto_man.BackColor = System.Drawing.Color.LimeGreen
+        Me.lbl_auto_man.Font = New System.Drawing.Font("Arial Narrow", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_auto_man.ForeColor = System.Drawing.Color.White
+        Me.lbl_auto_man.Location = New System.Drawing.Point(495, 26)
+        Me.lbl_auto_man.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_auto_man.Name = "lbl_auto_man"
+        Me.lbl_auto_man.Size = New System.Drawing.Size(137, 40)
+        Me.lbl_auto_man.TabIndex = 29
+        Me.lbl_auto_man.Text = "MANUAL"
         '
         'pb_status_bar
         '
         Me.pb_status_bar.BackColor = System.Drawing.Color.LimeGreen
         Me.pb_status_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pb_status_bar.Location = New System.Drawing.Point(481, 15)
-        Me.pb_status_bar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pb_status_bar.Margin = New System.Windows.Forms.Padding(4)
         Me.pb_status_bar.Name = "pb_status_bar"
         Me.pb_status_bar.Size = New System.Drawing.Size(666, 104)
         Me.pb_status_bar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -216,7 +216,7 @@ Partial Class SettingForm
         Me.btn_home.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_home.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_home_50
         Me.btn_home.Location = New System.Drawing.Point(13, 199)
-        Me.btn_home.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_home.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_home.Name = "btn_home"
         Me.btn_home.Size = New System.Drawing.Size(160, 105)
         Me.btn_home.TabIndex = 39
@@ -229,7 +229,7 @@ Partial Class SettingForm
         Me.btn_st6.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st6.Image = CType(resources.GetObject("btn_st6.Image"), System.Drawing.Image)
         Me.btn_st6.Location = New System.Drawing.Point(1723, 759)
-        Me.btn_st6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_st6.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_st6.Name = "btn_st6"
         Me.btn_st6.Size = New System.Drawing.Size(160, 105)
         Me.btn_st6.TabIndex = 53
@@ -242,7 +242,7 @@ Partial Class SettingForm
         Me.btn_st5.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st5.Image = CType(resources.GetObject("btn_st5.Image"), System.Drawing.Image)
         Me.btn_st5.Location = New System.Drawing.Point(1723, 647)
-        Me.btn_st5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_st5.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_st5.Name = "btn_st5"
         Me.btn_st5.Size = New System.Drawing.Size(160, 105)
         Me.btn_st5.TabIndex = 52
@@ -255,7 +255,7 @@ Partial Class SettingForm
         Me.btn_st4.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st4.Image = CType(resources.GetObject("btn_st4.Image"), System.Drawing.Image)
         Me.btn_st4.Location = New System.Drawing.Point(1723, 535)
-        Me.btn_st4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_st4.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_st4.Name = "btn_st4"
         Me.btn_st4.Size = New System.Drawing.Size(160, 105)
         Me.btn_st4.TabIndex = 51
@@ -268,7 +268,7 @@ Partial Class SettingForm
         Me.btn_st3.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st3.Image = CType(resources.GetObject("btn_st3.Image"), System.Drawing.Image)
         Me.btn_st3.Location = New System.Drawing.Point(1723, 423)
-        Me.btn_st3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_st3.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_st3.Name = "btn_st3"
         Me.btn_st3.Size = New System.Drawing.Size(160, 105)
         Me.btn_st3.TabIndex = 50
@@ -281,7 +281,7 @@ Partial Class SettingForm
         Me.btn_st2.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st2.Image = CType(resources.GetObject("btn_st2.Image"), System.Drawing.Image)
         Me.btn_st2.Location = New System.Drawing.Point(1723, 311)
-        Me.btn_st2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_st2.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_st2.Name = "btn_st2"
         Me.btn_st2.Size = New System.Drawing.Size(160, 105)
         Me.btn_st2.TabIndex = 49
@@ -294,7 +294,7 @@ Partial Class SettingForm
         Me.btn_st1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st1.Image = CType(resources.GetObject("btn_st1.Image"), System.Drawing.Image)
         Me.btn_st1.Location = New System.Drawing.Point(1723, 199)
-        Me.btn_st1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_st1.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_st1.Name = "btn_st1"
         Me.btn_st1.Size = New System.Drawing.Size(160, 105)
         Me.btn_st1.TabIndex = 48
@@ -309,9 +309,9 @@ Partial Class SettingForm
         Me.GroupBox1.Controls.Add(Me.grp_plc)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(181, 180)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(1533, 846)
         Me.GroupBox1.TabIndex = 54
         Me.GroupBox1.TabStop = False
@@ -321,7 +321,7 @@ Partial Class SettingForm
         '
         Me.rtbSetting.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rtbSetting.Location = New System.Drawing.Point(529, 722)
-        Me.rtbSetting.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.rtbSetting.Margin = New System.Windows.Forms.Padding(5)
         Me.rtbSetting.Name = "rtbSetting"
         Me.rtbSetting.Size = New System.Drawing.Size(875, 78)
         Me.rtbSetting.TabIndex = 68
@@ -343,9 +343,9 @@ Partial Class SettingForm
         Me.GroupBox177.Controls.Add(Me.ind_stn_1)
         Me.GroupBox177.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox177.Location = New System.Drawing.Point(37, 47)
-        Me.GroupBox177.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.GroupBox177.Margin = New System.Windows.Forms.Padding(5)
         Me.GroupBox177.Name = "GroupBox177"
-        Me.GroupBox177.Padding = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.GroupBox177.Padding = New System.Windows.Forms.Padding(5)
         Me.GroupBox177.Size = New System.Drawing.Size(383, 188)
         Me.GroupBox177.TabIndex = 65
         Me.GroupBox177.TabStop = False
@@ -422,7 +422,7 @@ Partial Class SettingForm
         Me.ind_stn_6.BackColor = System.Drawing.Color.DarkRed
         Me.ind_stn_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ind_stn_6.Location = New System.Drawing.Point(193, 132)
-        Me.ind_stn_6.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ind_stn_6.Margin = New System.Windows.Forms.Padding(5)
         Me.ind_stn_6.Name = "ind_stn_6"
         Me.ind_stn_6.Size = New System.Drawing.Size(34, 29)
         Me.ind_stn_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -434,7 +434,7 @@ Partial Class SettingForm
         Me.ind_stn_3.BackColor = System.Drawing.Color.DarkRed
         Me.ind_stn_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ind_stn_3.Location = New System.Drawing.Point(9, 132)
-        Me.ind_stn_3.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ind_stn_3.Margin = New System.Windows.Forms.Padding(5)
         Me.ind_stn_3.Name = "ind_stn_3"
         Me.ind_stn_3.Size = New System.Drawing.Size(34, 29)
         Me.ind_stn_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -446,7 +446,7 @@ Partial Class SettingForm
         Me.ind_stn_5.BackColor = System.Drawing.Color.DarkRed
         Me.ind_stn_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ind_stn_5.Location = New System.Drawing.Point(193, 92)
-        Me.ind_stn_5.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ind_stn_5.Margin = New System.Windows.Forms.Padding(5)
         Me.ind_stn_5.Name = "ind_stn_5"
         Me.ind_stn_5.Size = New System.Drawing.Size(34, 29)
         Me.ind_stn_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -458,7 +458,7 @@ Partial Class SettingForm
         Me.ind_stn_2.BackColor = System.Drawing.Color.DarkRed
         Me.ind_stn_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ind_stn_2.Location = New System.Drawing.Point(9, 92)
-        Me.ind_stn_2.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ind_stn_2.Margin = New System.Windows.Forms.Padding(5)
         Me.ind_stn_2.Name = "ind_stn_2"
         Me.ind_stn_2.Size = New System.Drawing.Size(34, 29)
         Me.ind_stn_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -470,7 +470,7 @@ Partial Class SettingForm
         Me.ind_stn_4.BackColor = System.Drawing.Color.DarkRed
         Me.ind_stn_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ind_stn_4.Location = New System.Drawing.Point(193, 53)
-        Me.ind_stn_4.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ind_stn_4.Margin = New System.Windows.Forms.Padding(5)
         Me.ind_stn_4.Name = "ind_stn_4"
         Me.ind_stn_4.Size = New System.Drawing.Size(34, 29)
         Me.ind_stn_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -482,7 +482,7 @@ Partial Class SettingForm
         Me.ind_stn_1.BackColor = System.Drawing.Color.DarkRed
         Me.ind_stn_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ind_stn_1.Location = New System.Drawing.Point(9, 53)
-        Me.ind_stn_1.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ind_stn_1.Margin = New System.Windows.Forms.Padding(5)
         Me.ind_stn_1.Name = "ind_stn_1"
         Me.ind_stn_1.Size = New System.Drawing.Size(34, 29)
         Me.ind_stn_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -506,9 +506,9 @@ Partial Class SettingForm
         Me.grp_plc.Controls.Add(Me.Label91)
         Me.grp_plc.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grp_plc.Location = New System.Drawing.Point(37, 271)
-        Me.grp_plc.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.grp_plc.Margin = New System.Windows.Forms.Padding(5)
         Me.grp_plc.Name = "grp_plc"
-        Me.grp_plc.Padding = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.grp_plc.Padding = New System.Windows.Forms.Padding(5)
         Me.grp_plc.Size = New System.Drawing.Size(383, 530)
         Me.grp_plc.TabIndex = 64
         Me.grp_plc.TabStop = False
@@ -519,7 +519,7 @@ Partial Class SettingForm
         Me.ind_connect_plc.BackColor = System.Drawing.Color.DarkRed
         Me.ind_connect_plc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ind_connect_plc.Location = New System.Drawing.Point(80, 139)
-        Me.ind_connect_plc.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ind_connect_plc.Margin = New System.Windows.Forms.Padding(5)
         Me.ind_connect_plc.Name = "ind_connect_plc"
         Me.ind_connect_plc.Size = New System.Drawing.Size(34, 29)
         Me.ind_connect_plc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -531,7 +531,7 @@ Partial Class SettingForm
         Me.btn_write.AutoSize = True
         Me.btn_write.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_write.Location = New System.Drawing.Point(201, 404)
-        Me.btn_write.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.btn_write.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_write.Name = "btn_write"
         Me.btn_write.Size = New System.Drawing.Size(149, 53)
         Me.btn_write.TabIndex = 4
@@ -543,7 +543,7 @@ Partial Class SettingForm
         Me.btn_save_plc.AutoSize = True
         Me.btn_save_plc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_save_plc.Location = New System.Drawing.Point(201, 178)
-        Me.btn_save_plc.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.btn_save_plc.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_save_plc.Name = "btn_save_plc"
         Me.btn_save_plc.Size = New System.Drawing.Size(173, 53)
         Me.btn_save_plc.TabIndex = 4
@@ -555,7 +555,7 @@ Partial Class SettingForm
         Me.btn_connect_plc.AutoSize = True
         Me.btn_connect_plc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_connect_plc.Location = New System.Drawing.Point(11, 178)
-        Me.btn_connect_plc.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.btn_connect_plc.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_connect_plc.Name = "btn_connect_plc"
         Me.btn_connect_plc.Size = New System.Drawing.Size(171, 53)
         Me.btn_connect_plc.TabIndex = 4
@@ -567,7 +567,7 @@ Partial Class SettingForm
         Me.btn_read.AutoSize = True
         Me.btn_read.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_read.Location = New System.Drawing.Point(32, 404)
-        Me.btn_read.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.btn_read.Margin = New System.Windows.Forms.Padding(5)
         Me.btn_read.Name = "btn_read"
         Me.btn_read.Size = New System.Drawing.Size(149, 53)
         Me.btn_read.TabIndex = 4
@@ -578,7 +578,7 @@ Partial Class SettingForm
         '
         Me.txt_port_plc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_port_plc.Location = New System.Drawing.Point(160, 86)
-        Me.txt_port_plc.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txt_port_plc.Margin = New System.Windows.Forms.Padding(5)
         Me.txt_port_plc.Name = "txt_port_plc"
         Me.txt_port_plc.Size = New System.Drawing.Size(196, 30)
         Me.txt_port_plc.TabIndex = 3
@@ -587,7 +587,7 @@ Partial Class SettingForm
         '
         Me.txtValue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtValue.Location = New System.Drawing.Point(167, 329)
-        Me.txtValue.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txtValue.Margin = New System.Windows.Forms.Padding(5)
         Me.txtValue.Name = "txtValue"
         Me.txtValue.Size = New System.Drawing.Size(196, 30)
         Me.txtValue.TabIndex = 3
@@ -596,7 +596,7 @@ Partial Class SettingForm
         '
         Me.txt_ip_plc.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_ip_plc.Location = New System.Drawing.Point(160, 37)
-        Me.txt_ip_plc.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txt_ip_plc.Margin = New System.Windows.Forms.Padding(5)
         Me.txt_ip_plc.Name = "txt_ip_plc"
         Me.txt_ip_plc.Size = New System.Drawing.Size(196, 30)
         Me.txt_ip_plc.TabIndex = 2
@@ -616,7 +616,7 @@ Partial Class SettingForm
         '
         Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAddress.Location = New System.Drawing.Point(167, 278)
-        Me.txtAddress.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.txtAddress.Margin = New System.Windows.Forms.Padding(5)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(196, 30)
         Me.txtAddress.TabIndex = 2
@@ -680,9 +680,9 @@ Partial Class SettingForm
         Me.Controls.Add(Me.lbl_date)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lbl_curr_time)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lbl_auto_man)
         Me.Controls.Add(Me.pb_status_bar)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "SettingForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SettingForm"
@@ -714,7 +714,7 @@ Partial Class SettingForm
     Friend WithEvents lbl_date As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents lbl_curr_time As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lbl_auto_man As Label
     Friend WithEvents pb_status_bar As PictureBox
     Friend WithEvents btn_home As Button
     Friend WithEvents btn_st6 As Button
