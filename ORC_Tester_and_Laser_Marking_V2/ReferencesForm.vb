@@ -73,7 +73,7 @@ Public Class ReferencesForm
 
         Else
             Call ConnectionDB.connection_db()
-            Dim sc As New SqlCommand("INSERT INTO tb_reference ([References], [Punching Mode], [Level Distance], [Level Tolerance], [Oring Check], [Festo LEFT Distance], [Festo Right Distance], [Festo LEFT Speed], [Fest RIGHT Speed], [Laser Template], [Camera Program]) VALUES('" & tbx_ref.Text & "', '" & tbx_punching.Text & "', '" & tbx_lvl_dist.Text & "', '" & tbx_lvl_toler.Text & "', '" & tbx_oring.Text & "', '" & tbx_Ldist.Text & "', '" & tbx_Rdist.Text & "', '" & tbx_Lspeed.Text & "', '" & tbx_Rspeed.Text & "', '" & tbx_laser_template.Text & "', '" & tbx_camera_program.Text & "')", ConnectionDB.Connection)
+            Dim sc As New SqlCommand("INSERT INTO tbl_References ([References], [Punching Mode], [Level Distance], [Level Tolerance], [Oring Check], [Festo LEFT Distance], [Festo Right Distance], [Festo LEFT Speed], [Festo RIGHT Speed], [Laser Template], [Camera Program]) VALUES('" & tbx_ref.Text & "', '" & tbx_punching.Text & "', '" & tbx_lvl_dist.Text & "', '" & tbx_lvl_toler.Text & "', '" & tbx_oring.Text & "', '" & tbx_Ldist.Text & "', '" & tbx_Rdist.Text & "', '" & tbx_Lspeed.Text & "', '" & tbx_Rspeed.Text & "', '" & tbx_laser_template.Text & "', '" & tbx_camera_program.Text & "')", ConnectionDB.Connection)
             Dim adapter As New SqlDataAdapter(sc)
             adapter.SelectCommand.ExecuteNonQuery()
             LoadTbRef()
