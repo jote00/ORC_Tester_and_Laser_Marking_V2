@@ -285,6 +285,18 @@ Public Class MainForm
     End Sub
 
     Private Sub plcWriting()
-
+        'Write Cylinder
+        Modbus.WriteModbus(ADDR_STN1_CYL1, SetCylFest.V101)
+        Modbus.WriteModbus(ADDR_STN3_CYL1, SetCylFest.V301)
+        Modbus.WriteModbus(ADDR_STN3_CYL2, SetCylFest.V302)
+        Modbus.WriteModbus(ADDR_STN3_CYL3, SetCylFest.V303)
+        Modbus.WriteModbus(ADDR_STN3_CYL4, SetCylFest.V304)
+        Modbus.WriteModbus(ADDR_STN4_CYL1, SetCylFest.V401)
+        Modbus.WriteModbus(ADDR_STN5_CYL1, SetCylFest.V501)
+        Modbus.WriteModbus(ADDR_STN5_CYL2, SetCylFest.V502)
+        Modbus.WriteModbus(ADDR_STN5_CYL3, SetCylFest.V503)
+        Modbus.WriteModbus(ADDR_STN6_CYL1, SetCylFest.V601)
+        Modbus.WriteModbus(ADDR_STN6_CYL2, SetCylFest.V602)
+        Modbus.WriteModbus(ADDR_STN6_CYL3, SetCylFest.V603)
     End Sub
 End Class
