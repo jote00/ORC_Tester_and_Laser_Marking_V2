@@ -19,6 +19,7 @@
     End Structure
 
     Public Structure CylFest
+        'Cylinder
         Dim V101 As Integer
         Dim V301 As Integer
         Dim V302 As Integer
@@ -31,6 +32,8 @@
         Dim V601 As Integer
         Dim V602 As Integer
         Dim V603 As Integer
+
+        'Festo Indicator Read
         Dim LALM As Integer
         Dim LPEND As Integer
         Dim LHEND As Integer
@@ -41,6 +44,14 @@
         Dim RHEND As Integer
         Dim RSVON As Integer
         Dim REMG As Integer
+
+        'Festo TextBox Read
+        Dim LPOSITION As Integer
+        Dim LSPEED As Integer
+        Dim LALARM As Integer
+        Dim RPOSITION As Integer
+        Dim RSPEED As Integer
+        Dim RALARM As Integer
     End Structure
 
     Public ADDR_TEST As Integer = 9090

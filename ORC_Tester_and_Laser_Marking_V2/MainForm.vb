@@ -263,7 +263,7 @@ Public Class MainForm
         GetCylFest.V602 = Modbus.ReadModbus(ADDR_STN6_SEN2, 1)(0)
         GetCylFest.V603 = Modbus.ReadModbus(ADDR_STN6_SEN3, 1)(0)
 
-        'Festo
+        'Festo Indicator Read
         GetCylFest.LALM = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 0)
         GetCylFest.LPEND = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 1)
         GetCylFest.LHEND = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 2)
@@ -274,6 +274,14 @@ Public Class MainForm
         GetCylFest.RHEND = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 2)
         GetCylFest.RSVON = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 3)
         GetCylFest.REMG = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 4)
+
+        'Festo TextBox Read
+        GetCylFest.LPOSITION = Modbus.ReadDoubleAddrees(ADDR_STN3_PSTN_LFESTO)
+        GetCylFest.LSPEED = Modbus.ReadModbus(ADDR_STN3_SPD_LFESTO, 1)(0)
+        GetCylFest.LALARM = Modbus.ReadModbus(ADDR_STN3_ALM_LFESTO, 1)(0)
+        GetCylFest.RPOSITION = Modbus.ReadDoubleAddrees(ADDR_STN3_PSTN_RFESTO)
+        GetCylFest.RSPEED = Modbus.ReadModbus(ADDR_STN3_SPD_RFESTO, 1)(0)
+        GetCylFest.RALARM = Modbus.ReadModbus(ADDR_STN3_ALM_RFESTO, 1)(0)
     End Sub
 
     Private Sub plcWriting()

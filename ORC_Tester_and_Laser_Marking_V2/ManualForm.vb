@@ -524,6 +524,19 @@ Public Class ManualForm
         Do
             Console.WriteLine("Manual Form Thread=MainLoop")
 
+
+            'Text Box Festo read ----------------------------------------------
+            Me.Invoke(Sub()
+
+                          tbx_Lfesto_position.Text = GetCylFest.LPOSITION
+                          tbx_Lfesto_speed.Text = GetCylFest.LSPEED
+                          tbx_Lfesto_alarm.Text = GetCylFest.LALARM
+
+                          tbx_Rfesto_position.Text = GetCylFest.RPOSITION
+                          tbx_Rfesto_speed.Text = GetCylFest.RSPEED
+                          tbx_Rfesto_alarm.Text = GetCylFest.RALARM
+                      End Sub)
+
             'Station 1 - ---------------------------------------------
             'CylSen 1
             If GetCylFest.V101 = FORWARD Then
