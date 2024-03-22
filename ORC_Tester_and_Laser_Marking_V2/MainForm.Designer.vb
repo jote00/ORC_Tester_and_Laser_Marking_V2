@@ -32,9 +32,13 @@ Partial Class MainForm
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox76 = New System.Windows.Forms.GroupBox()
+        Me.ind_plc_status = New System.Windows.Forms.PictureBox()
         Me.Label64 = New System.Windows.Forms.Label()
         Me.txt_alarm_copy = New System.Windows.Forms.RichTextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.ind_software_stop = New System.Windows.Forms.PictureBox()
+        Me.ind_software_run = New System.Windows.Forms.PictureBox()
+        Me.ind_software_open = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label65 = New System.Windows.Forms.Label()
@@ -134,6 +138,10 @@ Partial Class MainForm
         Me.lbl_status_1 = New System.Windows.Forms.Label()
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.btn_empty = New System.Windows.Forms.Button()
         Me.txt_po_num = New System.Windows.Forms.TextBox()
         Me.Label85 = New System.Windows.Forms.Label()
         Me.txt_ope_id = New System.Windows.Forms.TextBox()
@@ -142,14 +150,6 @@ Partial Class MainForm
         Me.Label80 = New System.Windows.Forms.Label()
         Me.DateTime = New System.Windows.Forms.Timer(Me.components)
         Me.ModbusRW = New System.Windows.Forms.Timer(Me.components)
-        Me.ind_plc_status = New System.Windows.Forms.PictureBox()
-        Me.ind_software_stop = New System.Windows.Forms.PictureBox()
-        Me.ind_software_run = New System.Windows.Forms.PictureBox()
-        Me.ind_software_open = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.btn_empty = New System.Windows.Forms.Button()
         Me.btn_st6 = New System.Windows.Forms.Button()
         Me.btn_st5 = New System.Windows.Forms.Button()
         Me.btn_st4 = New System.Windows.Forms.Button()
@@ -166,16 +166,17 @@ Partial Class MainForm
         Me.pb_logo = New System.Windows.Forms.PictureBox()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
+        Me.Status = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox76.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.GroupBox175.SuspendLayout()
-        Me.GroupBox78.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.ind_plc_status, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
         CType(Me.ind_software_stop, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_software_run, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_software_open, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox175.SuspendLayout()
+        Me.GroupBox78.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -284,6 +285,16 @@ Partial Class MainForm
         Me.GroupBox76.TabStop = False
         Me.GroupBox76.Text = "PLC Status"
         '
+        'ind_plc_status
+        '
+        Me.ind_plc_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_plc_status.Location = New System.Drawing.Point(16, 32)
+        Me.ind_plc_status.Margin = New System.Windows.Forms.Padding(5)
+        Me.ind_plc_status.Name = "ind_plc_status"
+        Me.ind_plc_status.Size = New System.Drawing.Size(25, 22)
+        Me.ind_plc_status.TabIndex = 33
+        Me.ind_plc_status.TabStop = False
+        '
         'Label64
         '
         Me.Label64.AutoSize = True
@@ -323,6 +334,36 @@ Partial Class MainForm
         Me.GroupBox3.TabIndex = 68
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "PC Status"
+        '
+        'ind_software_stop
+        '
+        Me.ind_software_stop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_software_stop.Location = New System.Drawing.Point(17, 112)
+        Me.ind_software_stop.Margin = New System.Windows.Forms.Padding(5)
+        Me.ind_software_stop.Name = "ind_software_stop"
+        Me.ind_software_stop.Size = New System.Drawing.Size(25, 22)
+        Me.ind_software_stop.TabIndex = 35
+        Me.ind_software_stop.TabStop = False
+        '
+        'ind_software_run
+        '
+        Me.ind_software_run.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_software_run.Location = New System.Drawing.Point(17, 76)
+        Me.ind_software_run.Margin = New System.Windows.Forms.Padding(5)
+        Me.ind_software_run.Name = "ind_software_run"
+        Me.ind_software_run.Size = New System.Drawing.Size(25, 22)
+        Me.ind_software_run.TabIndex = 35
+        Me.ind_software_run.TabStop = False
+        '
+        'ind_software_open
+        '
+        Me.ind_software_open.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_software_open.Location = New System.Drawing.Point(17, 36)
+        Me.ind_software_open.Margin = New System.Windows.Forms.Padding(5)
+        Me.ind_software_open.Name = "ind_software_open"
+        Me.ind_software_open.Size = New System.Drawing.Size(25, 22)
+        Me.ind_software_open.TabIndex = 35
+        Me.ind_software_open.TabStop = False
         '
         'Label4
         '
@@ -1609,107 +1650,6 @@ Partial Class MainForm
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Product Information"
         '
-        'txt_po_num
-        '
-        Me.txt_po_num.Location = New System.Drawing.Point(15, 201)
-        Me.txt_po_num.Margin = New System.Windows.Forms.Padding(5)
-        Me.txt_po_num.Name = "txt_po_num"
-        Me.txt_po_num.Size = New System.Drawing.Size(299, 29)
-        Me.txt_po_num.TabIndex = 75
-        '
-        'Label85
-        '
-        Me.Label85.AutoSize = True
-        Me.Label85.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label85.Location = New System.Drawing.Point(12, 171)
-        Me.Label85.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label85.Name = "Label85"
-        Me.Label85.Size = New System.Drawing.Size(99, 20)
-        Me.Label85.TabIndex = 74
-        Me.Label85.Text = "PO Number :"
-        '
-        'txt_ope_id
-        '
-        Me.txt_ope_id.Location = New System.Drawing.Point(15, 130)
-        Me.txt_ope_id.Margin = New System.Windows.Forms.Padding(5)
-        Me.txt_ope_id.Name = "txt_ope_id"
-        Me.txt_ope_id.Size = New System.Drawing.Size(299, 29)
-        Me.txt_ope_id.TabIndex = 73
-        '
-        'Label83
-        '
-        Me.Label83.AutoSize = True
-        Me.Label83.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label83.Location = New System.Drawing.Point(9, 101)
-        Me.Label83.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label83.Name = "Label83"
-        Me.Label83.Size = New System.Drawing.Size(101, 20)
-        Me.Label83.TabIndex = 72
-        Me.Label83.Text = "Operator ID :"
-        '
-        'txt_ref
-        '
-        Me.txt_ref.Location = New System.Drawing.Point(15, 60)
-        Me.txt_ref.Margin = New System.Windows.Forms.Padding(5)
-        Me.txt_ref.Name = "txt_ref"
-        Me.txt_ref.Size = New System.Drawing.Size(299, 29)
-        Me.txt_ref.TabIndex = 71
-        '
-        'Label80
-        '
-        Me.Label80.AutoSize = True
-        Me.Label80.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label80.Location = New System.Drawing.Point(9, 31)
-        Me.Label80.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label80.Name = "Label80"
-        Me.Label80.Size = New System.Drawing.Size(100, 20)
-        Me.Label80.TabIndex = 32
-        Me.Label80.Text = "References :"
-        '
-        'DateTime
-        '
-        Me.DateTime.Enabled = True
-        '
-        'ind_plc_status
-        '
-        Me.ind_plc_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_plc_status.Location = New System.Drawing.Point(16, 32)
-        Me.ind_plc_status.Margin = New System.Windows.Forms.Padding(5)
-        Me.ind_plc_status.Name = "ind_plc_status"
-        Me.ind_plc_status.Size = New System.Drawing.Size(25, 22)
-        Me.ind_plc_status.TabIndex = 33
-        Me.ind_plc_status.TabStop = False
-        '
-        'ind_software_stop
-        '
-        Me.ind_software_stop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_software_stop.Location = New System.Drawing.Point(17, 112)
-        Me.ind_software_stop.Margin = New System.Windows.Forms.Padding(5)
-        Me.ind_software_stop.Name = "ind_software_stop"
-        Me.ind_software_stop.Size = New System.Drawing.Size(25, 22)
-        Me.ind_software_stop.TabIndex = 35
-        Me.ind_software_stop.TabStop = False
-        '
-        'ind_software_run
-        '
-        Me.ind_software_run.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_software_run.Location = New System.Drawing.Point(17, 76)
-        Me.ind_software_run.Margin = New System.Windows.Forms.Padding(5)
-        Me.ind_software_run.Name = "ind_software_run"
-        Me.ind_software_run.Size = New System.Drawing.Size(25, 22)
-        Me.ind_software_run.TabIndex = 35
-        Me.ind_software_run.TabStop = False
-        '
-        'ind_software_open
-        '
-        Me.ind_software_open.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_software_open.Location = New System.Drawing.Point(17, 36)
-        Me.ind_software_open.Margin = New System.Windows.Forms.Padding(5)
-        Me.ind_software_open.Name = "ind_software_open"
-        Me.ind_software_open.Size = New System.Drawing.Size(25, 22)
-        Me.ind_software_open.TabIndex = 35
-        Me.ind_software_open.TabStop = False
-        '
         'Button2
         '
         Me.Button2.FlatAppearance.BorderSize = 0
@@ -1771,6 +1711,67 @@ Partial Class MainForm
         Me.btn_empty.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btn_empty.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btn_empty.UseVisualStyleBackColor = True
+        '
+        'txt_po_num
+        '
+        Me.txt_po_num.Location = New System.Drawing.Point(15, 201)
+        Me.txt_po_num.Margin = New System.Windows.Forms.Padding(5)
+        Me.txt_po_num.Name = "txt_po_num"
+        Me.txt_po_num.Size = New System.Drawing.Size(299, 29)
+        Me.txt_po_num.TabIndex = 75
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label85.Location = New System.Drawing.Point(12, 171)
+        Me.Label85.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(99, 20)
+        Me.Label85.TabIndex = 74
+        Me.Label85.Text = "PO Number :"
+        '
+        'txt_ope_id
+        '
+        Me.txt_ope_id.Location = New System.Drawing.Point(15, 130)
+        Me.txt_ope_id.Margin = New System.Windows.Forms.Padding(5)
+        Me.txt_ope_id.Name = "txt_ope_id"
+        Me.txt_ope_id.Size = New System.Drawing.Size(299, 29)
+        Me.txt_ope_id.TabIndex = 73
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label83.Location = New System.Drawing.Point(9, 101)
+        Me.Label83.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(101, 20)
+        Me.Label83.TabIndex = 72
+        Me.Label83.Text = "Operator ID :"
+        '
+        'txt_ref
+        '
+        Me.txt_ref.Location = New System.Drawing.Point(15, 60)
+        Me.txt_ref.Margin = New System.Windows.Forms.Padding(5)
+        Me.txt_ref.Name = "txt_ref"
+        Me.txt_ref.Size = New System.Drawing.Size(299, 29)
+        Me.txt_ref.TabIndex = 71
+        '
+        'Label80
+        '
+        Me.Label80.AutoSize = True
+        Me.Label80.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label80.Location = New System.Drawing.Point(9, 31)
+        Me.Label80.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label80.Name = "Label80"
+        Me.Label80.Size = New System.Drawing.Size(100, 20)
+        Me.Label80.TabIndex = 32
+        Me.Label80.Text = "References :"
+        '
+        'DateTime
+        '
+        Me.DateTime.Enabled = True
         '
         'btn_st6
         '
@@ -1959,6 +1960,9 @@ Partial Class MainForm
         Me.pb_status_bar.TabIndex = 13
         Me.pb_status_bar.TabStop = False
         '
+        'Status
+        '
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1996,18 +2000,18 @@ Partial Class MainForm
         Me.GroupBox1.PerformLayout()
         Me.GroupBox76.ResumeLayout(False)
         Me.GroupBox76.PerformLayout()
+        CType(Me.ind_plc_status, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.ind_software_stop, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_software_run, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_software_open, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox175.ResumeLayout(False)
         Me.GroupBox175.PerformLayout()
         Me.GroupBox78.ResumeLayout(False)
         Me.GroupBox78.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.ind_plc_status, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_software_stop, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_software_run, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_software_open, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2158,4 +2162,5 @@ Partial Class MainForm
     Friend WithEvents ind_plc_status As PictureBox
     Friend WithEvents Label64 As Label
     Friend WithEvents ModbusRW As Timer
+    Friend WithEvents Status As Timer
 End Class

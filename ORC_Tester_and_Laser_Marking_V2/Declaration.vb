@@ -3,17 +3,44 @@
     Public BtnStnVisible As Integer
     Public LoadingBarValue As Integer
     Public LoadingBarMessage As String
-    Public txtManAuto As Integer
+    Public plcTrigger As Boolean
 
     Public Config As New machineConfig
     Public MODBUS_ERR As Boolean = False
 
+    Public SetCylFest As CylFest
+    Public GetCylFest As CylFest
 
     Public Structure machineConfig
         Dim dbHostName As String
         Dim dbUsername As String
         Dim dbPassword As String
         Dim dbDatabase As String
+    End Structure
+
+    Public Structure CylFest
+        Dim V101 As Integer
+        Dim V301 As Integer
+        Dim V302 As Integer
+        Dim V303 As Integer
+        Dim V304 As Integer
+        Dim V401 As Integer
+        Dim V501 As Integer
+        Dim V502 As Integer
+        Dim V503 As Integer
+        Dim V601 As Integer
+        Dim V602 As Integer
+        Dim V603 As Integer
+        Dim LALM As Integer
+        Dim LPEND As Integer
+        Dim LHEND As Integer
+        Dim LSVON As Integer
+        Dim LEMG As Integer
+        Dim RALM As Integer
+        Dim RPEND As Integer
+        Dim RHEND As Integer
+        Dim RSVON As Integer
+        Dim REMG As Integer
     End Structure
 
     Public ADDR_TEST As Integer = 9090
