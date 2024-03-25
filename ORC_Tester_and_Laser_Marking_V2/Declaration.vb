@@ -10,7 +10,7 @@
 
     Public SetCylFest As CylFest
     Public GetCylFest As CylFest
-
+    Public GetAutoMan As CylFest
     Public Structure machineConfig
         Dim dbHostName As String
         Dim dbUsername As String
@@ -52,6 +52,25 @@
         Dim RPOSITION As Integer
         Dim RSPEED As Integer
         Dim RALARM As Integer
+
+        'Festo Trigger
+        Dim LALMRES As Integer
+        Dim LSERVO As Integer
+        Dim LJOGMIN As Integer
+        Dim LJOGPLUS As Integer
+        Dim LHOMING As Integer
+        Dim LJISL As Integer
+        Dim LPWRRES As Integer
+        Dim RALMRES As Integer
+        Dim RSERVO As Integer
+        Dim RJOGMIN As Integer
+        Dim RJOGPLUS As Integer
+        Dim RHOMING As Integer
+        Dim RJISL As Integer
+        Dim RPWRRES As Integer
+
+        'Auto Manual Mode Status
+        Dim RUNNING_MODE
     End Structure
 
     Public ADDR_TEST As Integer = 9090
