@@ -124,15 +124,18 @@ Public Class MainForm
 
     Private Sub btn_references_Click(sender As Object, e As EventArgs) Handles btn_references.Click
         Hide()
-        ReferencesForm.ShowDialog()
+        MainModbusThread.Abort()
+        ReferencesForm.Show()
+        'MainModbusThread = New Thread(AddressOf MainModbus)
+        'MainModbusThread.Start()
     End Sub
 
     Private Sub btn_setting_Click(sender As Object, e As EventArgs) Handles btn_setting.Click
         Hide()
-        plcReadThread.Abort()
-        SettingForm.ShowDialog()
-        plcReadThread = New Thread(AddressOf plcReading)
-        plcReadThread.Start()
+        MainModbusThread.Abort()
+        SettingForm.Show()
+        'MainModbusThread = New Thread(AddressOf MainModbus)
+        'MainModbusThread.Start()
     End Sub
 
     'Private Sub plcReading()

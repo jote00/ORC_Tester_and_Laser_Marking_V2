@@ -1,7 +1,9 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Threading
 Imports ControlBPM
 Imports System.IO
 Public Class ReferencesForm
+    Dim runningModeThread As Thread
     Dim fullPath As String = System.AppDomain.CurrentDomain.BaseDirectory
     Dim projectFolder As String = fullPath.Replace("\ORC_Tester_and_Laser_Marking_V2\bin\Debug\", "").Replace("\ORC_Tester_and_Laser_Marking\bin\Release\", "")
     Dim iniPath As String = projectFolder + "\Config\Config.INI"
@@ -13,6 +15,7 @@ Public Class ReferencesForm
     End Sub
 
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
+        runningModeThread.Abort()
         Close()
         MainForm.Show()
     End Sub
@@ -31,6 +34,9 @@ Public Class ReferencesForm
 
     Private Sub ReferencesForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetUserLevel()
+        runningModeThread = New Thread(New ThreadStart(AddressOf runningMode))
+        runningModeThread.Start()
+
         With Config
             .dbHostName = ReadINI(iniPath, "DATABASE", "Hostname")
             .dbUsername = ReadINI(iniPath, "DATABASE", "Username")
@@ -128,5 +134,32 @@ Public Class ReferencesForm
         Catch ex As Exception
             MsgBox("Error " + ex.Message)
         End Try
+    End Sub
+
+    'Running Mode Status
+    Private Sub runningMode()
+        Do
+            Console.WriteLine("Modbus SettingForm")
+            If Connected() Then
+
+                'Running Mode Status
+                RUNNING_MODE = Modbus.ReadModbus(ADDR_RUNNING_MODE, 1)(0)
+                Select Case RUNNING_MODE
+                    Case 0
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "..."
+                                  End Sub)
+                    Case 1
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "AUTO"
+                                  End Sub)
+                    Case 2
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "MANUAL"
+                                  End Sub)
+                End Select
+            End If
+            Thread.Sleep(100)
+        Loop
     End Sub
 End Class
