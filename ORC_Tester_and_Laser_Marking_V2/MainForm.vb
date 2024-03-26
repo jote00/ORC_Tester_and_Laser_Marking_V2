@@ -3,7 +3,7 @@ Imports System.IO
 Imports System.Data.SqlClient
 Public Class MainForm
     Dim ThreadLoadingBar As Thread
-    Dim plcReadThread As Thread
+    ' Dim plcStatusThread As Thread
     Dim MainModbusThread As Thread
     'Dim Statusbar As Thread
 
@@ -18,8 +18,8 @@ Public Class MainForm
         AutoConnection()
         'Statusbar = New Thread(New ThreadStart(AddressOf manualauto))
         'Statusbar.Start()
-        plcReadThread = New Thread(New ThreadStart(AddressOf plcReading))
-        plcReadThread.Start()
+        ' plcStatusThread = New Thread(New ThreadStart(AddressOf plcStatus))
+        'plcStatusThread.Start()
         MainModbusThread = New Thread(AddressOf MainModbus)
         MainModbusThread.Start()
 
@@ -58,8 +58,12 @@ Public Class MainForm
     End Sub
     Private Sub ProcessLoad()
         Do
-            LoadingForm.ShowDialog()
-            Thread.Sleep(100)
+            Try
+                LoadingForm.ShowDialog()
+                Thread.Sleep(100)
+            Catch ex As Exception
+
+            End Try
         Loop
     End Sub
     Private Sub UpdateLoadingBar(value As Integer, msg As String)
@@ -116,7 +120,7 @@ Public Class MainForm
 
     Private Sub btn_manual_Click(sender As Object, e As EventArgs) Handles btn_manual.Click
         Hide()
-        'MainModbusThread.Abort()
+        'plcStatusThread.Abort()
         ManualForm.Show()
         'plcReadThread = New Thread(AddressOf plcReading)
         'plcReadThread.Start()
@@ -124,6 +128,7 @@ Public Class MainForm
 
     Private Sub btn_references_Click(sender As Object, e As EventArgs) Handles btn_references.Click
         Hide()
+        ' plcStatusThread.Abort()
         MainModbusThread.Abort()
         ReferencesForm.Show()
         'MainModbusThread = New Thread(AddressOf MainModbus)
@@ -132,13 +137,14 @@ Public Class MainForm
 
     Private Sub btn_setting_Click(sender As Object, e As EventArgs) Handles btn_setting.Click
         Hide()
+        'plcStatusThread.Abort()
         MainModbusThread.Abort()
         SettingForm.Show()
         'MainModbusThread = New Thread(AddressOf MainModbus)
         'MainModbusThread.Start()
     End Sub
 
-    'Private Sub plcReading()
+    'Private Sub plcStatus()
     '    Do
     '        Console.WriteLine("Modbus MainForm")
     '        If Connected() Then
@@ -180,60 +186,62 @@ Public Class MainForm
 
     'For Refrences, Operator ID,PO Number
     Private Sub Status_Tick(sender As Object, e As EventArgs) Handles Status.Tick
+
+
         Select Case SCAN_MODE
-            Case 0
-                If txt_ref.Text <> "" Then
-                    Call ConnectionDB.connection_db()
-                    Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]=@Reference", ConnectionDB.Connection)
-                    sc.Parameters.AddWithValue("@Reference", txt_ref.Text)
-                    Dim rd As SqlDataReader = sc.ExecuteReader()
+                Case 0
+                    If txt_ref.Text <> "" Then
+                        Call ConnectionDB.connection_db()
+                        Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]=@Reference", ConnectionDB.Connection)
+                        sc.Parameters.AddWithValue("@Reference", txt_ref.Text)
+                        Dim rd As SqlDataReader = sc.ExecuteReader()
 
-                    If rd.HasRows Then
-                        SCAN_MODE = 1
-                    Else
-                        MsgBox("Invalid Reference")
-                        txt_ref.Text = ""
+                        If rd.HasRows Then
+                            SCAN_MODE = 1
+                        Else
+                            MsgBox("Invalid Reference")
+                            txt_ref.Text = ""
+                        End If
+
+                        rd.Close()
                     End If
 
-                    rd.Close()
-                End If
-
-            Case 1
-                If txt_ope_id.Text <> "" Then
-                    SCAN_MODE = 2
-                End If
-
-            Case 2
-                If txt_po_num.Text <> "" Then
-                    Call ConnectionDB.connection_db()
-                    Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]=@Reference", ConnectionDB.Connection)
-                    sc.Parameters.AddWithValue("@Reference", txt_ref.Text)
-                    Dim rd As SqlDataReader = sc.ExecuteReader()
-
-                    If rd.HasRows Then
-                        rd.Read()
-                        Modbus.WriteModbus(ADDR_PUNCHING_MODE, rd.Item("Punching Mode"))
-                        Modbus.WriteDataFloat(ADDR_LVL_DIST, Single.Parse(rd.Item("Level Distance").Replace(",", ".")))
-                        Modbus.WriteDataFloat(ADDR_LVL_TOLER, Single.Parse(rd.Item("Level Tolerance").Replace(",", ".")))
-                        Modbus.WriteModbus(ADDR_ORING, rd.Item("Oring Check"))
-                        Modbus.WriteDoubleInteger(ADDR_FESTO_LDIST, rd.Item("Festo LEFT Distance"))
-                        Modbus.WriteDoubleInteger(ADDR_FESTO_RDIST, rd.Item("Festo RIGHT Distance"))
-                        Modbus.WriteModbus(ADDR_FESTO_LSPEED, rd.Item("Festo LEFT Speed"))
-                        Modbus.WriteModbus(ADDR_FESTO_RSPEED, rd.Item("Festo RIGHT Speed"))
-                        Modbus.WriteModbus(ADDR_LASER_TEMPLATE, rd.Item("Laser Template"))
-                        Modbus.WriteModbus(ADDR_CAMERA_PROGRAM, rd.Item("Camera Program"))
-
-
-
-                        SCAN_MODE = 3
-                    Else
-                        MsgBox("Invalid Reference")
-                        txt_ref.Text = ""
+                Case 1
+                    If txt_ope_id.Text <> "" Then
+                        SCAN_MODE = 2
                     End If
 
-                    rd.Close()
-                End If
-        End Select
+                Case 2
+                    If txt_po_num.Text <> "" Then
+                        Call ConnectionDB.connection_db()
+                        Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]=@Reference", ConnectionDB.Connection)
+                        sc.Parameters.AddWithValue("@Reference", txt_ref.Text)
+                        Dim rd As SqlDataReader = sc.ExecuteReader()
+
+                        If rd.HasRows Then
+                            rd.Read()
+                            Modbus.WriteModbus(ADDR_PUNCHING_MODE, rd.Item("Punching Mode"))
+                            Modbus.WriteDataFloat(ADDR_LVL_DIST, Single.Parse(rd.Item("Level Distance").Replace(",", ".")))
+                            Modbus.WriteDataFloat(ADDR_LVL_TOLER, Single.Parse(rd.Item("Level Tolerance").Replace(",", ".")))
+                            Modbus.WriteModbus(ADDR_ORING, rd.Item("Oring Check"))
+                            Modbus.WriteDoubleInteger(ADDR_FESTO_LDIST, rd.Item("Festo LEFT Distance"))
+                            Modbus.WriteDoubleInteger(ADDR_FESTO_RDIST, rd.Item("Festo RIGHT Distance"))
+                            Modbus.WriteModbus(ADDR_FESTO_LSPEED, rd.Item("Festo LEFT Speed"))
+                            Modbus.WriteModbus(ADDR_FESTO_RSPEED, rd.Item("Festo RIGHT Speed"))
+                            Modbus.WriteModbus(ADDR_LASER_TEMPLATE, rd.Item("Laser Template"))
+                            Modbus.WriteModbus(ADDR_CAMERA_PROGRAM, rd.Item("Camera Program"))
+
+
+
+                            SCAN_MODE = 3
+                        Else
+                            MsgBox("Invalid Reference")
+                            txt_ref.Text = ""
+                        End If
+
+                        rd.Close()
+                    End If
+            End Select
     End Sub
 
     Private Sub MainModbus()
@@ -247,7 +255,7 @@ Public Class MainForm
                 'Thread.Sleep(10)
                 plcTrigger = False
             End If
-            Thread.Sleep(40)
+            Thread.Sleep(100)
         Loop
     End Sub
 
@@ -255,6 +263,37 @@ Public Class MainForm
         Try
 
             'Auto Manual Status
+            If Connected() Then
+                RUNNING_MODE = Modbus.ReadModbus(ADDR_RUNNING_MODE, 1)(0)
+                Select Case RUNNING_MODE
+                    Case 0
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "..."
+                                  End Sub)
+                    Case 1
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "AUTO"
+                                  End Sub)
+                    Case 2
+                        Me.Invoke(Sub()
+                                      lbl_auto_man.Text = "MANUAL"
+                                  End Sub)
+                End Select
+                'Check PLC
+
+                PLC_READY = Modbus.ReadModbus(ADDR_PLC_READY, 1)(0)
+                If PLC_READY = 1 Then
+                    ind_plc_status.BackColor = Color.Lime
+                Else
+                    ind_plc_status.BackColor = Color.Red
+                End If
+
+
+
+
+
+            End If
+
             GetAutoMan.RUNNING_MODE = Modbus.ReadModbus(ADDR_RUNNING_MODE, 1)(0)
 
             'Cylinder
@@ -298,19 +337,41 @@ Public Class MainForm
     End Sub
 
     Private Sub plcWriting()
+
+        'Write Rotary table
+        Modbus.WriteBit(ADDR_ROTARY_TABLE, 0, SetRotate.V101)
+
+
         'Write Cylinder
-        Modbus.WriteModbus(ADDR_STN1_CYL1, SetCylFest.V101)
-        Modbus.WriteModbus(ADDR_STN3_CYL1, SetCylFest.V301)
-        Modbus.WriteModbus(ADDR_STN3_CYL2, SetCylFest.V302)
-        Modbus.WriteModbus(ADDR_STN3_CYL3, SetCylFest.V303)
-        Modbus.WriteModbus(ADDR_STN3_CYL4, SetCylFest.V304)
-        Modbus.WriteModbus(ADDR_STN4_CYL1, SetCylFest.V401)
-        Modbus.WriteModbus(ADDR_STN5_CYL1, SetCylFest.V501)
-        Modbus.WriteModbus(ADDR_STN5_CYL2, SetCylFest.V502)
-        Modbus.WriteModbus(ADDR_STN5_CYL3, SetCylFest.V503)
-        Modbus.WriteModbus(ADDR_STN6_CYL1, SetCylFest.V601)
-        Modbus.WriteModbus(ADDR_STN6_CYL2, SetCylFest.V602)
-        Modbus.WriteModbus(ADDR_STN6_CYL3, SetCylFest.V603)
+
+        'Bit0
+        Modbus.WriteBit(ADDR_STN1_CYL1, 0, SetCyl0.V101)
+        Modbus.WriteBit(ADDR_STN3_CYL1, 0, SetCyl0.V301)
+        Modbus.WriteBit(ADDR_STN3_CYL2, 0, SetCyl0.V302)
+        Modbus.WriteBit(ADDR_STN3_CYL3, 0, SetCyl0.V303)
+        Modbus.WriteBit(ADDR_STN3_CYL4, 0, SetCyl0.V304)
+        Modbus.WriteBit(ADDR_STN4_CYL1, 0, SetCyl0.V401)
+        Modbus.WriteBit(ADDR_STN5_CYL1, 0, SetCyl0.V501)
+        Modbus.WriteBit(ADDR_STN5_CYL2, 0, SetCyl0.V502)
+        Modbus.WriteBit(ADDR_STN5_CYL3, 0, SetCyl0.V503)
+        Modbus.WriteBit(ADDR_STN6_CYL1, 0, SetCyl0.V601)
+        Modbus.WriteBit(ADDR_STN6_CYL2, 0, SetCyl0.V602)
+        Modbus.WriteBit(ADDR_STN6_CYL3, 0, SetCyl0.V603)
+
+        'Bit1
+        Modbus.WriteBit(ADDR_STN1_CYL1, 1, SetCyl1.V101)
+        Modbus.WriteBit(ADDR_STN3_CYL1, 1, SetCyl1.V301)
+        Modbus.WriteBit(ADDR_STN3_CYL2, 1, SetCyl1.V302)
+        Modbus.WriteBit(ADDR_STN3_CYL3, 1, SetCyl1.V303)
+        Modbus.WriteBit(ADDR_STN3_CYL4, 1, SetCyl1.V304)
+        Modbus.WriteBit(ADDR_STN4_CYL1, 1, SetCyl1.V401)
+        Modbus.WriteBit(ADDR_STN5_CYL1, 1, SetCyl1.V501)
+        Modbus.WriteBit(ADDR_STN5_CYL2, 1, SetCyl1.V502)
+        Modbus.WriteBit(ADDR_STN5_CYL3, 1, SetCyl1.V503)
+        Modbus.WriteBit(ADDR_STN6_CYL1, 1, SetCyl1.V601)
+        Modbus.WriteBit(ADDR_STN6_CYL2, 1, SetCyl1.V602)
+        Modbus.WriteBit(ADDR_STN6_CYL3, 1, SetCyl1.V603)
+
 
         'Write Festo
         Modbus.WriteBit(370, 0, SetCylFest.LALMRES)

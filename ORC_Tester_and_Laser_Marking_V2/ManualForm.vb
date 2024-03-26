@@ -809,19 +809,43 @@ Public Class ManualForm
     '    Loop
     'End Sub
 
+
     'Button Manual Click Function
 
+    'Rotary Table Button
+    Private Sub btn_rotate_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_rotate.MouseDown
+        If btn_rotate.Text = "Rotate" Then
+            SetRotate.V101 = 1
+            btn_rotate.Tag = btn_rotate.BackColor
+            btn_rotate.BackColor = Color.Lavender
+            btn_rotate.Text = "Rotating"
+        End If
+        plcTrigger = True
+    End Sub
+
+    Private Sub btn_rotate_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_rotate.MouseUp
+        If btn_rotate.Text = "Rotating" Then
+            SetRotate.V101 = 0
+            btn_rotate.BackColor = DirectCast(btn_rotate.Tag, Color)
+            btn_rotate.Text = "Rotate"
+        End If
+        plcTrigger = True
+    End Sub
+
+    'Cylinder Button
     Private Sub btn_stn1_cyl1_fw_Click(sender As Object, e As EventArgs) Handles btn_stn1_cyl1_fw.Click
         If btn_stn1_cyl1_bw.Text = "Is Backward" Then
             btn_stn1_cyl1_bw.PerformClick()
         End If
 
         If btn_stn1_cyl1_fw.Text = "Forward" Then
-            SetCylFest.V101 = FORWARD
+            SetCyl0.V101 = 1
+            SetCyl1.V101 = 0
             btn_stn1_cyl1_fw.Image = My.Resources.button_white
             btn_stn1_cyl1_fw.Text = "Is Forward"
         ElseIf btn_stn1_cyl1_fw.Text = "Is Forward" Then
-            SetCylFest.V101 = IDLE
+            SetCyl0.V101 = 0
+            SetCyl1.V101 = 0
             btn_stn1_cyl1_fw.Image = My.Resources.button_silver
             btn_stn1_cyl1_fw.Text = "Forward"
         End If
@@ -834,11 +858,13 @@ Public Class ManualForm
         End If
 
         If btn_stn1_cyl1_bw.Text = "Backward" Then
-            SetCylFest.V101 = BACKWARD
+            SetCyl0.V101 = 0
+            SetCyl1.V101 = 1
             btn_stn1_cyl1_bw.Image = My.Resources.button_white
             btn_stn1_cyl1_bw.Text = "Is Backward"
         ElseIf btn_stn1_cyl1_bw.Text = "Is Backward" Then
-            SetCylFest.V101 = IDLE
+            SetCyl0.V101 = 0
+            SetCyl1.V101 = 0
             btn_stn1_cyl1_bw.Image = My.Resources.button_silver
             btn_stn1_cyl1_bw.Text = "Backward"
         End If
@@ -853,11 +879,13 @@ Public Class ManualForm
         End If
 
         If btn_stn3_cyl1_fw.Text = "Forward" Then
-            SetCylFest.V301 = FORWARD
+            SetCyl0.V301 = 1
+            SetCyl1.V301 = 0
             btn_stn3_cyl1_fw.Image = My.Resources.button_white
             btn_stn3_cyl1_fw.Text = "Is Forward"
         ElseIf btn_stn3_cyl1_fw.Text = "Is Forward" Then
-            SetCylFest.V301 = IDLE
+            SetCyl0.V301 = 0
+            SetCyl1.V301 = 0
             btn_stn3_cyl1_fw.Image = My.Resources.button_silver
             btn_stn3_cyl1_fw.Text = "Forward"
         End If
@@ -870,11 +898,13 @@ Public Class ManualForm
         End If
 
         If btn_stn3_cyl1_bw.Text = "Backward" Then
-            SetCylFest.V301 = BACKWARD
+            SetCyl0.V301 = 0
+            SetCyl1.V301 = 1
             btn_stn3_cyl1_bw.Image = My.Resources.button_white
             btn_stn3_cyl1_bw.Text = "Is Backward"
         ElseIf btn_stn3_cyl1_bw.Text = "Is Backward" Then
-            SetCylFest.V301 = IDLE
+            SetCyl0.V301 = 0
+            SetCyl1.V301 = 0
             btn_stn3_cyl1_bw.Image = My.Resources.button_silver
             btn_stn3_cyl1_bw.Text = "Backward"
         End If
@@ -887,11 +917,13 @@ Public Class ManualForm
         End If
 
         If btn_stn3_cyl2_fw.Text = "Forward" Then
-            SetCylFest.V302 = FORWARD
+            SetCyl0.V302 = 1
+            SetCyl1.V302 = 0
             btn_stn3_cyl2_fw.Image = My.Resources.button_white
             btn_stn3_cyl2_fw.Text = "Is Forward"
         ElseIf btn_stn3_cyl2_fw.Text = "Is Forward" Then
-            SetCylFest.V302 = IDLE
+            SetCyl0.V302 = 0
+            SetCyl1.V302 = 0
             btn_stn3_cyl2_fw.Image = My.Resources.button_silver
             btn_stn3_cyl2_fw.Text = "Forward"
         End If
@@ -904,11 +936,13 @@ Public Class ManualForm
         End If
 
         If btn_stn3_cyl2_bw.Text = "Backward" Then
-            SetCylFest.V302 = BACKWARD
+            SetCyl0.V302 = 0
+            SetCyl1.V302 = 1
             btn_stn3_cyl2_bw.Image = My.Resources.button_white
             btn_stn3_cyl2_bw.Text = "Is Backward"
         ElseIf btn_stn3_cyl2_bw.Text = "Is Backward" Then
-            SetCylFest.V302 = IDLE
+            SetCyl0.V302 = 0
+            SetCyl1.V302 = 0
             btn_stn3_cyl2_bw.Image = My.Resources.button_silver
             btn_stn3_cyl2_bw.Text = "Backward"
         End If
@@ -921,11 +955,13 @@ Public Class ManualForm
         End If
 
         If btn_stn3_cyl3_fw.Text = "Forward" Then
-            SetCylFest.V303 = FORWARD
+            SetCyl0.V303 = 1
+            SetCyl1.V303 = 0
             btn_stn3_cyl3_fw.Image = My.Resources.button_white
             btn_stn3_cyl3_fw.Text = "Is Forward"
         ElseIf btn_stn3_cyl3_fw.Text = "Is Forward" Then
-            SetCylFest.V303 = IDLE
+            SetCyl0.V303 = 0
+            SetCyl1.V303 = 0
             btn_stn3_cyl3_fw.Image = My.Resources.button_silver
             btn_stn3_cyl3_fw.Text = "Forward"
         End If
@@ -938,11 +974,13 @@ Public Class ManualForm
         End If
 
         If btn_stn3_cyl3_bw.Text = "Backward" Then
-            SetCylFest.V303 = BACKWARD
+            SetCyl0.V303 = 0
+            SetCyl1.V303 = 1
             btn_stn3_cyl3_bw.Image = My.Resources.button_white
             btn_stn3_cyl3_bw.Text = "Is Backward"
         ElseIf btn_stn3_cyl3_bw.Text = "Is Backward" Then
-            SetCylFest.V303 = IDLE
+            SetCyl0.V303 = 0
+            SetCyl1.V303 = 0
             btn_stn3_cyl3_bw.Image = My.Resources.button_silver
             btn_stn3_cyl3_bw.Text = "Backward"
         End If
@@ -955,11 +993,13 @@ Public Class ManualForm
         End If
 
         If btn_stn3_cyl4_fw.Text = "Forward" Then
-            SetCylFest.V304 = FORWARD
+            SetCyl0.V304 = 1
+            SetCyl1.V304 = 0
             btn_stn3_cyl4_fw.Image = My.Resources.button_white
             btn_stn3_cyl4_fw.Text = "Is Forward"
         ElseIf btn_stn3_cyl4_fw.Text = "Is Forward" Then
-            SetCylFest.V304 = IDLE
+            SetCyl0.V304 = 0
+            SetCyl1.V304 = 0
             btn_stn3_cyl4_fw.Image = My.Resources.button_silver
             btn_stn3_cyl4_fw.Text = "Forward"
         End If
@@ -972,11 +1012,13 @@ Public Class ManualForm
         End If
 
         If btn_stn3_cyl4_bw.Text = "Backward" Then
-            SetCylFest.V304 = BACKWARD
+            SetCyl0.V304 = 0
+            SetCyl1.V304 = 1
             btn_stn3_cyl4_bw.Image = My.Resources.button_white
             btn_stn3_cyl4_bw.Text = "Is Backward"
         ElseIf btn_stn3_cyl4_bw.Text = "Is Backward" Then
-            SetCylFest.V304 = IDLE
+            SetCyl0.V304 = 0
+            SetCyl1.V304 = 0
             btn_stn3_cyl4_bw.Image = My.Resources.button_silver
             btn_stn3_cyl4_bw.Text = "Backward"
         End If
@@ -992,11 +1034,13 @@ Public Class ManualForm
         End If
 
         If btn_stn4_cyl1_fw.Text = "Forward" Then
-            SetCylFest.V401 = FORWARD
+            SetCyl0.V401 = 1
+            SetCyl1.V401 = 0
             btn_stn4_cyl1_fw.Image = My.Resources.button_white
             btn_stn4_cyl1_fw.Text = "Is Forward"
         ElseIf btn_stn4_cyl1_fw.Text = "Is Forward" Then
-            SetCylFest.V401 = IDLE
+            SetCyl0.V401 = 0
+            SetCyl1.V401 = 0
             btn_stn4_cyl1_fw.Image = My.Resources.button_silver
             btn_stn4_cyl1_fw.Text = "Forward"
         End If
@@ -1009,11 +1053,13 @@ Public Class ManualForm
         End If
 
         If btn_stn4_cyl1_bw.Text = "Backward" Then
-            SetCylFest.V401 = BACKWARD
+            SetCyl0.V401 = 0
+            SetCyl1.V401 = 1
             btn_stn4_cyl1_bw.Image = My.Resources.button_white
             btn_stn4_cyl1_bw.Text = "Is Backward"
         ElseIf btn_stn4_cyl1_bw.Text = "Is Backward" Then
-            SetCylFest.V401 = IDLE
+            SetCyl0.V401 = 0
+            SetCyl1.V401 = 0
             btn_stn4_cyl1_bw.Image = My.Resources.button_silver
             btn_stn4_cyl1_bw.Text = "Backward"
         End If
@@ -1029,11 +1075,13 @@ Public Class ManualForm
         End If
 
         If btn_stn5_cyl1_fw.Text = "Forward" Then
-            SetCylFest.V501 = FORWARD
+            SetCyl0.V501 = 1
+            SetCyl1.V501 = 0
             btn_stn5_cyl1_fw.Image = My.Resources.button_white
             btn_stn5_cyl1_fw.Text = "Is Forward"
         ElseIf btn_stn5_cyl1_fw.Text = "Is Forward" Then
-            SetCylFest.V501 = IDLE
+            SetCyl0.V501 = 0
+            SetCyl1.V501 = 0
             btn_stn5_cyl1_fw.Image = My.Resources.button_silver
             btn_stn5_cyl1_fw.Text = "Forward"
         End If
@@ -1046,11 +1094,13 @@ Public Class ManualForm
         End If
 
         If btn_stn5_cyl1_bw.Text = "Backward" Then
-            SetCylFest.V501 = BACKWARD
+            SetCyl0.V501 = 0
+            SetCyl1.V501 = 1
             btn_stn5_cyl1_bw.Image = My.Resources.button_white
             btn_stn5_cyl1_bw.Text = "Is Backward"
         ElseIf btn_stn5_cyl1_bw.Text = "Is Backward" Then
-            SetCylFest.V501 = IDLE
+            SetCyl0.V501 = 0
+            SetCyl1.V501 = 0
             btn_stn5_cyl1_bw.Image = My.Resources.button_silver
             btn_stn5_cyl1_bw.Text = "Backward"
         End If
@@ -1063,11 +1113,13 @@ Public Class ManualForm
         End If
 
         If btn_stn5_cyl2_fw.Text = "Forward" Then
-            SetCylFest.V502 = FORWARD
+            SetCyl0.V502 = 1
+            SetCyl1.V502 = 0
             btn_stn5_cyl2_fw.Image = My.Resources.button_white
             btn_stn5_cyl2_fw.Text = "Is Forward"
         ElseIf btn_stn5_cyl2_fw.Text = "Is Forward" Then
-            SetCylFest.V502 = IDLE
+            SetCyl0.V502 = 0
+            SetCyl1.V502 = 0
             btn_stn5_cyl2_fw.Image = My.Resources.button_silver
             btn_stn5_cyl2_fw.Text = "Forward"
         End If
@@ -1080,11 +1132,13 @@ Public Class ManualForm
         End If
 
         If btn_stn5_cyl2_bw.Text = "Backward" Then
-            SetCylFest.V502 = BACKWARD
+            SetCyl0.V502 = 0
+            SetCyl1.V502 = 1
             btn_stn5_cyl2_bw.Image = My.Resources.button_white
             btn_stn5_cyl2_bw.Text = "Is Backward"
         ElseIf btn_stn5_cyl2_bw.Text = "Is Backward" Then
-            SetCylFest.V502 = IDLE
+            SetCyl0.V502 = 0
+            SetCyl1.V502 = 0
             btn_stn5_cyl2_bw.Image = My.Resources.button_silver
             btn_stn5_cyl2_bw.Text = "Backward"
         End If
@@ -1097,11 +1151,13 @@ Public Class ManualForm
         End If
 
         If btn_stn5_cyl3_fw.Text = "Forward" Then
-            SetCylFest.V503 = FORWARD
+            SetCyl0.V503 = 1
+            SetCyl1.V503 = 0
             btn_stn5_cyl3_fw.Image = My.Resources.button_white
             btn_stn5_cyl3_fw.Text = "Is Forward"
         ElseIf btn_stn5_cyl3_fw.Text = "Is Forward" Then
-            SetCylFest.V503 = IDLE
+            SetCyl0.V503 = 0
+            SetCyl1.V503 = 0
             btn_stn5_cyl3_fw.Image = My.Resources.button_silver
             btn_stn5_cyl3_fw.Text = "Forward"
         End If
@@ -1114,11 +1170,13 @@ Public Class ManualForm
         End If
 
         If btn_stn5_cyl3_bw.Text = "Backward" Then
-            SetCylFest.V503 = BACKWARD
+            SetCyl0.V503 = 0
+            SetCyl1.V503 = 1
             btn_stn5_cyl3_bw.Image = My.Resources.button_white
             btn_stn5_cyl3_bw.Text = "Is Backward"
         ElseIf btn_stn5_cyl3_bw.Text = "Is Backward" Then
-            SetCylFest.V503 = IDLE
+            SetCyl0.V503 = 0
+            SetCyl1.V503 = 0
             btn_stn5_cyl3_bw.Image = My.Resources.button_silver
             btn_stn5_cyl3_bw.Text = "Backward"
         End If
@@ -1131,11 +1189,13 @@ Public Class ManualForm
         End If
 
         If btn_stn6_cyl1_fw.Text = "Forward" Then
-            SetCylFest.V601 = FORWARD
+            SetCyl0.V601 = 1
+            SetCyl1.V601 = 0
             btn_stn6_cyl1_fw.Image = My.Resources.button_white
             btn_stn6_cyl1_fw.Text = "Is Forward"
         ElseIf btn_stn6_cyl1_fw.Text = "Is Forward" Then
-            SetCylFest.V601 = IDLE
+            SetCyl0.V601 = 0
+            SetCyl1.V601 = 0
             btn_stn6_cyl1_fw.Image = My.Resources.button_silver
             btn_stn6_cyl1_fw.Text = "Forward"
         End If
@@ -1148,11 +1208,13 @@ Public Class ManualForm
         End If
 
         If btn_stn6_cyl1_bw.Text = "Backward" Then
-            SetCylFest.V601 = BACKWARD
+            SetCyl0.V601 = 0
+            SetCyl1.V601 = 1
             btn_stn6_cyl1_bw.Image = My.Resources.button_white
             btn_stn6_cyl1_bw.Text = "Is Backward"
         ElseIf btn_stn6_cyl1_bw.Text = "Is Backward" Then
-            SetCylFest.V601 = IDLE
+            SetCyl0.V601 = 0
+            SetCyl1.V601 = 0
             btn_stn6_cyl1_bw.Image = My.Resources.button_silver
             btn_stn6_cyl1_bw.Text = "Backward"
         End If
@@ -1165,11 +1227,13 @@ Public Class ManualForm
         End If
 
         If btn_stn6_cyl2_fw.Text = "Forward" Then
-            SetCylFest.V602 = FORWARD
+            SetCyl0.V602 = 1
+            SetCyl1.V602 = 0
             btn_stn6_cyl2_fw.Image = My.Resources.button_white
             btn_stn6_cyl2_fw.Text = "Is Forward"
         ElseIf btn_stn6_cyl2_fw.Text = "Is Forward" Then
-            SetCylFest.V602 = IDLE
+            SetCyl0.V602 = 0
+            SetCyl1.V602 = 0
             btn_stn6_cyl2_fw.Image = My.Resources.button_silver
             btn_stn6_cyl2_fw.Text = "Forward"
         End If
@@ -1182,11 +1246,13 @@ Public Class ManualForm
         End If
 
         If btn_stn6_cyl2_bw.Text = "Backward" Then
-            SetCylFest.V602 = BACKWARD
+            SetCyl0.V602 = 0
+            SetCyl1.V602 = 1
             btn_stn6_cyl2_bw.Image = My.Resources.button_white
             btn_stn6_cyl2_bw.Text = "Is Backward"
         ElseIf btn_stn6_cyl2_bw.Text = "Is Backward" Then
-            SetCylFest.V602 = IDLE
+            SetCyl0.V602 = 0
+            SetCyl1.V602 = 0
             btn_stn6_cyl2_bw.Image = My.Resources.button_silver
             btn_stn6_cyl2_bw.Text = "Backward"
         End If
@@ -1199,11 +1265,13 @@ Public Class ManualForm
         End If
 
         If btn_stn6_cyl3_fw.Text = "Forward" Then
-            SetCylFest.V603 = FORWARD
+            SetCyl0.V603 = 1
+            SetCyl1.V603 = 0
             btn_stn6_cyl3_fw.Image = My.Resources.button_white
             btn_stn6_cyl3_fw.Text = "Is Forward"
         ElseIf btn_stn6_cyl3_fw.Text = "Is Forward" Then
-            SetCylFest.V603 = IDLE
+            SetCyl0.V603 = 0
+            SetCyl1.V603 = 0
             btn_stn6_cyl3_fw.Image = My.Resources.button_silver
             btn_stn6_cyl3_fw.Text = "Forward"
         End If
@@ -1216,259 +1284,263 @@ Public Class ManualForm
         End If
 
         If btn_stn6_cyl3_bw.Text = "Backward" Then
-            SetCylFest.V603 = BACKWARD
+            SetCyl0.V603 = 0
+            SetCyl1.V603 = 1
             btn_stn6_cyl3_bw.Image = My.Resources.button_white
             btn_stn6_cyl3_bw.Text = "Is Backward"
         ElseIf btn_stn6_cyl3_bw.Text = "Is Backward" Then
-            SetCylFest.V603 = IDLE
+            SetCyl0.V603 = 0
+            SetCyl1.V603 = 0
             btn_stn6_cyl3_bw.Image = My.Resources.button_silver
             btn_stn6_cyl3_bw.Text = "Backward"
         End If
         plcTrigger = True
     End Sub
 
-    '###############################################################################################################################################################################################
-    'Festo Controller Button
-
-    'Festo Left ----------------------------------------------
-    'Alarm Reset 
-    Private Sub btn_Lfesto_alarm_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_alarm.MouseDown
-        SetCylFest.LALMRES = 1
-        plcTrigger = True
-        btn_Lfesto_alarm.Tag = New Tuple(Of Color, Color)(btn_Lfesto_alarm.BackColor, btn_Lfesto_alarm.ForeColor)
-        btn_Lfesto_alarm.BackColor = SystemColors.GradientInactiveCaption
-        btn_Lfesto_alarm.ForeColor = Color.DarkBlue
-    End Sub
-
-    Private Sub btn_Lfesto_alarm_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_alarm.MouseUp
-        SetCylFest.LALMRES = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_alarm.Tag, Tuple(Of Color, Color))
-        btn_Lfesto_alarm.BackColor = originalColors.Item1
-        btn_Lfesto_alarm.ForeColor = originalColors.Item2
-    End Sub
 
 
-    'Servo On
-    Private Sub btn_Lfesto_servo_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_servo.MouseDown
-        SetCylFest.LSERVO = 1
-        plcTrigger = True
-        btn_Lfesto_servo.Tag = New Tuple(Of Color, Color)(btn_Lfesto_servo.BackColor, btn_Lfesto_servo.ForeColor)
-        btn_Lfesto_servo.BackColor = SystemColors.GradientInactiveCaption
-        btn_Lfesto_servo.ForeColor = Color.DarkBlue
-    End Sub
+    ''###############################################################################################################################################################################################
+    ''Festo Controller Button
 
-    Private Sub btn_Lfesto_servo_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_servo.MouseUp
-        SetCylFest.LSERVO = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_servo.Tag, Tuple(Of Color, Color))
-        btn_Lfesto_servo.BackColor = originalColors.Item1
-        btn_Lfesto_servo.ForeColor = originalColors.Item2
-    End Sub
+    ''Festo Left ----------------------------------------------
+    ''Alarm Reset 
+    'Private Sub btn_Lfesto_alarm_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_alarm.MouseDown
+    '    SetCylFest.LALMRES = 1
+    '    plcTrigger = True
+    '    btn_Lfesto_alarm.Tag = New Tuple(Of Color, Color)(btn_Lfesto_alarm.BackColor, btn_Lfesto_alarm.ForeColor)
+    '    btn_Lfesto_alarm.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Lfesto_alarm.ForeColor = Color.DarkBlue
+    'End Sub
 
-    'Jog Min
-    Private Sub btn_Lfesto_jog_min_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_min.MouseDown
-        SetCylFest.LJOGMIN = 1
-        plcTrigger = True
-        btn_Lfesto_jog_min.Tag = New Tuple(Of Color, Color)(btn_Lfesto_jog_min.BackColor, btn_Lfesto_jog_min.ForeColor)
-        btn_Lfesto_jog_min.BackColor = SystemColors.GradientInactiveCaption
-        btn_Lfesto_jog_min.ForeColor = Color.DarkBlue
-    End Sub
-
-    Private Sub btn_Lfesto_jog_min_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_min.MouseUp
-        SetCylFest.LJOGMIN = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_jog_min.Tag, Tuple(Of Color, Color))
-        btn_Lfesto_jog_min.BackColor = originalColors.Item1
-        btn_Lfesto_jog_min.ForeColor = originalColors.Item2
-    End Sub
-
-    'Jog Plus
-    Private Sub btn_Lfesto_jog_plus_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_plus.MouseDown
-        SetCylFest.LJOGPLUS = 1
-        plcTrigger = True
-        btn_Lfesto_jog_plus.Tag = New Tuple(Of Color, Color)(btn_Lfesto_jog_plus.BackColor, btn_Lfesto_jog_plus.ForeColor)
-        btn_Lfesto_jog_plus.BackColor = SystemColors.GradientInactiveCaption
-        btn_Lfesto_jog_plus.ForeColor = Color.DarkBlue
-    End Sub
-
-    Private Sub btn_Lfesto_jog_plus_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_plus.MouseUp
-        SetCylFest.LJOGPLUS = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_jog_plus.Tag, Tuple(Of Color, Color))
-        btn_Lfesto_jog_plus.BackColor = originalColors.Item1
-        btn_Lfesto_jog_plus.ForeColor = originalColors.Item2
-    End Sub
-
-    'Homing
-    Private Sub btn_Lfesto_homing_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_homing.MouseDown
-        SetCylFest.LHOMING = 1
-        plcTrigger = True
-        btn_Lfesto_homing.Tag = New Tuple(Of Color, Color)(btn_Lfesto_homing.BackColor, btn_Lfesto_homing.ForeColor)
-        btn_Lfesto_homing.BackColor = SystemColors.GradientInactiveCaption
-        btn_Lfesto_homing.ForeColor = Color.DarkBlue
-    End Sub
-
-    Private Sub btn_Lfesto_homing_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_homing.MouseUp
-        SetCylFest.LHOMING = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_homing.Tag, Tuple(Of Color, Color))
-        btn_Lfesto_homing.BackColor = originalColors.Item1
-        btn_Lfesto_homing.ForeColor = originalColors.Item2
-    End Sub
-
-    'Jisl
-    Private Sub btn_Lfesto_jisl_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jisl.MouseDown
-        SetCylFest.LJISL = 1
-        plcTrigger = True
-        btn_Lfesto_jisl.Tag = New Tuple(Of Color, Color)(btn_Lfesto_jisl.BackColor, btn_Lfesto_jisl.ForeColor)
-        btn_Lfesto_jisl.BackColor = SystemColors.GradientInactiveCaption
-        btn_Lfesto_jisl.ForeColor = Color.DarkBlue
-    End Sub
-
-    Private Sub btn_Lfesto_jisl_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jisl.MouseUp
-        SetCylFest.LJISL = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_jisl.Tag, Tuple(Of Color, Color))
-        btn_Lfesto_jisl.BackColor = originalColors.Item1
-        btn_Lfesto_jisl.ForeColor = originalColors.Item2
-    End Sub
-
-    'Power Reset
-    Private Sub btn_Lfesto_power_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_power.MouseDown
-        SetCylFest.LPWRRES = 1
-        plcTrigger = True
-        btn_Lfesto_power.Tag = New Tuple(Of Color, Color)(btn_Lfesto_power.BackColor, btn_Lfesto_power.ForeColor)
-        btn_Lfesto_power.BackColor = SystemColors.GradientInactiveCaption
-        btn_Lfesto_power.ForeColor = Color.DarkBlue
-    End Sub
-
-    Private Sub btn_Lfesto_power_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_power.MouseUp
-        SetCylFest.LPWRRES = 1
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_power.Tag, Tuple(Of Color, Color))
-        btn_Lfesto_power.BackColor = originalColors.Item1
-        btn_Lfesto_power.ForeColor = originalColors.Item2
-    End Sub
-
-    'Festo Right ----------------------------------------------
-    'Alarm Reset 
-    Private Sub btn_Rfesto_alarm_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_alarm.MouseDown
-        SetCylFest.RALMRES = 1
-        plcTrigger = True
-        btn_Rfesto_alarm.Tag = New Tuple(Of Color, Color)(btn_Rfesto_alarm.BackColor, btn_Rfesto_alarm.ForeColor)
-        btn_Rfesto_alarm.BackColor = SystemColors.GradientInactiveCaption
-        btn_Rfesto_alarm.ForeColor = Color.DarkBlue
-    End Sub
-
-    Private Sub btn_Rfesto_alarm_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_alarm.MouseUp
-        SetCylFest.RALMRES = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_alarm.Tag, Tuple(Of Color, Color))
-        btn_Rfesto_alarm.BackColor = originalColors.Item1
-        btn_Rfesto_alarm.ForeColor = originalColors.Item2
-    End Sub
+    'Private Sub btn_Lfesto_alarm_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_alarm.MouseUp
+    '    SetCylFest.LALMRES = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_alarm.Tag, Tuple(Of Color, Color))
+    '    btn_Lfesto_alarm.BackColor = originalColors.Item1
+    '    btn_Lfesto_alarm.ForeColor = originalColors.Item2
+    'End Sub
 
 
-    'Servo On
-    Private Sub btn_Rfesto_servo_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_servo.MouseDown
-        SetCylFest.RSERVO = 1
-        plcTrigger = True
-        btn_Rfesto_servo.Tag = New Tuple(Of Color, Color)(btn_Rfesto_servo.BackColor, btn_Rfesto_servo.ForeColor)
-        btn_Rfesto_servo.BackColor = SystemColors.GradientInactiveCaption
-        btn_Rfesto_servo.ForeColor = Color.DarkBlue
-    End Sub
+    ''Servo On
+    'Private Sub btn_Lfesto_servo_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_servo.MouseDown
+    '    SetCylFest.LSERVO = 1
+    '    plcTrigger = True
+    '    btn_Lfesto_servo.Tag = New Tuple(Of Color, Color)(btn_Lfesto_servo.BackColor, btn_Lfesto_servo.ForeColor)
+    '    btn_Lfesto_servo.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Lfesto_servo.ForeColor = Color.DarkBlue
+    'End Sub
 
-    Private Sub btn_Rfesto_servo_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_servo.MouseUp
-        SetCylFest.RSERVO = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_servo.Tag, Tuple(Of Color, Color))
-        btn_Rfesto_servo.BackColor = originalColors.Item1
-        btn_Rfesto_servo.ForeColor = originalColors.Item2
-    End Sub
+    'Private Sub btn_Lfesto_servo_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_servo.MouseUp
+    '    SetCylFest.LSERVO = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_servo.Tag, Tuple(Of Color, Color))
+    '    btn_Lfesto_servo.BackColor = originalColors.Item1
+    '    btn_Lfesto_servo.ForeColor = originalColors.Item2
+    'End Sub
 
-    'Jog Min
-    Private Sub btn_Rfesto_jog_min_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_min.MouseDown
-        SetCylFest.RJOGMIN = 1
-        plcTrigger = True
-        btn_Rfesto_jog_min.Tag = New Tuple(Of Color, Color)(btn_Rfesto_jog_min.BackColor, btn_Rfesto_jog_min.ForeColor)
-        btn_Rfesto_jog_min.BackColor = SystemColors.GradientInactiveCaption
-        btn_Rfesto_jog_min.ForeColor = Color.DarkBlue
-    End Sub
+    ''Jog Min
+    'Private Sub btn_Lfesto_jog_min_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_min.MouseDown
+    '    SetCylFest.LJOGMIN = 1
+    '    plcTrigger = True
+    '    btn_Lfesto_jog_min.Tag = New Tuple(Of Color, Color)(btn_Lfesto_jog_min.BackColor, btn_Lfesto_jog_min.ForeColor)
+    '    btn_Lfesto_jog_min.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Lfesto_jog_min.ForeColor = Color.DarkBlue
+    'End Sub
 
-    Private Sub btn_Rfesto_jog_min_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_min.MouseUp
-        SetCylFest.RJOGMIN = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_jog_min.Tag, Tuple(Of Color, Color))
-        btn_Rfesto_jog_min.BackColor = originalColors.Item1
-        btn_Rfesto_jog_min.ForeColor = originalColors.Item2
-    End Sub
+    'Private Sub btn_Lfesto_jog_min_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_min.MouseUp
+    '    SetCylFest.LJOGMIN = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_jog_min.Tag, Tuple(Of Color, Color))
+    '    btn_Lfesto_jog_min.BackColor = originalColors.Item1
+    '    btn_Lfesto_jog_min.ForeColor = originalColors.Item2
+    'End Sub
 
-    'Jog Plus
-    Private Sub btn_Rfesto_jog_plus_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_plus.MouseDown
-        SetCylFest.RJOGPLUS = 1
-        plcTrigger = True
-        btn_Rfesto_jog_plus.Tag = New Tuple(Of Color, Color)(btn_Rfesto_jog_plus.BackColor, btn_Rfesto_jog_plus.ForeColor)
-        btn_Rfesto_jog_plus.BackColor = SystemColors.GradientInactiveCaption
-        btn_Rfesto_jog_plus.ForeColor = Color.DarkBlue
-    End Sub
+    ''Jog Plus
+    'Private Sub btn_Lfesto_jog_plus_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_plus.MouseDown
+    '    SetCylFest.LJOGPLUS = 1
+    '    plcTrigger = True
+    '    btn_Lfesto_jog_plus.Tag = New Tuple(Of Color, Color)(btn_Lfesto_jog_plus.BackColor, btn_Lfesto_jog_plus.ForeColor)
+    '    btn_Lfesto_jog_plus.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Lfesto_jog_plus.ForeColor = Color.DarkBlue
+    'End Sub
 
-    Private Sub btn_Rfesto_jog_plus_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_plus.MouseUp
-        SetCylFest.RJOGPLUS = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_jog_plus.Tag, Tuple(Of Color, Color))
-        btn_Rfesto_jog_plus.BackColor = originalColors.Item1
-        btn_Rfesto_jog_plus.ForeColor = originalColors.Item2
-    End Sub
+    'Private Sub btn_Lfesto_jog_plus_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jog_plus.MouseUp
+    '    SetCylFest.LJOGPLUS = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_jog_plus.Tag, Tuple(Of Color, Color))
+    '    btn_Lfesto_jog_plus.BackColor = originalColors.Item1
+    '    btn_Lfesto_jog_plus.ForeColor = originalColors.Item2
+    'End Sub
 
-    'Homing
-    Private Sub btn_Rfesto_homing_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_homing.MouseDown
-        SetCylFest.RHOMING = 1
-        plcTrigger = True
-        btn_Rfesto_homing.Tag = New Tuple(Of Color, Color)(btn_Rfesto_homing.BackColor, btn_Rfesto_homing.ForeColor)
-        btn_Rfesto_homing.BackColor = SystemColors.GradientInactiveCaption
-        btn_Rfesto_homing.ForeColor = Color.DarkBlue
-    End Sub
+    ''Homing
+    'Private Sub btn_Lfesto_homing_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_homing.MouseDown
+    '    SetCylFest.LHOMING = 1
+    '    plcTrigger = True
+    '    btn_Lfesto_homing.Tag = New Tuple(Of Color, Color)(btn_Lfesto_homing.BackColor, btn_Lfesto_homing.ForeColor)
+    '    btn_Lfesto_homing.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Lfesto_homing.ForeColor = Color.DarkBlue
+    'End Sub
 
-    Private Sub btn_Rfesto_homing_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_homing.MouseUp
-        SetCylFest.RHOMING = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_homing.Tag, Tuple(Of Color, Color))
-        btn_Rfesto_homing.BackColor = originalColors.Item1
-        btn_Rfesto_homing.ForeColor = originalColors.Item2
-    End Sub
+    'Private Sub btn_Lfesto_homing_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_homing.MouseUp
+    '    SetCylFest.LHOMING = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_homing.Tag, Tuple(Of Color, Color))
+    '    btn_Lfesto_homing.BackColor = originalColors.Item1
+    '    btn_Lfesto_homing.ForeColor = originalColors.Item2
+    'End Sub
 
-    'Jisl
-    Private Sub btn_Rfesto_jisl_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jisl.MouseDown
-        SetCylFest.RJISL = 1
-        plcTrigger = True
-        btn_Rfesto_jisl.Tag = New Tuple(Of Color, Color)(btn_Rfesto_jisl.BackColor, btn_Rfesto_jisl.ForeColor)
-        btn_Rfesto_jisl.BackColor = SystemColors.GradientInactiveCaption
-        btn_Rfesto_jisl.ForeColor = Color.DarkBlue
-    End Sub
+    ''Jisl
+    'Private Sub btn_Lfesto_jisl_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jisl.MouseDown
+    '    SetCylFest.LJISL = 1
+    '    plcTrigger = True
+    '    btn_Lfesto_jisl.Tag = New Tuple(Of Color, Color)(btn_Lfesto_jisl.BackColor, btn_Lfesto_jisl.ForeColor)
+    '    btn_Lfesto_jisl.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Lfesto_jisl.ForeColor = Color.DarkBlue
+    'End Sub
 
-    Private Sub btn_Rfesto_jisl_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jisl.MouseUp
-        SetCylFest.RJISL = 0
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_jisl.Tag, Tuple(Of Color, Color))
-        btn_Rfesto_jisl.BackColor = originalColors.Item1
-        btn_Rfesto_jisl.ForeColor = originalColors.Item2
-    End Sub
+    'Private Sub btn_Lfesto_jisl_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_jisl.MouseUp
+    '    SetCylFest.LJISL = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_jisl.Tag, Tuple(Of Color, Color))
+    '    btn_Lfesto_jisl.BackColor = originalColors.Item1
+    '    btn_Lfesto_jisl.ForeColor = originalColors.Item2
+    'End Sub
 
-    'Power Reset
-    Private Sub btn_Rfesto_power_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_power.MouseDown
-        SetCylFest.RPWRRES = 1
-        plcTrigger = True
-        btn_Rfesto_power.Tag = New Tuple(Of Color, Color)(btn_Rfesto_power.BackColor, btn_Rfesto_power.ForeColor)
-        btn_Rfesto_power.BackColor = SystemColors.GradientInactiveCaption
-        btn_Rfesto_power.ForeColor = Color.DarkBlue
-    End Sub
+    ''Power Reset
+    'Private Sub btn_Lfesto_power_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_power.MouseDown
+    '    SetCylFest.LPWRRES = 1
+    '    plcTrigger = True
+    '    btn_Lfesto_power.Tag = New Tuple(Of Color, Color)(btn_Lfesto_power.BackColor, btn_Lfesto_power.ForeColor)
+    '    btn_Lfesto_power.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Lfesto_power.ForeColor = Color.DarkBlue
+    'End Sub
 
-    Private Sub btn_Rfesto_power_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_power.MouseUp
-        SetCylFest.RPWRRES = 1
-        plcTrigger = True
-        Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_power.Tag, Tuple(Of Color, Color))
-        btn_Rfesto_power.BackColor = originalColors.Item1
-        btn_Rfesto_power.ForeColor = originalColors.Item2
-    End Sub
+    'Private Sub btn_Lfesto_power_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Lfesto_power.MouseUp
+    '    SetCylFest.LPWRRES = 1
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Lfesto_power.Tag, Tuple(Of Color, Color))
+    '    btn_Lfesto_power.BackColor = originalColors.Item1
+    '    btn_Lfesto_power.ForeColor = originalColors.Item2
+    'End Sub
+
+    ''Festo Right ----------------------------------------------
+    ''Alarm Reset 
+    'Private Sub btn_Rfesto_alarm_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_alarm.MouseDown
+    '    SetCylFest.RALMRES = 1
+    '    plcTrigger = True
+    '    btn_Rfesto_alarm.Tag = New Tuple(Of Color, Color)(btn_Rfesto_alarm.BackColor, btn_Rfesto_alarm.ForeColor)
+    '    btn_Rfesto_alarm.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Rfesto_alarm.ForeColor = Color.DarkBlue
+    'End Sub
+
+    'Private Sub btn_Rfesto_alarm_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_alarm.MouseUp
+    '    SetCylFest.RALMRES = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_alarm.Tag, Tuple(Of Color, Color))
+    '    btn_Rfesto_alarm.BackColor = originalColors.Item1
+    '    btn_Rfesto_alarm.ForeColor = originalColors.Item2
+    'End Sub
+
+
+    ''Servo On
+    'Private Sub btn_Rfesto_servo_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_servo.MouseDown
+    '    SetCylFest.RSERVO = 1
+    '    plcTrigger = True
+    '    btn_Rfesto_servo.Tag = New Tuple(Of Color, Color)(btn_Rfesto_servo.BackColor, btn_Rfesto_servo.ForeColor)
+    '    btn_Rfesto_servo.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Rfesto_servo.ForeColor = Color.DarkBlue
+    'End Sub
+
+    'Private Sub btn_Rfesto_servo_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_servo.MouseUp
+    '    SetCylFest.RSERVO = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_servo.Tag, Tuple(Of Color, Color))
+    '    btn_Rfesto_servo.BackColor = originalColors.Item1
+    '    btn_Rfesto_servo.ForeColor = originalColors.Item2
+    'End Sub
+
+    ''Jog Min
+    'Private Sub btn_Rfesto_jog_min_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_min.MouseDown
+    '    SetCylFest.RJOGMIN = 1
+    '    plcTrigger = True
+    '    btn_Rfesto_jog_min.Tag = New Tuple(Of Color, Color)(btn_Rfesto_jog_min.BackColor, btn_Rfesto_jog_min.ForeColor)
+    '    btn_Rfesto_jog_min.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Rfesto_jog_min.ForeColor = Color.DarkBlue
+    'End Sub
+
+    'Private Sub btn_Rfesto_jog_min_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_min.MouseUp
+    '    SetCylFest.RJOGMIN = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_jog_min.Tag, Tuple(Of Color, Color))
+    '    btn_Rfesto_jog_min.BackColor = originalColors.Item1
+    '    btn_Rfesto_jog_min.ForeColor = originalColors.Item2
+    'End Sub
+
+    ''Jog Plus
+    'Private Sub btn_Rfesto_jog_plus_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_plus.MouseDown
+    '    SetCylFest.RJOGPLUS = 1
+    '    plcTrigger = True
+    '    btn_Rfesto_jog_plus.Tag = New Tuple(Of Color, Color)(btn_Rfesto_jog_plus.BackColor, btn_Rfesto_jog_plus.ForeColor)
+    '    btn_Rfesto_jog_plus.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Rfesto_jog_plus.ForeColor = Color.DarkBlue
+    'End Sub
+
+    'Private Sub btn_Rfesto_jog_plus_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jog_plus.MouseUp
+    '    SetCylFest.RJOGPLUS = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_jog_plus.Tag, Tuple(Of Color, Color))
+    '    btn_Rfesto_jog_plus.BackColor = originalColors.Item1
+    '    btn_Rfesto_jog_plus.ForeColor = originalColors.Item2
+    'End Sub
+
+    ''Homing
+    'Private Sub btn_Rfesto_homing_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_homing.MouseDown
+    '    SetCylFest.RHOMING = 1
+    '    plcTrigger = True
+    '    btn_Rfesto_homing.Tag = New Tuple(Of Color, Color)(btn_Rfesto_homing.BackColor, btn_Rfesto_homing.ForeColor)
+    '    btn_Rfesto_homing.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Rfesto_homing.ForeColor = Color.DarkBlue
+    'End Sub
+
+    'Private Sub btn_Rfesto_homing_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_homing.MouseUp
+    '    SetCylFest.RHOMING = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_homing.Tag, Tuple(Of Color, Color))
+    '    btn_Rfesto_homing.BackColor = originalColors.Item1
+    '    btn_Rfesto_homing.ForeColor = originalColors.Item2
+    'End Sub
+
+    ''Jisl
+    'Private Sub btn_Rfesto_jisl_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jisl.MouseDown
+    '    SetCylFest.RJISL = 1
+    '    plcTrigger = True
+    '    btn_Rfesto_jisl.Tag = New Tuple(Of Color, Color)(btn_Rfesto_jisl.BackColor, btn_Rfesto_jisl.ForeColor)
+    '    btn_Rfesto_jisl.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Rfesto_jisl.ForeColor = Color.DarkBlue
+    'End Sub
+
+    'Private Sub btn_Rfesto_jisl_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_jisl.MouseUp
+    '    SetCylFest.RJISL = 0
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_jisl.Tag, Tuple(Of Color, Color))
+    '    btn_Rfesto_jisl.BackColor = originalColors.Item1
+    '    btn_Rfesto_jisl.ForeColor = originalColors.Item2
+    'End Sub
+
+    ''Power Reset
+    'Private Sub btn_Rfesto_power_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_power.MouseDown
+    '    SetCylFest.RPWRRES = 1
+    '    plcTrigger = True
+    '    btn_Rfesto_power.Tag = New Tuple(Of Color, Color)(btn_Rfesto_power.BackColor, btn_Rfesto_power.ForeColor)
+    '    btn_Rfesto_power.BackColor = SystemColors.GradientInactiveCaption
+    '    btn_Rfesto_power.ForeColor = Color.DarkBlue
+    'End Sub
+
+    'Private Sub btn_Rfesto_power_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_Rfesto_power.MouseUp
+    '    SetCylFest.RPWRRES = 1
+    '    plcTrigger = True
+    '    Dim originalColors As Tuple(Of Color, Color) = DirectCast(btn_Rfesto_power.Tag, Tuple(Of Color, Color))
+    '    btn_Rfesto_power.BackColor = originalColors.Item1
+    '    btn_Rfesto_power.ForeColor = originalColors.Item2
+    'End Sub
 End Class
