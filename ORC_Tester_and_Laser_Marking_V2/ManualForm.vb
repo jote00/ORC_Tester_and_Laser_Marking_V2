@@ -150,17 +150,17 @@ Public Class ManualForm
             End Select
 
 
-            'Text Box Festo read ----------------------------------------------
-            Me.Invoke(Sub()
+            ''Text Box Festo read ----------------------------------------------
+            'Me.Invoke(Sub()
 
-                          tbx_Lfesto_position.Text = GetCylFest.LPOSITION
-                          tbx_Lfesto_speed.Text = GetCylFest.LSPEED
-                          tbx_Lfesto_alarm.Text = GetCylFest.LALARM
+            '              tbx_Lfesto_position.Text = GetCylFest.LPOSITION
+            '              tbx_Lfesto_speed.Text = GetCylFest.LSPEED
+            '              tbx_Lfesto_alarm.Text = GetCylFest.LALARM
 
-                          tbx_Rfesto_position.Text = GetCylFest.RPOSITION
-                          tbx_Rfesto_speed.Text = GetCylFest.RSPEED
-                          tbx_Rfesto_alarm.Text = GetCylFest.RALARM
-                      End Sub)
+            '              tbx_Rfesto_position.Text = GetCylFest.RPOSITION
+            '              tbx_Rfesto_speed.Text = GetCylFest.RSPEED
+            '              tbx_Rfesto_alarm.Text = GetCylFest.RALARM
+            '          End Sub)
 
             'Station 1 - ---------------------------------------------
             'CylSen 1
@@ -234,67 +234,67 @@ Public Class ManualForm
                 man_stn3_cyl4_min.Image = My.Resources.led_red_on
             End If
 
-            'Festo Left
-            If GetCylFest.LALM = 1 Then
-                ind_stn3_Lfesto_alm.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Lfesto_alm.Image = My.Resources.led_red_on
-            End If
+            ''Festo Left
+            'If GetCylFest.LALM = 1 Then
+            '    ind_stn3_Lfesto_alm.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Lfesto_alm.Image = My.Resources.led_red_on
+            'End If
 
-            If GetCylFest.LPEND = 1 Then
-                ind_stn3_Lfesto_pend.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Lfesto_pend.Image = My.Resources.led_red_on
-            End If
+            'If GetCylFest.LPEND = 1 Then
+            '    ind_stn3_Lfesto_pend.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Lfesto_pend.Image = My.Resources.led_red_on
+            'End If
 
-            If GetCylFest.LHEND = 1 Then
-                ind_stn3_Lfesto_hend.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Lfesto_hend.Image = My.Resources.led_red_on
-            End If
+            'If GetCylFest.LHEND = 1 Then
+            '    ind_stn3_Lfesto_hend.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Lfesto_hend.Image = My.Resources.led_red_on
+            'End If
 
-            If GetCylFest.LSVON = 1 Then
-                ind_stn3_Lfesto_svon.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Lfesto_svon.Image = My.Resources.led_red_on
-            End If
+            'If GetCylFest.LSVON = 1 Then
+            '    ind_stn3_Lfesto_svon.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Lfesto_svon.Image = My.Resources.led_red_on
+            'End If
 
-            If GetCylFest.LEMG = 1 Then
-                ind_stn3_Lfesto_emg.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Lfesto_emg.Image = My.Resources.led_red_on
-            End If
+            'If GetCylFest.LEMG = 1 Then
+            '    ind_stn3_Lfesto_emg.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Lfesto_emg.Image = My.Resources.led_red_on
+            'End If
 
-            'Festo Right
-            If GetCylFest.RALM = 1 Then
-                ind_stn3_Rfesto_alm.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Rfesto_alm.Image = My.Resources.led_red_on
-            End If
+            ''Festo Right
+            'If GetCylFest.RALM = 1 Then
+            '    ind_stn3_Rfesto_alm.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Rfesto_alm.Image = My.Resources.led_red_on
+            'End If
 
-            If GetCylFest.RPEND = 1 Then
-                ind_stn3_Rfesto_pend.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Rfesto_pend.Image = My.Resources.led_red_on
-            End If
+            'If GetCylFest.RPEND = 1 Then
+            '    ind_stn3_Rfesto_pend.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Rfesto_pend.Image = My.Resources.led_red_on
+            'End If
 
-            If GetCylFest.RHEND = 1 Then
-                ind_stn3_Rfesto_hend.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Rfesto_hend.Image = My.Resources.led_red_on
-            End If
+            'If GetCylFest.RHEND = 1 Then
+            '    ind_stn3_Rfesto_hend.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Rfesto_hend.Image = My.Resources.led_red_on
+            'End If
 
-            If GetCylFest.RSVON = 1 Then
-                ind_stn3_Rfesto_svon.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Rfesto_svon.Image = My.Resources.led_red_on
-            End If
+            'If GetCylFest.RSVON = 1 Then
+            '    ind_stn3_Rfesto_svon.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Rfesto_svon.Image = My.Resources.led_red_on
+            'End If
 
-            If GetCylFest.REMG = 1 Then
-                ind_stn3_Rfesto_emg.Image = My.Resources.led_green_on
-            Else
-                ind_stn3_Rfesto_emg.Image = My.Resources.led_red_on
-            End If
+            'If GetCylFest.REMG = 1 Then
+            '    ind_stn3_Rfesto_emg.Image = My.Resources.led_green_on
+            'Else
+            '    ind_stn3_Rfesto_emg.Image = My.Resources.led_red_on
+            'End If
 
 
 

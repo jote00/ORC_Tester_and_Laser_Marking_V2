@@ -1,0 +1,4 @@
+Hostname=WTID10306990DP
+Username=.\adminbatam
+Password=Batam123456
+Database=db_ORC

@@ -310,25 +310,25 @@ Public Class MainForm
             GetCylFest.V602 = Modbus.ReadModbus(ADDR_STN6_SEN2, 1)(0)
             GetCylFest.V603 = Modbus.ReadModbus(ADDR_STN6_SEN3, 1)(0)
 
-            'Festo Indicator Read
-            GetCylFest.LALM = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 0)
-            GetCylFest.LPEND = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 1)
-            GetCylFest.LHEND = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 2)
-            GetCylFest.LSVON = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 3)
-            GetCylFest.LEMG = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 4)
-            GetCylFest.RALM = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 0)
-            GetCylFest.RPEND = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 1)
-            GetCylFest.RHEND = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 2)
-            GetCylFest.RSVON = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 3)
-            GetCylFest.REMG = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 4)
+            ''Festo Indicator Read
+            'GetCylFest.LALM = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 0)
+            'GetCylFest.LPEND = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 1)
+            'GetCylFest.LHEND = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 2)
+            'GetCylFest.LSVON = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 3)
+            'GetCylFest.LEMG = Modbus.ReadBit(ADDR_STN3_IND_LFESTO, 4)
+            'GetCylFest.RALM = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 0)
+            'GetCylFest.RPEND = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 1)
+            'GetCylFest.RHEND = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 2)
+            'GetCylFest.RSVON = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 3)
+            'GetCylFest.REMG = Modbus.ReadBit(ADDR_STN3_IND_RFESTO, 4)
 
-            'Festo TextBox Read
-            GetCylFest.LPOSITION = Modbus.ReadDoubleAddrees(ADDR_STN3_PSTN_LFESTO)
-            GetCylFest.LSPEED = Modbus.ReadModbus(ADDR_STN3_SPD_LFESTO, 1)(0)
-            GetCylFest.LALARM = Modbus.ReadModbus(ADDR_STN3_ALM_LFESTO, 1)(0)
-            GetCylFest.RPOSITION = Modbus.ReadDoubleAddrees(ADDR_STN3_PSTN_RFESTO)
-            GetCylFest.RSPEED = Modbus.ReadModbus(ADDR_STN3_SPD_RFESTO, 1)(0)
-            GetCylFest.RALARM = Modbus.ReadModbus(ADDR_STN3_ALM_RFESTO, 1)(0)
+            ''Festo TextBox Read
+            'GetCylFest.LPOSITION = Modbus.ReadDoubleAddrees(ADDR_STN3_PSTN_LFESTO)
+            'GetCylFest.LSPEED = Modbus.ReadModbus(ADDR_STN3_SPD_LFESTO, 1)(0)
+            'GetCylFest.LALARM = Modbus.ReadModbus(ADDR_STN3_ALM_LFESTO, 1)(0)
+            'GetCylFest.RPOSITION = Modbus.ReadDoubleAddrees(ADDR_STN3_PSTN_RFESTO)
+            'GetCylFest.RSPEED = Modbus.ReadModbus(ADDR_STN3_SPD_RFESTO, 1)(0)
+            'GetCylFest.RALARM = Modbus.ReadModbus(ADDR_STN3_ALM_RFESTO, 1)(0)
 
 
         Catch ex As Exception
@@ -373,20 +373,20 @@ Public Class MainForm
         Modbus.WriteBit(ADDR_STN6_CYL3, 1, SetCyl1.V603)
 
 
-        'Write Festo
-        Modbus.WriteBit(370, 0, SetCylFest.LALMRES)
-        Modbus.WriteBit(370, 1, SetCylFest.LSERVO)
-        Modbus.WriteBit(370, 2, SetCylFest.LJOGMIN)
-        Modbus.WriteBit(370, 3, SetCylFest.LJOGPLUS)
-        Modbus.WriteBit(370, 4, SetCylFest.LHOMING)
-        Modbus.WriteBit(370, 5, SetCylFest.LJISL)
-        Modbus.WriteBit(370, 6, SetCylFest.LPWRRES)
-        Modbus.WriteBit(380, 0, SetCylFest.RALMRES)
-        Modbus.WriteBit(380, 1, SetCylFest.RSERVO)
-        Modbus.WriteBit(380, 2, SetCylFest.RJOGMIN)
-        Modbus.WriteBit(380, 3, SetCylFest.RJOGPLUS)
-        Modbus.WriteBit(380, 4, SetCylFest.RHOMING)
-        Modbus.WriteBit(380, 5, SetCylFest.RJISL)
-        Modbus.WriteBit(380, 6, SetCylFest.RPWRRES)
+        ''Write Festo
+        'Modbus.WriteBit(370, 0, SetCylFest.LALMRES)
+        'Modbus.WriteBit(370, 1, SetCylFest.LSERVO)
+        'Modbus.WriteBit(370, 2, SetCylFest.LJOGMIN)
+        'Modbus.WriteBit(370, 3, SetCylFest.LJOGPLUS)
+        'Modbus.WriteBit(370, 4, SetCylFest.LHOMING)
+        'Modbus.WriteBit(370, 5, SetCylFest.LJISL)
+        'Modbus.WriteBit(370, 6, SetCylFest.LPWRRES)
+        'Modbus.WriteBit(380, 0, SetCylFest.RALMRES)
+        'Modbus.WriteBit(380, 1, SetCylFest.RSERVO)
+        'Modbus.WriteBit(380, 2, SetCylFest.RJOGMIN)
+        'Modbus.WriteBit(380, 3, SetCylFest.RJOGPLUS)
+        'Modbus.WriteBit(380, 4, SetCylFest.RHOMING)
+        'Modbus.WriteBit(380, 5, SetCylFest.RJISL)
+        'Modbus.WriteBit(380, 6, SetCylFest.RPWRRES)
     End Sub
 End Class
