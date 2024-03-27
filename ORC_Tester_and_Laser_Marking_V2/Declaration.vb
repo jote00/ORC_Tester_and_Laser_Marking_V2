@@ -94,16 +94,18 @@
     Public LAST_PC_STATUS As Integer = 0
 
     'Product Database -------------------------------------------
-    Public ADDR_PUNCHING_MODE As Integer = 7000
-    Public ADDR_LVL_DIST As Integer = 7002 'Punya 2 address
-    Public ADDR_LVL_TOLER As Integer = 7004 'Punya 2 address
-    Public ADDR_ORING As Integer = 7006
-    Public ADDR_FESTO_LDIST As Integer = 7008 'Punya 2 address
-    Public ADDR_FESTO_RDIST As Integer = 7010 'Punya 2 address
-    Public ADDR_FESTO_LSPEED As Integer = 7012
-    Public ADDR_FESTO_RSPEED As Integer = 7014
-    Public ADDR_LASER_TEMPLATE As Integer = 7030
-    Public ADDR_CAMERA_PROGRAM As Integer = 7032
+    Public ADDR_PUNCHING_MODE As Integer = 10000
+    Public ADDR_LVL_DIST As Integer = 10002 'Punya 2 address Float
+    Public ADDR_LVL_TOLER As Integer = 10003 'Punya 2 address Float
+    Public ADDR_ORING As Integer = 10006
+    Public ADDR_FESTO_LDIST1 As Integer = 10008 'Punya 2 address(Address 1)
+    Public ADDR_FESTO_LDIST2 As Integer = 10009 'Punya 2 address(Address 2)
+    Public ADDR_FESTO_RDIST1 As Integer = 10010 'Punya 2 address(Address 1)
+    Public ADDR_FESTO_RDIST2 As Integer = 10011 'Punya 2 address(Address 2)
+    Public ADDR_FESTO_LSPEED As Integer = 10012
+    Public ADDR_FESTO_RSPEED As Integer = 10014
+    Public ADDR_LASER_TEMPLATE As Integer = 10030
+    Public ADDR_CAMERA_PROGRAM As Integer = 10032
 
     'For Cylinder  ----------------------------------------------
     Public FORWARD As Integer = 1

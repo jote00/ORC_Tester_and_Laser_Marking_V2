@@ -31,10 +31,12 @@ Partial Class MainForm
         Me.lbl_user = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txt_sendref = New System.Windows.Forms.TextBox()
+        Me.btn_sendref = New System.Windows.Forms.Button()
         Me.GroupBox76 = New System.Windows.Forms.GroupBox()
         Me.ind_plc_status = New System.Windows.Forms.PictureBox()
         Me.Label64 = New System.Windows.Forms.Label()
-        Me.txt_alarm_copy = New System.Windows.Forms.RichTextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ind_software_stop = New System.Windows.Forms.PictureBox()
         Me.ind_software_run = New System.Windows.Forms.PictureBox()
@@ -167,7 +169,9 @@ Partial Class MainForm
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
         Me.Status = New System.Windows.Forms.Timer(Me.components)
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.GroupBox76.SuspendLayout()
         CType(Me.ind_plc_status, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -255,8 +259,8 @@ Partial Class MainForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox76)
-        Me.GroupBox1.Controls.Add(Me.txt_alarm_copy)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.GroupBox175)
         Me.GroupBox1.Controls.Add(Me.lbl_op_ins)
@@ -266,21 +270,51 @@ Partial Class MainForm
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(136, 146)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1150, 692)
+        Me.GroupBox1.Size = New System.Drawing.Size(1150, 713)
         Me.GroupBox1.TabIndex = 40
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Home"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.txt_sendref)
+        Me.GroupBox4.Controls.Add(Me.btn_sendref)
+        Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox4.Location = New System.Drawing.Point(354, 517)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(453, 100)
+        Me.GroupBox4.TabIndex = 71
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Change Reference"
+        '
+        'txt_sendref
+        '
+        Me.txt_sendref.Location = New System.Drawing.Point(8, 40)
+        Me.txt_sendref.Margin = New System.Windows.Forms.Padding(5)
+        Me.txt_sendref.Name = "txt_sendref"
+        Me.txt_sendref.Size = New System.Drawing.Size(299, 29)
+        Me.txt_sendref.TabIndex = 72
+        '
+        'btn_sendref
+        '
+        Me.btn_sendref.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_sendref.Location = New System.Drawing.Point(331, 40)
+        Me.btn_sendref.Name = "btn_sendref"
+        Me.btn_sendref.Size = New System.Drawing.Size(75, 30)
+        Me.btn_sendref.TabIndex = 1
+        Me.btn_sendref.Text = "Send"
+        Me.btn_sendref.UseVisualStyleBackColor = True
         '
         'GroupBox76
         '
         Me.GroupBox76.Controls.Add(Me.ind_plc_status)
         Me.GroupBox76.Controls.Add(Me.Label64)
         Me.GroupBox76.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox76.Location = New System.Drawing.Point(8, 613)
+        Me.GroupBox76.Location = New System.Drawing.Point(8, 648)
         Me.GroupBox76.Margin = New System.Windows.Forms.Padding(5)
         Me.GroupBox76.Name = "GroupBox76"
         Me.GroupBox76.Padding = New System.Windows.Forms.Padding(5)
-        Me.GroupBox76.Size = New System.Drawing.Size(337, 71)
+        Me.GroupBox76.Size = New System.Drawing.Size(337, 57)
         Me.GroupBox76.TabIndex = 70
         Me.GroupBox76.TabStop = False
         Me.GroupBox76.Text = "PLC Status"
@@ -288,7 +322,7 @@ Partial Class MainForm
         'ind_plc_status
         '
         Me.ind_plc_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_plc_status.Location = New System.Drawing.Point(16, 32)
+        Me.ind_plc_status.Location = New System.Drawing.Point(16, 27)
         Me.ind_plc_status.Margin = New System.Windows.Forms.Padding(5)
         Me.ind_plc_status.Name = "ind_plc_status"
         Me.ind_plc_status.Size = New System.Drawing.Size(25, 22)
@@ -299,23 +333,12 @@ Partial Class MainForm
         '
         Me.Label64.AutoSize = True
         Me.Label64.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label64.Location = New System.Drawing.Point(52, 32)
+        Me.Label64.Location = New System.Drawing.Point(52, 27)
         Me.Label64.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label64.Name = "Label64"
         Me.Label64.Size = New System.Drawing.Size(89, 20)
         Me.Label64.TabIndex = 31
         Me.Label64.Text = "PLC Ready"
-        '
-        'txt_alarm_copy
-        '
-        Me.txt_alarm_copy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_alarm_copy.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_alarm_copy.Location = New System.Drawing.Point(354, 473)
-        Me.txt_alarm_copy.Margin = New System.Windows.Forms.Padding(5)
-        Me.txt_alarm_copy.Name = "txt_alarm_copy"
-        Me.txt_alarm_copy.Size = New System.Drawing.Size(788, 131)
-        Me.txt_alarm_copy.TabIndex = 69
-        Me.txt_alarm_copy.Text = ""
         '
         'GroupBox3
         '
@@ -326,7 +349,7 @@ Partial Class MainForm
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.Label65)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(7, 462)
+        Me.GroupBox3.Location = New System.Drawing.Point(7, 506)
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
@@ -632,7 +655,7 @@ Partial Class MainForm
         Me.GroupBox78.Margin = New System.Windows.Forms.Padding(5)
         Me.GroupBox78.Name = "GroupBox78"
         Me.GroupBox78.Padding = New System.Windows.Forms.Padding(5)
-        Me.GroupBox78.Size = New System.Drawing.Size(788, 239)
+        Me.GroupBox78.Size = New System.Drawing.Size(788, 271)
         Me.GroupBox78.TabIndex = 63
         Me.GroupBox78.TabStop = False
         Me.GroupBox78.Text = "Production Data :"
@@ -1645,7 +1668,7 @@ Partial Class MainForm
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(338, 422)
+        Me.GroupBox2.Size = New System.Drawing.Size(338, 466)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Product Information"
@@ -1671,7 +1694,7 @@ Partial Class MainForm
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = Global.ORC_Tester_and_Laser_Marking_V2.My.Resources.Resources.icons8_run_56
-        Me.Button1.Location = New System.Drawing.Point(27, 245)
+        Me.Button1.Location = New System.Drawing.Point(27, 241)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(82, 74)
@@ -1963,12 +1986,20 @@ Partial Class MainForm
         'Status
         '
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(1456, 419)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 41
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1424, 861)
+        Me.ClientSize = New System.Drawing.Size(1884, 861)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btn_st6)
         Me.Controls.Add(Me.btn_st5)
@@ -1998,6 +2029,8 @@ Partial Class MainForm
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.GroupBox76.ResumeLayout(False)
         Me.GroupBox76.PerformLayout()
         CType(Me.ind_plc_status, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2044,7 +2077,6 @@ Partial Class MainForm
     Friend WithEvents btn_st1 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DateTime As Timer
-    Friend WithEvents txt_alarm_copy As RichTextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents ind_software_stop As PictureBox
     Friend WithEvents ind_software_run As PictureBox
@@ -2163,4 +2195,8 @@ Partial Class MainForm
     Friend WithEvents Label64 As Label
     Friend WithEvents ModbusRW As Timer
     Friend WithEvents Status As Timer
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents txt_sendref As TextBox
+    Friend WithEvents btn_sendref As Button
+    Friend WithEvents TextBox2 As TextBox
 End Class

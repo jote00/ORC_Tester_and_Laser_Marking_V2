@@ -816,7 +816,9 @@ Public Class ManualForm
     Private Sub btn_rotate_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_rotate.MouseDown
         If btn_rotate.Text = "Rotate" Then
             SetRotate.V101 = 1
-            btn_rotate.Tag = btn_rotate.BackColor
+            btn_rotate.Tag = 1
+            Console.WriteLine("Nilai SetRotate.V101 saat MouseDown: " & SetRotate.V101)
+            'btn_rotate.Tag = btn_rotate.BackColor
             btn_rotate.BackColor = Color.Lavender
             btn_rotate.Text = "Rotating"
         End If
@@ -826,7 +828,9 @@ Public Class ManualForm
     Private Sub btn_rotate_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_rotate.MouseUp
         If btn_rotate.Text = "Rotating" Then
             SetRotate.V101 = 0
-            btn_rotate.BackColor = DirectCast(btn_rotate.Tag, Color)
+            btn_rotate.Tag = 0
+            Console.WriteLine("Nilai SetRotate.V101 saat MouseUp: " & SetRotate.V101)
+            btn_rotate.BackColor = Color.FromKnownColor(KnownColor.Control)
             btn_rotate.Text = "Rotate"
         End If
         plcTrigger = True

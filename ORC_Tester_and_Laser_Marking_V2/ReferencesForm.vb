@@ -46,7 +46,6 @@ Public Class ReferencesForm
         End With
 
         LoadTbRef() 'Harus dibawah Config
-
         'Button Station Enable
         For Each ctrl As Control In Me.Controls
             If TypeOf ctrl Is Button AndAlso ctrl.Name.StartsWith("btn_st") Then

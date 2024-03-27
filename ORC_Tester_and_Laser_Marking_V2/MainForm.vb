@@ -1,11 +1,13 @@
 ﻿Imports System.Threading
 Imports System.IO
 Imports System.Data.SqlClient
+Imports ControlBPM
 Public Class MainForm
     Dim ThreadLoadingBar As Thread
     ' Dim plcStatusThread As Thread
     Dim MainModbusThread As Thread
     'Dim Statusbar As Thread
+
 
     Dim fullPath As String = System.AppDomain.CurrentDomain.BaseDirectory
     Dim projectFolder As String = fullPath.Replace("\ORC_Tester_and_Laser_Marking_V2\bin\Debug\", "").Replace("\ORC_Tester_and_Laser_Marking\bin\Release\", "")
@@ -42,6 +44,15 @@ Public Class MainForm
         Cursor = Cursors.Default
         LoginForm.ShowDialog()
         GetUserLevel()
+
+        With Config
+            .dbHostName = ReadINI(iniPath, "DATABASE", "Hostname")
+            .dbUsername = ReadINI(iniPath, "DATABASE", "Username")
+            .dbPassword = ReadINI(iniPath, "DATABASE", "Password")
+            .dbDatabase = ReadINI(iniPath, "DATABASE", "Database")
+        End With
+
+        Status.Enabled = True
 
         'Button Station Enable
 
@@ -185,63 +196,133 @@ Public Class MainForm
     'End Sub
 
     'For Refrences, Operator ID,PO Number
+
+    Private hasInvalidReferenceMessageBoxShown As Boolean = False
     Private Sub Status_Tick(sender As Object, e As EventArgs) Handles Status.Tick
 
 
+        'Select Case SCAN_MODE
+        '    Case 0
+        '        If txt_ref.Text <> "" Then
+        '            Call ConnectionDB.connection_db()
+        '            Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]=@Reference", ConnectionDB.Connection)
+        '            sc.Parameters.AddWithValue("@Reference", txt_ref.Text)
+        '            Dim rd As SqlDataReader = sc.ExecuteReader()
+
+        '            If rd.HasRows Then
+        '                SCAN_MODE = 1
+        '            Else
+        '                MsgBox("Invalid Reference")
+        '                txt_ref.Text = ""
+        '            End If
+
+        '            rd.Close()
+        '        End If
+
+        '    Case 1
+        '        If txt_ope_id.Text <> "" Then
+        '            SCAN_MODE = 2
+        '        End If
+
+        '    Case 2
+        '        If txt_po_num.Text <> "" Then
+        '            Call ConnectionDB.connection_db()
+        '            Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]=@Reference", ConnectionDB.Connection)
+        '            sc.Parameters.AddWithValue("@Reference", txt_ref.Text)
+        '            Dim rd As SqlDataReader = sc.ExecuteReader()
+
+        '            If rd.HasRows Then
+        '                rd.Read()
+        '                Modbus.WriteModbus(ADDR_PUNCHING_MODE, rd.Item("Punching Mode"))
+        '                Modbus.WriteDataFloat(ADDR_LVL_DIST, Single.Parse(rd.Item("Level Distance").Replace(",", ".")))
+        '                Modbus.WriteDataFloat(ADDR_LVL_TOLER, Single.Parse(rd.Item("Level Tolerance").Replace(",", ".")))
+        '                Modbus.WriteModbus(ADDR_ORING, rd.Item("Oring Check"))
+        '                Modbus.WriteModbus(ADDR_FESTO_LDIST1, rd.Item("Festo LEFT Distance"))
+        '                Modbus.WriteModbus(ADDR_FESTO_LDIST2, rd.Item("Festo LEFT Distance"))
+        '                Modbus.WriteModbus(ADDR_FESTO_RDIST1, rd.Item("Festo RIGHT Distance"))
+        '                Modbus.WriteModbus(ADDR_FESTO_RDIST2, rd.Item("Festo RIGHT Distance"))
+        '                Modbus.WriteModbus(ADDR_FESTO_LSPEED, rd.Item("Festo LEFT Speed"))
+        '                Modbus.WriteModbus(ADDR_FESTO_RSPEED, rd.Item("Festo RIGHT Speed"))
+        '                Modbus.WriteModbus(ADDR_LASER_TEMPLATE, rd.Item("Laser Template"))
+        '                Modbus.WriteModbus(ADDR_CAMERA_PROGRAM, rd.Item("Camera Program"))
+
+
+
+        '                SCAN_MODE = 3
+        '            Else
+        '                MsgBox("Invalid Reference")
+        '                txt_ref.Text = ""
+        '            End If
+
+        '            rd.Close()
+        '        End If
+        'End Select
+
         Select Case SCAN_MODE
-                Case 0
-                    If txt_ref.Text <> "" Then
-                        Call ConnectionDB.connection_db()
-                        Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]=@Reference", ConnectionDB.Connection)
-                        sc.Parameters.AddWithValue("@Reference", txt_ref.Text)
-                        Dim rd As SqlDataReader = sc.ExecuteReader()
+            Case 0
+                If txt_ref.Text <> "" Then
+                    Call ConnectionDB.connection_db()
+                    Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]='" & txt_ref.Text & "'", ConnectionDB.Connection)
+                    Dim rd As SqlDataReader = sc.ExecuteReader
+                    rd.Read()
+                    If Not rd.HasRows Then
+                        'If Not hasInvalidReferenceMessageBoxShown Then
+                        'txt_msg.Text = "Invalid Reference"
+                        'MessageBox.Show("Invalid Reference", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        'hasInvalidReferenceMessageBoxShown = True
 
-                        If rd.HasRows Then
-                            SCAN_MODE = 1
-                        Else
-                            MsgBox("Invalid Reference")
-                            txt_ref.Text = ""
-                        End If
-
-                        rd.Close()
+                        'If
+                        txt_ref.Text = ""
+                        Return
                     End If
-
-                Case 1
-                    If txt_ope_id.Text <> "" Then
-                        SCAN_MODE = 2
-                    End If
-
-                Case 2
-                    If txt_po_num.Text <> "" Then
-                        Call ConnectionDB.connection_db()
-                        Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]=@Reference", ConnectionDB.Connection)
-                        sc.Parameters.AddWithValue("@Reference", txt_ref.Text)
-                        Dim rd As SqlDataReader = sc.ExecuteReader()
-
-                        If rd.HasRows Then
-                            rd.Read()
-                            Modbus.WriteModbus(ADDR_PUNCHING_MODE, rd.Item("Punching Mode"))
-                            Modbus.WriteDataFloat(ADDR_LVL_DIST, Single.Parse(rd.Item("Level Distance").Replace(",", ".")))
-                            Modbus.WriteDataFloat(ADDR_LVL_TOLER, Single.Parse(rd.Item("Level Tolerance").Replace(",", ".")))
-                            Modbus.WriteModbus(ADDR_ORING, rd.Item("Oring Check"))
-                            Modbus.WriteDoubleInteger(ADDR_FESTO_LDIST, rd.Item("Festo LEFT Distance"))
-                            Modbus.WriteDoubleInteger(ADDR_FESTO_RDIST, rd.Item("Festo RIGHT Distance"))
-                            Modbus.WriteModbus(ADDR_FESTO_LSPEED, rd.Item("Festo LEFT Speed"))
-                            Modbus.WriteModbus(ADDR_FESTO_RSPEED, rd.Item("Festo RIGHT Speed"))
-                            Modbus.WriteModbus(ADDR_LASER_TEMPLATE, rd.Item("Laser Template"))
-                            Modbus.WriteModbus(ADDR_CAMERA_PROGRAM, rd.Item("Camera Program"))
+                    SCAN_MODE = 1
+                End If
+            Case 1
+                If txt_ope_id.Text <> "" Then
+                    SCAN_MODE = 2
+                End If
+            Case 2
+                If txt_po_num.Text <> "" Then
+                    'Insert data to database
+                    Call ConnectionDB.connection_db()
+                    Dim sc As New SqlCommand("SELECT * FROM tbl_References WHERE [References]='" & txt_ref.Text & "'", ConnectionDB.Connection)
+                    Dim rd As SqlDataReader = sc.ExecuteReader
+                    rd.Read()
+                    txt_sendref.Text = txt_ref.Text
 
 
+                    'write to plc
+                    Modbus.WriteModbus(ADDR_PUNCHING_MODE, rd.Item("Punching Mode"))
+                    Modbus.WriteDataFloat(ADDR_LVL_DIST, Single.Parse(rd.Item("Level Distance").Replace(",", ".")))
+                    Modbus.WriteDataFloat(ADDR_LVL_TOLER, Single.Parse(rd.Item("Level Tolerance").Replace(",", ".")))
+                    Modbus.WriteModbus(ADDR_ORING, rd.Item("Oring Check"))
+                    Modbus.WriteModbus(ADDR_FESTO_LDIST1, rd.Item("Festo LEFT Distance"))
+                    Modbus.WriteModbus(ADDR_FESTO_LDIST2, rd.Item("Festo LEFT Distance"))
+                    Modbus.WriteModbus(ADDR_FESTO_RDIST1, rd.Item("Festo RIGHT Distance"))
+                    Modbus.WriteModbus(ADDR_FESTO_RDIST2, rd.Item("Festo RIGHT Distance"))
+                    Modbus.WriteModbus(ADDR_FESTO_LSPEED, rd.Item("Festo LEFT Speed"))
+                    Modbus.WriteModbus(ADDR_FESTO_RSPEED, rd.Item("Festo RIGHT Speed"))
+                    Modbus.WriteModbus(ADDR_LASER_TEMPLATE, rd.Item("Laser Template"))
+                    Modbus.WriteModbus(ADDR_CAMERA_PROGRAM, rd.Item("Camera Program"))
 
-                            SCAN_MODE = 3
-                        Else
-                            MsgBox("Invalid Reference")
-                            txt_ref.Text = ""
-                        End If
+                    '    Select Case LASER_STATE
+                    '        Case 0
+                    '            Laser.GetMarkStatus
+                    '            If Laser.ReadData("2") Then
+                    '                LASER_STATE += 1
+                    '            End If
+                    '        Case 1
+                    '            Laser.SetMarkingTemplate(rd.Item("Laser Template"))
+                    '            If Laser.ReadData("Ok") Then
+                    '                LASER_STATE += 1
+                    '            End If
+                    '        Case 2
+                    '            SCAN_MODE = 3
+                    '    End Select
 
-                        rd.Close()
-                    End If
-            End Select
+                    SCAN_MODE = 3
+                End If
+        End Select
     End Sub
 
     Private Sub MainModbus()
@@ -388,5 +469,28 @@ Public Class MainForm
         'Modbus.WriteBit(380, 4, SetCylFest.RHOMING)
         'Modbus.WriteBit(380, 5, SetCylFest.RJISL)
         'Modbus.WriteBit(380, 6, SetCylFest.RPWRRES)
+    End Sub
+
+    Private Sub btn_sendref_Click(sender As Object, e As EventArgs) Handles btn_sendref.Click
+        Dim char_data As Char
+        Dim string_data As String
+        Dim current_len As Integer
+        string_data = txt_sendref.Text
+        current_len = string_data.Length
+        '' fix string to 20 char
+        For i As Integer = current_len To 19
+            string_data = string_data & " "
+        Next
+
+        If Connected() Then
+            '' send 20 char string
+            For index As Integer = 0 To 19
+                char_data = string_data.Chars(index)
+                ''Debug.Write(index & " ")
+                ''Debug.WriteLine(char_data & " ")
+                WriteModbus(7100 + index, Convert.ToInt32(char_data))
+            Next
+
+        End If
     End Sub
 End Class
