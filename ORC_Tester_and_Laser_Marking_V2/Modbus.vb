@@ -1,4 +1,4 @@
-﻿Imports Easymodbus
+﻿Imports EasyModbus
 Module Modbus
     Dim modbus_Client As ModbusClient = New ModbusClient()
     Dim _Connected As Boolean
